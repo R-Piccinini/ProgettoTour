@@ -14,11 +14,10 @@
 
 
 <body>
-    <header
-        class="d-flex flex-wrap align-items-center justify-content-between justify-content-sm-around py-3 mb-4 border-bottom">
+    <header class="d-flex flex-wrap align-items-center justify-content-between justify-content-sm-around py-3 mb-4 border-bottom">
         <div class="col-6 col-sm-3 mb-2 ">
             <a href="home.html" class="d-inline-flex  text-decoration-none">
-                <img class="w-75 h-75" src="assets/img/logo.png" alt="">
+                <img class="w-50 h-50" src="assets/img/logo.png" alt="">
             </a>
         </div>
         <div class="col-sm-3 text-end" id="icons">
@@ -32,6 +31,16 @@
             </div>
 
         </div>
+        <div class="dropdown d-flex flex-wrap">
+            <img class=" w-25 h-25" src="assets/img/search.png" data-bs-toggle="dropdown" aria-expanded="false">
+
+            </img>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+        </div>
 
         <ul class="nav col-12  mt-4 mb-2 justify-content-center" id="navbar">
             <li><button type="button" class="btn btn-outline btn mx-4">Destinazioni</button></li>
@@ -43,90 +52,96 @@
     </header>
 
     <script src="js/bootstrap.bundle.min.js"></script>
-</body>
 
-<footer class="" style="background-color: #a3e8dc;">
 
-    <div class="container">
-        <div class="row text-center">
-            <div class="d-flex justify-content-center py-4 my-4">
-                <div class="col-6 offset-1">
-                    <form>
-                        <h5>Iscriviti alla nostra newsletter!</h5>
-                        <p>Ricevi offerte mensili, curiosità e novità da WeFlight.</p>
-                        <div class="d-flex w-100 gap-2">
-                            <label for="newsletter1" class="visually-hidden">Email</label>
-                            <input id="newsletter1" type="text" class="form-control" placeholder="Email">
-                            <button class="btn" type="button">Iscriviti</button>
-                        </div>
-                    </form>
+    <footer class="" style="background-color: #a3e8dc;">
+
+        <div class="container">
+            <div class="row text-center">
+                <div class="d-flex justify-content-center py-4 my-4">
+                    <div class="col-6 offset-1">
+                        <form>
+                            <h5>Iscriviti alla nostra newsletter!</h5>
+                            <p>Ricevi offerte mensili, curiosità e novità da WeFlight.</p>
+                            <div class="d-flex w-100 gap-2">
+                                <label for="newsletter1" class="visually-hidden">Email</label>
+                                <input id="newsletter1" type="text" class="form-control" placeholder="Email">
+                                <button class="btn" type="button">Iscriviti</button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
+
+            <div class="row text-center">
+                <div class="col-6 col-sm-6 col-md-3 text-start">
+                    <h5>Destinazioni</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Europa</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Stati Uniti</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Africa</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Asia</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Oceania</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-6 col-sm-6 col-md-3 text-start">
+                    <h5>WeFlight</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Gruppo</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Lavora con noi</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Area riservata</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Contatti</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-3 text-md-start">
+                    <h5>Info e condizioni di vendita</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Metodi di pagamento</a>
+                        </li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Termini e condizioni</a>
+                        </li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Privacy Policy</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-3 text-md-start">
+                    <h5>Community & Social</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Instagram</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Facebook</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Twitter</a></li>
+                    </ul>
+                </div>
+
+
+
+            </div>
+
+            <div class="d-flex justify-content-between py-4 my-4 border-top border-dark">
+                <p>© 2024 WeFlight. Tutti i diritti riservati.</p>
+                <ul class="list-unstyled d-flex">
+                    <li class="ms-3"><a class="link-dark" href="#"><img src="assets/img/instagram.svg" class="bi"
+                                width="24" height="24">
+
+                        </a></li>
+                    <li class="ms-3"><a class="link-dark" href="#"><img src="assets/img/facebook.svg" class="bi"
+                                width="24" height="24"></a>
+                    </li>
+                    <li class="ms-3"><a class="link-dark" href="#"><img src="assets/img/x-twitter.svg" class="bi"
+                                width="24" height="24">
+
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
+    </footer>
 
-        <div class="row text-center">
-            <div class="col-6 col-sm-6 col-md-3 text-start">
-                <h5>Destinazioni</h5>
-                <ul class="nav flex-column">
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Europa</a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Stati Uniti</a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Africa</a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Asia</a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Oceania</a></li>
-                </ul>
-            </div>
 
-            <div class="col-6 col-sm-6 col-md-3 text-start">
-                <h5>WeFlight</h5>
-                <ul class="nav flex-column">
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Gruppo</a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Lavora con noi</a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Area riservata</a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Contatti</a></li>
-                </ul>
-            </div>
+</body>
 
-            <div class="col-12 col-sm-6 col-md-3 text-md-start">
-                <h5>Info e condizioni di vendita</h5>
-                <ul class="nav flex-column">
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Metodi di pagamento</a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Termini e condizioni</a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Privacy Policy</a></li>
-                </ul>
-            </div>
-
-            <div class="col-12 col-sm-6 col-md-3 text-md-start">
-                <h5>Community & Social</h5>
-                <ul class="nav flex-column">
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Instagram</a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Facebook</a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Twitter</a></li>
-                </ul>
-            </div>
-
-            
-
-        </div>
-
-        <div class="d-flex justify-content-between py-4 my-4 border-top border-dark">
-            <p>© 2024 WeFlight. Tutti i diritti riservati.</p>
-            <ul class="list-unstyled d-flex">
-                <li class="ms-3"><a class="link-dark" href="#"><img src="assets/img/instagram.svg" class="bi" width="24"
-                            height="24">
-
-                    </a></li>
-                <li class="ms-3"><a class="link-dark" href="#"><img src="assets/img/facebook.svg" class="bi" width="24"
-                            height="24"></a>
-                </li>
-                <li class="ms-3"><a class="link-dark" href="#"><img src="assets/img/x-twitter.svg" class="bi" width="24"
-                            height="24">
-
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</footer>
 
 </html>

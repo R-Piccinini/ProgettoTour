@@ -61,6 +61,9 @@ header {
     background-color: #ba2644;
 }
 
+.dropdown{
+    display: none;
+}
 
 @media screen and (max-width: 576px) {
     #icons {
@@ -69,5 +72,9 @@ header {
 
     #navbar{
         display: none;
+    }
+
+    .dropdown{
+        display: inline;
     }
 }
