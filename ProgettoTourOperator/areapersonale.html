@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Area Personale</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" rel="stylesheet">
+</head>
+
+
+<body>
+    <header
+        class="d-flex flex-wrap align-items-center justify-content-between justify-content-sm-around py-3 mb-4 border-bottom">
+        <div class="col-6 col-sm-3 mb-2 ">
+            <a href="home.html" class="d-inline-flex  text-decoration-none">
+                <img class="w-75 h-75" src="assets/img/logo.png" alt="">
+            </a>
+        </div>
+        <div class="col-sm-3 text-end" id="icons">
+            <div>
+                <a href="home.html" class="text-decoration-none">
+                    <img class="w-25 h-25" src="assets/img/search.png" alt="">
+                </a>
+                <a href="home.html" class="text-decoration-none">
+                    <img class="w-25 h-25" src="assets/img/login.png" alt="">
+                </a>
+            </div>
+
+        </div>
+
+        <ul class="nav col-12  mt-4 mb-2 justify-content-center" id="navbar">
+            <li><button type="button" class="btn btn-outline btn mx-4">Destinazioni</button></li>
+            <li><button type="button" class="btn btn-outline btn mx-4">Pacchetti</button></li>
+            <li><button type="button" class="btn btn-outline btn mx-4">Chi Siamo</button></li>
+        </ul>
+
+
+    </header>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-lg-4">
+                <div class="d-flex flex-column p-3 text-white" style="width: 280px; background-color: #004c74;">
+                    <a href="/"
+                        class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+                        <span class="bi me-2 fs-4" width="40" height="32">Area Personale</span>
+                    </a>
+                    <hr>
+                    <ul class="nav nav-pills flex-column mb-auto">
+                        <li class="nav-item" id="lista">
+                            <a href="#" class="nav-link text-white" aria-current="page">
+                                <svg class="bi me-2" width="16" height="16">
+                                    <use xlink:href="#home"></use>
+                                </svg>
+                                Viaggi
+                            </a>
+                        </li>
+                        <li class="nav-item" id="lista">
+                            <a href="#" class="nav-link text-white">
+                                <svg class="bi me-2" width="16" height="16">
+                                    <use xlink:href="#speedometer2"></use>
+                                </svg>
+                                Wishlist
+                            </a>
+                        </li>
+                        <li class="nav-item" id="lista">
+                            <a href="#" class="nav-link text-white">
+                                <svg class="bi me-2" width="16" height="16">
+                                    <use xlink:href="#table"></use>
+                                </svg>
+                                Info Account
+                            </a>
+                        </li>
+                        <li class="nav-item" id="lista">
+                            <a href="#" class="nav-link text-white">
+                                <svg class="bi me-2" width="16" height="16">
+                                    <use xlink:href="#grid"></use>
+                                </svg>
+                                Lista buoni
+                            </a>
+                        </li>
+                    </ul>
+                    <hr>
+                    <div class="dropdown">
+                        <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
+                            id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="https://github.com/mdo.png" alt="" width="32" height="32"
+                                class="rounded-circle me-2">
+                            <strong>mdo</strong>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
+                            <li><a class="dropdown-item" href="#">New project...</a></li>
+                            <li><a class="dropdown-item" href="#">Settings</a></li>
+                            <li><a class="dropdown-item" href="#">Profile</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Sign out</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-lg-8">
+                <div class="content">
+                    <h2>Benvenuto nell'Area Personale</h2>
+                    <p>Qui puoi gestire i tuoi viaggi, visualizzare la tua wishlist, modificare le informazioni del tuo
+                        account e controllare la tua lista di buoni.</p>
+
+                    <div id="viaggi" class="section">
+                        <h3>Viaggi</h3>
+                        <p>Dettagli sui tuoi viaggi prenotati.</p>
+                        <!-- Contenuto dei viaggi -->
+                    </div>
+
+                    <div id="wishlist" class="section">
+                        <h3>Wishlist</h3>
+                        <p>Elementi salvati nella tua wishlist.</p>
+                        <!-- Contenuto della wishlist -->
+                    </div>
+
+                    <div id="info-account" class="section">
+                        <h3>Info Account</h3>
+                        <p>Informazioni personali e impostazioni dell'account.</p>
+                        <!-- Contenuto delle informazioni account -->
+                    </div>
+
+                    <div id="lista-buoni" class="section">
+                        <h3>Lista Buoni</h3>
+                        <p>Buoni sconto disponibili.</p>
+                        <!-- Contenuto della lista buoni -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer class="" style="background-color: #a3e8dc;">
+        <div class="container mt-2">
+            <div class="row text-center">
+                <div class="d-flex justify-content-center py-4 my-4">
+                    <div class="col-6 offset-1">
+                        <form>
+                            <h5>Iscriviti alla nostra newsletter!</h5>
+                            <p>Ricevi offerte mensili, curiosità e novità da WeFlight.</p>
+                            <div class="d-flex w-100 gap-2">
+                                <label for="newsletter1" class="visually-hidden">Email</label>
+                                <input id="newsletter1" type="text" class="form-control" placeholder="Email">
+                                <button class="btn" type="button">Iscriviti</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row text-center">
+                <div class="col-6 col-sm-6 col-md-3 text-start">
+                    <h5>Destinazioni</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Europa</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Stati Uniti</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Africa</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Asia</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Oceania</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-6 col-sm-6 col-md-3 text-start">
+                    <h5>WeFlight</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Gruppo</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Lavora con noi</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Area riservata</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Contatti</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-3 text-md-start">
+                    <h5>Info e condizioni di vendita</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Metodi di pagamento</a>
+                        </li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Termini e condizioni</a>
+                        </li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Privacy Policy</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-3 text-md-start">
+                    <h5>Community & Social</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Instagram</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Facebook</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Twitter</a></li>
+                    </ul>
+                </div>
+
+
+
+            </div>
+
+            <div class="d-flex justify-content-between py-4 my-4 border-top border-dark">
+                <p>© 2024 WeFlight. Tutti i diritti riservati.</p>
+                <ul class="list-unstyled d-flex">
+                    <li class="ms-3"><a class="link-dark" href="#"><img src="assets/img/instagram.svg" class="bi"
+                                width="24" height="24">
+
+                        </a></li>
+                    <li class="ms-3"><a class="link-dark" href="#"><img src="assets/img/facebook.svg" class="bi"
+                                width="24" height="24"></a>
+                    </li>
+                    <li class="ms-3"><a class="link-dark" href="#"><img src="assets/img/x-twitter.svg" class="bi"
+                                width="24" height="24">
+
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/areapersonale.js"></script>
+</body>
+
+</html>

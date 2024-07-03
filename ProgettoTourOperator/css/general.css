@@ -44,7 +44,10 @@ header {
     background-color: #a3e8dc;
 }
 
-
+.logo{
+    width: 45%;
+    height: auto;
+}
 
 .btn {
     font-family: "Montserrat", sans-serif;
@@ -61,13 +64,25 @@ header {
     background-color: #ba2644;
 }
 
+.dropdown{
+    display: none;
+}
 
 @media screen and (max-width: 576px) {
-    #icons {
+    .logo{
+        height: 100%;
+        width: 100%;
+    }
+    
+    .icons {
         display: none;
     }
 
     #navbar{
         display: none;
+    }
+
+    .dropdown{
+        display: inline;
     }
 }
