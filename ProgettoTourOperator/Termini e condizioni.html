@@ -14,34 +14,46 @@
 
 
 <body>
-    <header
-        class="d-flex flex-wrap align-items-center justify-content-between justify-content-sm-around py-3 mb-4 border-bottom">
-        <div class="col-6 col-sm-3 mb-2 ">
-            <a href="home.html" class="d-inline-flex  text-decoration-none">
-                <img class="w-75 h-75" src="assets/img/logo.png" alt="">
-            </a>
-        </div>
-        <div class="col-sm-3 text-end" id="icons">
-            <div>
+    <header>
+        <div class="container-fluid text-center justify-content-around">
+        <div class="row py-3 mb-4"> 
+            <div class="col-4 col-sm-3 mb-2">
                 <a href="home.html" class="text-decoration-none">
-                    <img class="w-25 h-25" src="assets/img/search.png" alt="">
-                </a>
-                <a href="home.html" class="text-decoration-none">
-                    <img class="w-25 h-25" src="assets/img/login.png" alt="">
+                    <img class="logo" src="assets/img/logo.png" alt="">
                 </a>
             </div>
+            <div class="col-auto"></div>
+            <div class="col-4 dropdown ms-auto">
+                <img class="w-75 h-auto" src="assets/img/dropdown.png" data-bs-toggle="dropdown" aria-expanded="false">
+    
+                
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-2 ms-auto d-flex icons" id="">
+                <a href="home.html" class="text-decoration-none icons">
+                        <img class="w-50 h-auto" src="assets/img/search.png" alt="">
+                    </a>
+                    <a href="home.html" class="text-decoration-none text-start icons">
+                        <img class="w-50 h-auto" src="assets/img/login.png" alt="">
+                    </a>
+            </div>
 
+
+    
+        </div>
+        
+            <ul class="nav mt-4 mb-5 pb-3 justify-content-center" id="navbar">
+                <li><button type="button" class="btn btn-outline btn mx-4">Destinazioni</button></li>
+                <li><button type="button" class="btn btn-outline btn mx-4">Pacchetti</button></li>
+                <li><button type="button" class="btn btn-outline btn mx-4">Chi Siamo</button></li>
+            </ul>
         </div>
 
-        <ul class="nav col-12  mt-4 mb-2 justify-content-center" id="navbar">
-            <li><button type="button" class="btn btn-outline btn mx-4">Destinazioni</button></li>
-            <li><button type="button" class="btn btn-outline btn mx-4">Pacchetti</button></li>
-            <li><button type="button" class="btn btn-outline btn mx-4">Chi Siamo</button></li>
-        </ul>
-
-
     </header>
-
 <body>
     <h1>Termini e Condizioni</h1><hr>
 
