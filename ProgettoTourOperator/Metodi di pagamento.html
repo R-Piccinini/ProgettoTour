@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metodo di pagamento</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" rel="stylesheet">
+</head>
+
+
+<body>
+    <header
+        class="d-flex flex-wrap align-items-center justify-content-between justify-content-sm-around py-3 mb-4 border-bottom">
+        <div class="col-6 col-sm-3 mb-2 ">
+            <a href="home.html" class="d-inline-flex  text-decoration-none">
+                <img class="w-75 h-75" src="assets/img/logo.png" alt="">
+            </a>
+        </div>
+        <div class="col-sm-3 text-end" id="icons">
+            <div>
+                <a href="home.html" class="text-decoration-none">
+                    <img class="w-25 h-25" src="assets/img/search.png" alt="">
+                </a>
+                <a href="home.html" class="text-decoration-none">
+                    <img class="w-25 h-25" src="assets/img/login.png" alt="">
+                </a>
+            </div>
+
+        </div>
+
+        <ul class="nav col-12  mt-4 mb-2 justify-content-center" id="navbar">
+            <li><button type="button" class="btn btn-outline btn mx-4">Destinazioni</button></li>
+            <li><button type="button" class="btn btn-outline btn mx-4">Pacchetti</button></li>
+            <li><button type="button" class="btn btn-outline btn mx-4">Chi Siamo</button></li>
+        </ul>
+
+
+    </header>
+<body>
+
+    <div class="container mt-5">
+        <h2 class="mb-4">Metodi di Pagamento</h2>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col"></th>
+                    <th scope="col"></th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="cursor-pointer" data-toggle="collapse" data-target="#creditCardDetails" aria-expanded="false"
+                    aria-controls="creditCardDetails">
+                    <th scope="row"></th>
+                    <td>Carta di Credito/Debito</td>
+                    <td><button class="btn btn-primary">Mostra Dettagli</button></td>
+                </tr>
+                <tr>
+                    <td colspan="3">
+                        <div id="creditCardDetails" class="collapse">
+                            <div class="card card-body">
+                                Le carte di credito e debito includono Visa, MasterCard, Amex, ecc. Sono accettate per
+                                la maggior parte delle transazioni online e offline.
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr class="cursor-pointer" data-toggle="collapse" data-target="#paypalDetails" aria-expanded="false"
+                    aria-controls="paypalDetails">
+                    <th scope="row"></th>
+                    <td>PayPal</td>
+                    <td><button class="btn btn-primary">Mostra Dettagli</button></td>
+                </tr>
+                <tr>
+                    <td colspan="3">
+                        <div id="paypalDetails" class="collapse">
+                            <div class="card card-body">
+                                PayPal è un metodo di pagamento online sicuro che permette di pagare senza condividere i
+                                dati della carta di credito o del conto bancario.
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr class="cursor-pointer" data-toggle="collapse" data-target="#bankTransferDetails"
+                    aria-expanded="false" aria-controls="bankTransferDetails">
+                    <th scope="row"></th>
+                    <td>Bonifico Bancario</td>
+                    <td><button class="btn btn-primary">Mostra Dettagli</button></td>
+                </tr>
+                <tr>
+                    <td colspan="3">
+                        <div id="bankTransferDetails" class="collapse">
+                            <div class="card card-body">
+                                Il bonifico bancario permette di trasferire denaro direttamente dal proprio conto
+                                corrente. Richiede l'utilizzo dell'IBAN.
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr class="cursor-pointer" data-toggle="collapse" data-target="#cashOnDeliveryDetails"
+                    aria-expanded="false" aria-controls="cashOnDeliveryDetails">
+                    <th scope="row"></th>
+                    <td>Contrassegno</td>
+                    <td><button class="btn btn-primary">Mostra Dettagli</button></td>
+                </tr>
+                <tr>
+                    <td colspan="3">
+                        <div id="cashOnDeliveryDetails" class="collapse">
+                            <div class="card card-body">
+                                Il pagamento alla consegna (contrassegno) permette di pagare direttamente al momento
+                                della ricezione del pacco.
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr class="cursor-pointer" data-toggle="collapse" data-target="#googlePayDetails" aria-expanded="false"
+                    aria-controls="googlePayDetails">
+                    <th scope="row"></th>
+                    <td>Google Pay</td>
+                    <td><button class="btn btn-primary">Mostra Dettagli</button></td>
+                </tr>
+                <tr>
+                    <td colspan="3">
+                        <div id="googlePayDetails" class="collapse">
+                            <div class="card card-body">
+                                Google Pay è un servizio di pagamento online che permette di pagare in modo sicuro e
+                                veloce utilizzando il proprio account Google.
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr class="cursor-pointer" data-toggle="collapse" data-target="#applePayDetails" aria-expanded="false"
+                    aria-controls="applePayDetails">
+                    <th scope="row"></th>
+                    <td>Apple Pay</td>
+                    <td><button class="btn btn-primary">Mostra Dettagli</button></td>
+                </tr>
+                <tr>
+                    <td colspan="3">
+                        <div id="applePayDetails" class="collapse">
+                            <div class="card card-body">
+                                Apple Pay permette di effettuare pagamenti sicuri e rapidi utilizzando i dispositivi
+                                Apple.
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Includi Bootstrap JS e jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <footer class="" style="background-color: #a3e8dc;">
+    
+        <div class="container">
+            <div class="row text-center">
+                <div class="d-flex justify-content-center py-4 my-4">
+                    <div class="col-6 offset-1">
+                        <form>
+                            <h5>Iscriviti alla nostra newsletter!</h5>
+                            <p>Ricevi offerte mensili, curiosità e novità da WeFlight.</p>
+                            <div class="d-flex w-100 gap-2">
+                                <label for="newsletter1" class="visually-hidden">Email</label>
+                                <input id="newsletter1" type="text" class="form-control" placeholder="Email">
+                                <button class="btn" type="button">Iscriviti</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="row text-center">
+                <div class="col-6 col-sm-6 col-md-3 text-start">
+                    <h5>Destinazioni</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Europa</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Stati Uniti</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Africa</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Asia</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Oceania</a></li>
+                    </ul>
+                </div>
+    
+                <div class="col-6 col-sm-6 col-md-3 text-start">
+                    <h5>WeFlight</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Gruppo</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Lavora con noi</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Area riservata</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Contatti</a></li>
+                    </ul>
+                </div>
+    
+                <div class="col-12 col-sm-6 col-md-3 text-md-start">
+                    <h5>Info e condizioni di vendita</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Metodi di pagamento</a>
+                        </li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Termini e condizioni</a>
+                        </li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Privacy Policy</a></li>
+                    </ul>
+                </div>
+    
+                <div class="col-12 col-sm-6 col-md-3 text-md-start">
+                    <h5>Community & Social</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Instagram</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Facebook</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Twitter</a></li>
+                    </ul>
+                </div>
+    
+    
+    
+            </div>
+    
+            <div class="d-flex justify-content-between py-5 border-top border-dark">
+                <p>© 2024 WeFlight. Tutti i diritti riservati.</p>
+                <ul class="list-unstyled d-flex">
+                    <li class="ms-3"><a class="link-dark" href="#"><img src="assets/img/instagram.svg" class="bi" width="24"
+                                height="24">
+    
+                        </a></li>
+                    <li class="ms-3"><a class="link-dark" href="#"><img src="assets/img/facebook.svg" class="bi" width="24"
+                                height="24"></a>
+                    </li>
+                    <li class="ms-3"><a class="link-dark" href="#"><img src="assets/img/x-twitter.svg" class="bi" width="24"
+                                height="24">
+    
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="js/bootstrap.bundle.min.js"></script>
+    </body>
+    
+    
+    </html>
