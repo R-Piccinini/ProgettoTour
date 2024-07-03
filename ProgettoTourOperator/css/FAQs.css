@@ -1,0 +1,15 @@
+
+#cardFaq{
+    max-width: 1140px;
+    margin: 0 auto;
+    padding-left: 16px;
+    padding-right: 16px;
+    gap: 15px;
+}
+
+#cartaSingola{
+    padding: 22px 15px 18px 21px;
+    border: solid var(--tertiary-blue, #02928a);
+    border-radius: 8px;
+    height: 196px
+}
