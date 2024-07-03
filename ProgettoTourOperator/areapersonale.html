@@ -7,6 +7,7 @@
     <title>Area Personale</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/areapersonale.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" rel="stylesheet">
@@ -14,70 +15,81 @@
 
 
 <body>
-    <header
-        class="d-flex flex-wrap align-items-center justify-content-between justify-content-sm-around py-3 mb-4 border-bottom">
-        <div class="col-6 col-sm-3 mb-2 ">
-            <a href="home.html" class="d-inline-flex  text-decoration-none">
-                <img class="w-75 h-75" src="assets/img/logo.png" alt="">
-            </a>
-        </div>
-        <div class="col-sm-3 text-end" id="icons">
-            <div>
-                <a href="home.html" class="text-decoration-none">
-                    <img class="w-25 h-25" src="assets/img/search.png" alt="">
-                </a>
-                <a href="home.html" class="text-decoration-none">
-                    <img class="w-25 h-25" src="assets/img/login.png" alt="">
-                </a>
+    <header>
+        <div class="container-fluid text-center justify-content-around">
+            <div class="row py-3 mb-4">
+                <div class="col-4 col-sm-3 mb-2">
+                    <a href="home.html" class="text-decoration-none">
+                        <img class="logo" src="assets/img/logo.png" alt="">
+                    </a>
+                </div>
+                <div class="col-auto"></div>
+                <div class="col-4 dropdown ms-auto">
+                    <img class="w-75 h-auto" src="assets/img/dropdown.png" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+
+
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-2 ms-auto d-flex icons" id="">
+                    <a href="home.html" class="text-decoration-none icons">
+                        <img class="w-50 h-auto" src="assets/img/search.png" alt="">
+                    </a>
+                    <a href="home.html" class="text-decoration-none text-start icons">
+                        <img class="w-50 h-auto" src="assets/img/login.png" alt="">
+                    </a>
+                </div>
             </div>
 
+            <ul class="nav mt-4 mb-5 pb-3 justify-content-center" id="navbar">
+                <li><button type="button" class="btn btn-outline btn mx-4">Destinazioni</button></li>
+                <li><button type="button" class="btn btn-outline btn mx-4">Pacchetti</button></li>
+                <li><button type="button" class="btn btn-outline btn mx-4">Chi Siamo</button></li>
+            </ul>
         </div>
-
-        <ul class="nav col-12  mt-4 mb-2 justify-content-center" id="navbar">
-            <li><button type="button" class="btn btn-outline btn mx-4">Destinazioni</button></li>
-            <li><button type="button" class="btn btn-outline btn mx-4">Pacchetti</button></li>
-            <li><button type="button" class="btn btn-outline btn mx-4">Chi Siamo</button></li>
-        </ul>
-
 
     </header>
 
     <div class="container">
-        <div class="row">
+        <div class="row rounded">
             <div class="col-12 col-lg-4">
-                <div class="d-flex flex-column p-3 text-white" style="width: 280px; background-color: #004c74;">
+                <div class="d-flex flex-column p-3 text-white rounded" style="width: 280px; background-color: #004c74;">
                     <a href="/"
                         class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
                         <span class="bi me-2 fs-4" width="40" height="32">Area Personale</span>
                     </a>
                     <hr>
                     <ul class="nav nav-pills flex-column mb-auto">
-                        <li class="nav-item" id="lista">
-                            <a href="#" class="nav-link text-white" aria-current="page">
+                        <li class="nav-item my-1">
+                            <a href="#" class="nav-link" onmouseover="aggiungiSfondo(this)" onmouseout="rimuoviSfondo(this)" onclick="attivaSfondo(this)">
                                 <svg class="bi me-2" width="16" height="16">
                                     <use xlink:href="#home"></use>
                                 </svg>
                                 Viaggi
                             </a>
                         </li>
-                        <li class="nav-item" id="lista">
-                            <a href="#" class="nav-link text-white">
+                        <li class="nav-item my-1">
+                            <a href="#" class="nav-link" onmouseover="aggiungiSfondo(this)" onmouseout="rimuoviSfondo(this)" onclick="attivaSfondo(this)">
                                 <svg class="bi me-2" width="16" height="16">
                                     <use xlink:href="#speedometer2"></use>
                                 </svg>
                                 Wishlist
                             </a>
                         </li>
-                        <li class="nav-item" id="lista">
-                            <a href="#" class="nav-link text-white">
+                        <li class="nav-item my-1">
+                            <a href="#" class="nav-link" onmouseover="aggiungiSfondo(this)" onmouseout="rimuoviSfondo(this)" onclick="attivaSfondo(this)">
                                 <svg class="bi me-2" width="16" height="16">
                                     <use xlink:href="#table"></use>
                                 </svg>
                                 Info Account
                             </a>
                         </li>
-                        <li class="nav-item" id="lista">
-                            <a href="#" class="nav-link text-white">
+                        <li class="nav-item my-1">
+                            <a href="#" class="nav-link" onmouseover="aggiungiSfondo(this)" onmouseout="rimuoviSfondo(this)" onclick="attivaSfondo(this)">
                                 <svg class="bi me-2" width="16" height="16">
                                     <use xlink:href="#grid"></use>
                                 </svg>
@@ -106,21 +118,21 @@
                 </div>
             </div>
 
-            <div class="col-12 col-lg-8">
-                <div class="content">
-                    <h2>Benvenuto nell'Area Personale</h2>
-                    <p>Qui puoi gestire i tuoi viaggi, visualizzare la tua wishlist, modificare le informazioni del tuo
+            <div class="col-12 col-lg-8" style="color: white;">
+                <div class="content" style="background-color: #004c74;">
+                    <h2 style="color: #ff8a21;">Benvenuto nell'Area Personale</h2>
+                    <p style="color: #f64242">Qui puoi gestire i tuoi viaggi, visualizzare la tua wishlist, modificare le informazioni del tuo
                         account e controllare la tua lista di buoni.</p>
 
                     <div id="viaggi" class="section">
-                        <h3>Viaggi</h3>
+                        <h3 style="color: white;">Viaggi</h3>
                         <p>Dettagli sui tuoi viaggi prenotati.</p>
                         <!-- Contenuto dei viaggi -->
                     </div>
 
                     <div id="wishlist" class="section">
                         <h3>Wishlist</h3>
-                        <p>Elementi salvati nella tua wishlist.</p>
+                        <p style="color: #a3e8dc;">Elementi salvati nella tua wishlist.</p>
                         <!-- Contenuto della wishlist -->
                     </div>
 
@@ -141,7 +153,7 @@
     </div>
 
 
-    <footer class="" style="background-color: #a3e8dc;">
+    <footer class="" style="background-color: #a3e8dc; color: #004c74;">
         <div class="container mt-2">
             <div class="row text-center">
                 <div class="d-flex justify-content-center py-4 my-4">

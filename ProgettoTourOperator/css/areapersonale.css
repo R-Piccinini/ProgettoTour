@@ -1,3 +1,13 @@
-.lista {
+.sfondoTesto {
     background-color: #a3e8dc;
+    color: #004c74;
+}
+
+.sfondo {
+    background-color: #a3e8dc;
+    color: #004c74;
+}
+
+.nav-link {
+    color: white;
 }
