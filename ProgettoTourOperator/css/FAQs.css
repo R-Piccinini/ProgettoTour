@@ -1,15 +1,50 @@
+p{
+    color: #004c74 ;
+}
 
 #cardFaq{
     max-width: 1140px;
     margin: 0 auto;
     padding-left: 16px;
     padding-right: 16px;
-    gap: 15px;
+    margin-bottom: 5%;  
 }
 
 #cartaSingola{
+    margin: 3%;
     padding: 22px 15px 18px 21px;
-    border: solid var(--tertiary-blue, #02928a);
+    border: 2pt solid var(--tertiary-blue, #419895);
     border-radius: 8px;
     height: 196px
+}
+
+.card-title{
+    color: #419895;
+}
+
+.card-link{
+    color:#004c74;
+}
+
+h3{
+    color: #ba2644;
+    margin: 3%;
+}
+
+.linkRitorno{
+    color: #004c74;
+}
+
+#navbarina{
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #004c74;
+    padding: 1%;
+
+}
+ol{
+    margin: 0%;
+    padding:0%;
 }
