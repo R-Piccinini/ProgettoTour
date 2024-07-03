@@ -15,7 +15,13 @@ p{
     padding: 22px 15px 18px 21px;
     border: 2pt solid var(--tertiary-blue, #419895);
     border-radius: 8px;
-    height: 196px
+    height: 156px;
+}
+
+#cartaSingola:hover{
+    color: aliceblue;
+    background-color: #49a9a66d;
+    border-color: #4198959f;
 }
 
 .card-title{
@@ -24,6 +30,7 @@ p{
 
 .card-link{
     color:#004c74;
+    font-style:bold;
 }
 
 h3{
@@ -40,11 +47,18 @@ h3{
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
-    background-color: #004c74;
+    background-color: #cdececa0;
     padding: 1%;
-
+    height: 0%;
+    margin-bottom :1%;
 }
-ol{
-    margin: 0%;
-    padding:0%;
+
+ol.breadcrumb{
+    margin-bottom: 0%;
+    color: #004c74;
+}
+
+#casa{
+
+    color: #004c74;
 }
