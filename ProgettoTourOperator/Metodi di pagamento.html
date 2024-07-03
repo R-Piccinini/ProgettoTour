@@ -4,10 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Area Personale</title>
+    <title>Metodi di Pagamento</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/general.css">
-    <link rel="stylesheet" href="css/areapersonale.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" rel="stylesheet">
@@ -30,7 +29,7 @@
 
 
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#"> </a></li>
                         <li><a class="dropdown-item" href="#">Another action</a></li>
                         <li><a class="dropdown-item" href="#">Something else here</a></li>
                     </ul>
@@ -43,6 +42,9 @@
                         <img class="w-50 h-auto" src="assets/img/login.png" alt="">
                     </a>
                 </div>
+
+
+
             </div>
 
             <ul class="nav mt-4 mb-5 pb-3 justify-content-center" id="navbar">
@@ -54,107 +56,101 @@
 
     </header>
 
-    <div class="container">
-        <div class="row rounded">
-            <div class="col-12 col-lg-4">
-                <div class="d-flex flex-column p-3 text-white rounded" style="width: 280px; background-color: #004c74;">
-                    <a href="/"
-                        class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
-                        <span class="bi me-2 fs-4" width="40" height="32">Area Personale</span>
-                    </a>
-                    <hr>
-                    <ul class="nav nav-pills flex-column mb-auto">
-                        <li class="nav-item my-1">
-                            <a href="#" class="nav-link" onmouseover="aggiungiSfondo(this)" onmouseout="rimuoviSfondo(this)" onclick="attivaSfondo(this)">
-                                <svg class="bi me-2" width="16" height="16">
-                                    <use xlink:href="#home"></use>
-                                </svg>
-                                Viaggi
-                            </a>
-                        </li>
-                        <li class="nav-item my-1">
-                            <a href="#" class="nav-link" onmouseover="aggiungiSfondo(this)" onmouseout="rimuoviSfondo(this)" onclick="attivaSfondo(this)">
-                                <svg class="bi me-2" width="16" height="16">
-                                    <use xlink:href="#speedometer2"></use>
-                                </svg>
-                                Wishlist
-                            </a>
-                        </li>
-                        <li class="nav-item my-1">
-                            <a href="#" class="nav-link" onmouseover="aggiungiSfondo(this)" onmouseout="rimuoviSfondo(this)" onclick="attivaSfondo(this)">
-                                <svg class="bi me-2" width="16" height="16">
-                                    <use xlink:href="#table"></use>
-                                </svg>
-                                Info Account
-                            </a>
-                        </li>
-                        <li class="nav-item my-1">
-                            <a href="#" class="nav-link" onmouseover="aggiungiSfondo(this)" onmouseout="rimuoviSfondo(this)" onclick="attivaSfondo(this)">
-                                <svg class="bi me-2" width="16" height="16">
-                                    <use xlink:href="#grid"></use>
-                                </svg>
-                                Lista buoni
-                            </a>
-                        </li>
-                    </ul>
-                    <hr>
-                    <div class="dropdown">
-                        <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
-                            id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
-                            <img src="https://github.com/mdo.png" alt="" width="32" height="32"
-                                class="rounded-circle me-2">
-                            <strong>mdo</strong>
-                        </a>
-                        <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
-                            <li><a class="dropdown-item" href="#">New project...</a></li>
-                            <li><a class="dropdown-item" href="#">Settings</a></li>
-                            <li><a class="dropdown-item" href="#">Profile</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#">Sign out</a></li>
-                        </ul>
+    <div class="accordion" id="accordionExample">
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                    aria-expanded="true" aria-controls="collapseOne">
+                    Carta di credito/Debito
+                </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    Le carte di credito e debito includono Visa, MasterCard, Amex, ecc. Sono accettate per la maggior parte delle
+                    transazioni online e offline.
+
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    PayPal
+                </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    PayPal è un metodo di pagamento online sicuro che permette di pagare senza condividere i dati della carta di credito o
+                    del conto bancario.
+
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    Bonifico bancario
+                </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+
+                    Il bonifico bancario permette di trasferire denaro direttamente dal proprio conto corrente. Richiede l'utilizzo
+                    dell'IBAN.
+
+                </div>
+            </div>
+        </div>
+       
+        <div class="accordion accordion-flush" id="accordionFlushExample">
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                        Contrassegno
+                    </button>
+                </h2>
+                <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">Il pagamento alla consegna (contrassegno) permette di pagare direttamente al momento della ricezione del pacco.
+</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                        Google Pay
+                    </button>
+                </h2>
+                <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                        Google Pay è un servizio di pagamento online che permette di pagare in modo sicuro e veloce utilizzando il proprio
+                        account Google.
+
                     </div>
                 </div>
             </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                        Apple Pay
+                    </button>
+                </h2>
+                <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                        Apple Pay permette di effettuare pagamenti sicuri e rapidi utilizzando i dispositivi Apple.
 
-            <div class="col-12 col-lg-8" style="color: white;">
-                <div class="content" style="background-color: #004c74;">
-                    <h2 style="color: #ff8a21;">Benvenuto nell'Area Personale</h2>
-                    <p style="color: #f64242">Qui puoi gestire i tuoi viaggi, visualizzare la tua wishlist, modificare le informazioni del tuo
-                        account e controllare la tua lista di buoni.</p>
-
-                    <div id="viaggi" class="section">
-                        <h3 style="color: white;">Viaggi</h3>
-                        <p>Dettagli sui tuoi viaggi prenotati.</p>
-                        <!-- Contenuto dei viaggi -->
-                    </div>
-
-                    <div id="wishlist" class="section">
-                        <h3>Wishlist</h3>
-                        <p style="color: #a3e8dc;">Elementi salvati nella tua wishlist.</p>
-                        <!-- Contenuto della wishlist -->
-                    </div>
-
-                    <div id="info-account" class="section">
-                        <h3>Info Account</h3>
-                        <p>Informazioni personali e impostazioni dell'account.</p>
-                        <!-- Contenuto delle informazioni account -->
-                    </div>
-
-                    <div id="lista-buoni" class="section">
-                        <h3>Lista Buoni</h3>
-                        <p>Buoni sconto disponibili.</p>
-                        <!-- Contenuto della lista buoni -->
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
+    <footer class="" style="background-color: #a3e8dc;">
 
-    <footer class="" style="background-color: #a3e8dc; color: #004c74;">
-        <div class="container mt-2">
+        <div class="container">
             <div class="row text-center">
                 <div class="d-flex justify-content-center py-4 my-4">
                     <div class="col-6 offset-1">
@@ -218,7 +214,7 @@
 
             </div>
 
-            <div class="d-flex justify-content-between py-4 my-4 border-top border-dark">
+            <div class="d-flex justify-content-between py-5 border-top border-dark">
                 <p>© 2024 WeFlight. Tutti i diritti riservati.</p>
                 <ul class="list-unstyled d-flex">
                     <li class="ms-3"><a class="link-dark" href="#"><img src="assets/img/instagram.svg" class="bi"
@@ -239,7 +235,7 @@
     </footer>
 
     <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/areapersonale.js"></script>
 </body>
+
 
 </html>
