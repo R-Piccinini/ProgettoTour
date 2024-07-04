@@ -22,3 +22,10 @@ document.addEventListener('click', function (event) {
         });
     }
 })
+
+/*function categoria1(){
+    document.querySelectorAll(".container").forEach(function(element) {
+       element.style.display = "none";
+   });
+   document.getElementById("containerCat1").style.display = "block";
+}*/
