@@ -10,12 +10,6 @@ body {
     font-style: normal;
 }
 
-.contenitore-pagina {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
 h1 {
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
@@ -85,7 +79,6 @@ header {
 }
 
 #footer {
-    width: 100%;
     color: #004c74;
     background-color: #a3e8dc;
 }

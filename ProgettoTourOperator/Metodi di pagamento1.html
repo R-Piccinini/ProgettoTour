@@ -4,9 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Metodi di Pagamento</title>
+    <title>Metodi di pagamento</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/FAQs.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" rel="stylesheet">
@@ -14,38 +15,40 @@
 
 
 <body>
+    <!--HEADER-->
     <header>
         <div class="container-fluid text-center justify-content-around">
-        <div class="row py-3 mb-4"> 
-            <div class="col-4 col-sm-3 mb-2">
-                <a href="home.html" class="text-decoration-none">
-                    <img class="logo" src="assets/img/logo.png" alt="">
-                </a>
-            </div>
-            <div class="col-auto"></div>
-            <div class="col-4 dropdown ms-auto">
-                <img class="w-75 h-auto" src="assets/img/dropdown.png" data-bs-toggle="dropdown" aria-expanded="false">
-    
-                
-                <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
-            </div>
-            <div class="col-sm-2 ms-auto d-flex icons" id="">
-                <a href="home.html" class="text-decoration-none icons">
+            <div class="row py-3 mb-4">
+                <div class="col-4 col-sm-3 mb-2">
+                    <a href="home.html" class="text-decoration-none">
+                        <img class="logo" src="assets/img/logo.png" alt="">
+                    </a>
+                </div>
+                <div class="col-auto"></div>
+                <div class="col-4 dropdown ms-auto">
+                    <img class="w-75 h-auto" src="assets/img/dropdown.png" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+
+
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-2 ms-auto d-flex icons" id="">
+                    <a href="home.html" class="text-decoration-none icons">
                         <img class="w-50 h-auto" src="assets/img/search.png" alt="">
                     </a>
                     <a href="home.html" class="text-decoration-none text-start icons">
                         <img class="w-50 h-auto" src="assets/img/login.png" alt="">
                     </a>
+                </div>
+
+
+
             </div>
 
-
-    
-        </div>
-        
             <ul class="nav mt-4 mb-5 pb-3 justify-content-center" id="navbar">
                 <li><button type="button" class="btn btn-outline btn mx-4">Destinazioni</button></li>
                 <li><button type="button" class="btn btn-outline btn mx-4">Pacchetti</button></li>
@@ -54,106 +57,122 @@
         </div>
 
     </header>
-<h1> I metodi di pagamento accettati:</h1><br>
-    <div class="accordion" id="accordionExample">
+
+    <!--NAVIGAZIONE PAGINE-->
+    <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);"
+        aria-label="breadcrumb" id="navbarina">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="Home.html" id="navPag">Home</a></li>
+            <li class="breadcrumb-item"><a href="Metodi di pagamento.html" id="navPag">Pagamenti</a></li>
+            <li class="breadcrumb-item active" aria-current="page"><strong>Metodi di pagamento</strong></li>
+        </ol>
+    </nav>
+
+    <h3 class="text-start" id="titoloPag">Metodi di pagamento</h3>
+    <p class="testo">Offriamo una varietà di metodi di pagamento per rendere i tuoi acquisti facili e sicuri:</p>
+    <div style="--bs-accordion-btn-focus-box-shadow: 0 0 0 0.25rem #49a9a644, --bs-accordion-active-bg: #cdececa0, --bs-accordion-active-color: #49a9a644;"
+        class="accordion" id="accordionPanelsStayOpen">
         <div class="accordion-item">
             <h2 class="accordion-header">
-                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
-                    aria-expanded="true" aria-controls="collapseOne"> <img src="assets/img/mastercard_icon.png" width="30">
-                    Carta di credito/Debito 
+                <button class="accordion-button collapsed" id="bottoneAccordo" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                    aria-controls="panelsStayOpen-collapseOne"><img src="assets/img/mastercard_icon.png" width="30" class="me-2">
+                    Carta di credito/Debito
 
                 </button>
             </h2>
-            <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+            <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse ">
                 <div class="accordion-body">
                     Le carte di credito e debito includono Visa, MasterCard, Amex, ecc. Sono accettate per la maggior
-                    parte delle
-                    transazioni online e offline.
+                    parte delle transazioni online e offline.
 
                 </div>
             </div>
         </div>
         <div class="accordion-item">
             <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                <button class="accordion-button collapsed" id="bottoneAccordo" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
+                    aria-controls="panelsStayOpen-collapseTwo"><img src="assets/img/paypal_icon.png" width="30" class="me-2">
                     PayPal
                 </button>
             </h2>
-            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
                 <div class="accordion-body">
-                    PayPal è un metodo di pagamento online sicuro che permette di pagare senza condividere i dati della
-                    carta di credito o
-                    del conto bancario.
+                    <div class="accordion-body">
+                        PayPal è un metodo di pagamento online sicuro che permette di pagare senza condividere i dati
+                        della
+                        carta di credito o del conto bancario.
+                    </div>
 
                 </div>
             </div>
         </div>
         <div class="accordion-item">
             <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                <button class="accordion-button collapsed" id="bottoneAccordo" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
+                    aria-controls="panelsStayOpen-collapseThree"><img src="assets/img/bonifico.png" width="30" class="me-2">
                     Bonifico bancario
                 </button>
             </h2>
-            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
                 <div class="accordion-body">
-
                     Il bonifico bancario permette di trasferire denaro direttamente dal proprio conto corrente. Richiede
-                    l'utilizzo
-                    dell'IBAN.
-
+                    l'utilizzo dell'IBAN.
                 </div>
             </div>
-        </div>
-
-        <div class="accordion accordion-flush" id="accordionFlushExample">
             <div class="accordion-item">
                 <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                        Contrassegno
+                    <button class="accordion-button collapsed" id="bottoneAccordo" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="true"
+                        aria-controls="panelsStayOpen-collapseFour"><img src="assets/img/Contrasegno.png" width="30" class="me-2">
+                       <span> Contrassegno </span>
                     </button>
                 </h2>
-                <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                    <div class="accordion-body">Il pagamento alla consegna (contrassegno) permette di pagare
-                        direttamente al momento della ricezione del pacco.
+                <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse ">
+                    <div class="accordion-body">
+                        Il pagamento alla consegna (contrassegno) permette di pagare direttamente al momento della
+                        ricezione del pacco.
                     </div>
                 </div>
             </div>
             <div class="accordion-item">
+            <div class="accordion-item">
                 <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                    <button class="accordion-button collapsed d-flex align-items-center" id="bottoneAccordo" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFive" aria-expanded="true"
+                        aria-controls="panelsStayOpen-collapseFive">
+                        <img src="assets/img/gpay_icon.png" width="30" class="me-2">
                         Google Pay
                     </button>
                 </h2>
-                <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div id="panelsStayOpen-collapseFive" class="accordion-collapse collapse">
                     <div class="accordion-body">
-                        Google Pay è un servizio di pagamento online che permette di pagare in modo sicuro e veloce
-                        utilizzando il proprio
+                        Google Pay è un servizio di pagamento online che permette di pagare in modo sicuro e veloce utilizzando il
+                        proprio
                         account Google.
-
                     </div>
                 </div>
             </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                        Apple Pay
-                    </button>
-                </h2>
-                <div id="flush-collapseThree" class="accordion-collapse collapse"
-                    data-bs-parent="#accordionFlushExample">
-                    <div class="accordion-body">
-                        Apple Pay permette di effettuare pagamenti sicuri e rapidi utilizzando i dispositivi Apple.
-
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" id="bottoneAccordo" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseSix" aria-expanded="true"
+                            aria-controls="panelsStayOpen-collapseSix"><img src="assets/img/apple_pay_icon.png" width="30"  class="me-2">
+                            Apple pay
+                        </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseSix" class="accordion-collapse collapse ">
+                        <div class="accordion-body">
+                            Apple Pay permette di effettuare pagamenti sicuri e rapidi utilizzando i dispositivi Apple.
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
 
+        <!--FOOTER-->
         <footer class="" style="background-color: #a3e8dc; color: #004c74;">
             <div class="container mt-2">
                 <div class="row text-center">
@@ -171,7 +190,7 @@
                         </div>
                     </div>
                 </div>
-    
+
                 <div class="row text-center">
                     <div class="col-6 col-sm-6 col-md-3 text-start">
                         <h5>Destinazioni</h5>
@@ -183,29 +202,34 @@
                             <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Oceania</a></li>
                         </ul>
                     </div>
-    
+
                     <div class="col-6 col-sm-6 col-md-3 text-start">
                         <h5>WeFlight</h5>
                         <ul class="nav flex-column">
                             <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Gruppo</a></li>
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Lavora con noi</a></li>
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Area riservata</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Lavora con noi</a>
+                            </li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Area riservata</a>
+                            </li>
                             <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Contatti</a></li>
                         </ul>
                     </div>
-    
+
                     <div class="col-12 col-sm-6 col-md-3 text-md-start">
                         <h5>Info e condizioni di vendita</h5>
                         <ul class="nav flex-column">
                             <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Metodi di pagamento</a>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Metodi di
+                                    pagamento</a>
                             </li>
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Termini e condizioni</a>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Termini e
+                                    condizioni</a>
                             </li>
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Privacy Policy</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Privacy Policy</a>
+                            </li>
                         </ul>
                     </div>
-    
+
                     <div class="col-12 col-sm-6 col-md-3 text-md-start">
                         <h5>Community & Social</h5>
                         <ul class="nav flex-column">
@@ -214,24 +238,24 @@
                             <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Twitter</a></li>
                         </ul>
                     </div>
-    
-    
-    
+
+
+
                 </div>
-    
+
                 <div class="d-flex justify-content-between py-4 my-4 border-top border-dark">
                     <p>© 2024 WeFlight. Tutti i diritti riservati.</p>
                     <ul class="list-unstyled d-flex">
                         <li class="ms-3"><a class="link-dark" href="#"><img src="assets/img/instagram.svg" class="bi"
                                     width="24" height="24">
-    
+
                             </a></li>
                         <li class="ms-3"><a class="link-dark" href="#"><img src="assets/img/facebook.svg" class="bi"
                                     width="24" height="24"></a>
                         </li>
                         <li class="ms-3"><a class="link-dark" href="#"><img src="assets/img/x-twitter.svg" class="bi"
                                     width="24" height="24">
-    
+
                             </a>
                         </li>
                     </ul>
@@ -241,6 +265,5 @@
 
         <script src="js/bootstrap.bundle.min.js"></script>
 </body>
-
 
 </html>
