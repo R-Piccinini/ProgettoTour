@@ -14,156 +14,190 @@
 
 
 <body>
-    <header
-        class="d-flex flex-wrap align-items-center justify-content-between justify-content-sm-around py-3 mb-4 border-bottom">
-        <div class="col-6 col-sm-3 mb-2 ">
-            <a href="home.html" class="d-inline-flex  text-decoration-none">
-                <img class="w-75 h-75" src="assets/img/logo.png" alt="">
-            </a>
-        </div>
-        <div class="col-sm-3 text-end" id="icons">
-            <div>
+    <header>
+        <div class="container-fluid text-center justify-content-around">
+        <div class="row py-3 mb-4"> 
+            <div class="col-4 col-sm-3 mb-2">
                 <a href="home.html" class="text-decoration-none">
-                    <img class="w-25 h-25" src="assets/img/search.png" alt="">
-                </a>
-                <a href="home.html" class="text-decoration-none">
-                    <img class="w-25 h-25" src="assets/img/login.png" alt="">
+                    <img class="logo" src="assets/img/logo.png" alt="">
                 </a>
             </div>
-
-        </div>
-
-        <ul class="nav col-12  mt-4 mb-2 justify-content-center" id="navbar">
-            <li><button type="button" class="btn btn-outline btn mx-4">Destinazioni</button></li>
-            <li><button type="button" class="btn btn-outline btn mx-4">Pacchetti</button></li>
-            <li><button type="button" class="btn btn-outline btn mx-4">Chi Siamo</button></li>
-        </ul>
-
-
-    </header>
-<body>
-    <h1>Lavora con Noi</h1>
-
-    <div class="intro">
-        <p>Sei un giovane in cerca di avventure e appassionato di viaggi? WeFlight è alla ricerca di persone dinamiche,
-            creative e motivate a far parte del nostro team! Scopri le opportunità di carriera e come puoi contribuire a
-            rendere ogni viaggio un'esperienza indimenticabile per i nostri clienti.</p>
-    </div>
-
-    <h2>Posizioni Aperte</h2><br>
-
-    <h3>1. Travel Consultant</h3>
-    <p>Cerchiamo un Travel Consultant con esperienza nel settore turistico, capace di creare itinerari personalizzati e
-        di fornire assistenza ai clienti durante tutto il processo di prenotazione e viaggio.</p>
-
-    <h3>2. Digital Marketing Specialist</h3>
-    <p>Siamo alla ricerca di un Digital Marketing Specialist che abbia familiarità con le strategie di marketing
-        digitale, SEO, gestione dei social media e creazione di contenuti coinvolgenti per promuovere i nostri servizi.
-    </p>
-
-    <h3>3. Tour Guide</h3>
-    <p>Se ami condividere la tua passione per i viaggi e hai una buona conoscenza di diverse destinazioni turistiche,
-        considera di unirti a noi come Tour Guide. La capacità di parlare più lingue è un plus.</p>
-
-    <h3>Come Candidarsi</h3>
-
-    <p>Per candidarti per una delle posizioni sopra elencate, invia il tuo curriculum vitae aggiornato e una lettera
-        motivazionale all'indirizzo email <strong>jobs@weflight.com</strong>. Assicurati di indicare chiaramente il
-        titolo della posizione per cui stai applicando nell'oggetto dell'email.</p>
-
-    <p>Il nostro team di selezione esaminerà le candidature e contatterà i candidati idonei per un colloquio. Non
-        vediamo l'ora di conoscere persone entusiaste e desiderose di contribuire al nostro obiettivo di fornire
-        esperienze di viaggio straordinarie!</p>
-
-    <p>Grazie per il tuo interesse a far parte della squadra WeFlight!</p>
-
-    <button type="button" class="btn btn-primary btn-lg">UNISCITI A NOI</button>
-
-</body>
-<footer class="" style="background-color: #a3e8dc;">
-
-    <div class="container">
-        <div class="row text-center">
-            <div class="d-flex justify-content-center py-4 my-4">
-                <div class="col-6 offset-1">
-                    <form>
-                        <h5>Iscriviti alla nostra newsletter!</h5>
-                        <p>Ricevi offerte mensili, curiosità e novità da WeFlight.</p>
-                        <div class="d-flex w-100 gap-2">
-                            <label for="newsletter1" class="visually-hidden">Email</label>
-                            <input id="newsletter1" type="text" class="form-control" placeholder="Email">
-                            <button class="btn" type="button">Iscriviti</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-
-        <div class="row text-center">
-            <div class="col-6 col-sm-6 col-md-3 text-start">
-                <h5>Destinazioni</h5>
-                <ul class="nav flex-column">
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Europa</a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Stati Uniti</a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Africa</a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Asia</a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Oceania</a></li>
+            <div class="col-auto"></div>
+            <div class="col-4 dropdown ms-auto">
+                <img class="w-75 h-auto" src="assets/img/dropdown.png" data-bs-toggle="dropdown" aria-expanded="false">
+    
+                
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
                 </ul>
             </div>
-
-            <div class="col-6 col-sm-6 col-md-3 text-start">
-                <h5>WeFlight</h5>
-                <ul class="nav flex-column">
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Gruppo</a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Lavora con noi</a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Area riservata</a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Contatti</a></li>
-                </ul>
-            </div>
-
-            <div class="col-12 col-sm-6 col-md-3 text-md-start">
-                <h5>Info e condizioni di vendita</h5>
-                <ul class="nav flex-column">
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
-                    <li class="nav-item mb-2"><a href="Me" class="nav-link p-0 text-muted">Metodi di pagamento</a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Termini e condizioni</a></li>
-                    <li class="nav-item mb-2"><a href="Privacy Policy.html" class="nav-link p-0 text-muted">Privacy
-                            Policy</a></li>
-                </ul>
-            </div>
-
-            <div class="col-12 col-sm-6 col-md-3 text-md-start">
-                <h5>Community & Social</h5>
-                <ul class="nav flex-column">
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Instagram</a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Facebook</a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Twitter</a></li>
-                </ul>
-            </div>
-
-
-
-        </div>
-
-        <div class="d-flex justify-content-between py-4 my-4 border-top border-dark">
-            <p>© 2024 WeFlight. Tutti i diritti riservati.</p>
-            <ul class="list-unstyled d-flex">
-                <li class="ms-3"><a class="link-dark" href="#"><img src="assets/img/instagram.svg" class="bi" width="24"
-                            height="24">
-
-                    </a></li>
-                <li class="ms-3"><a class="link-dark" href="#"><img src="assets/img/facebook.svg" class="bi" width="24"
-                            height="24"></a>
-                </li>
-                <li class="ms-3"><a class="link-dark" href="#"><img src="assets/img/x-twitter.svg" class="bi" width="24"
-                            height="24">
-
+            <div class="col-sm-2 ms-auto d-flex icons" id="">
+                <a href="home.html" class="text-decoration-none icons">
+                        <img class="w-50 h-auto" src="assets/img/search.png" alt="">
                     </a>
-                </li>
+                    <a href="home.html" class="text-decoration-none text-start icons">
+                        <img class="w-50 h-auto" src="assets/img/login.png" alt="">
+                    </a>
+            </div>
+
+
+    
+        </div>
+        
+            <ul class="nav mt-4 mb-5 pb-3 justify-content-center" id="navbar">
+                <li><button type="button" class="btn btn-outline btn mx-4">Destinazioni</button></li>
+                <li><button type="button" class="btn btn-outline btn mx-4">Pacchetti</button></li>
+                <li><button type="button" class="btn btn-outline btn mx-4">Chi Siamo</button></li>
             </ul>
         </div>
-    </div>
-</footer>
+
+    </header>
+
+    <body>
+
+        <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+            <div class="col-10 col-sm-8 col-lg-6">
+                <img src="assets/img/Travel-Organizer.jpg" class=" rounded d-block mx-md-auto img-fluid" alt=""
+                    width="700" height="500">
+            </div>
+            <div class="col-lg-6">
+                <h4 class="display-5   mb-3">Lavora con noi</h4>
+                <p class="lead">Sei un giovane in cerca di avventure e appassionato di viaggi? WeFlight è alla ricerca
+                    di persone dinamiche,
+                    creative e motivate a far parte del nostro team! Scopri le opportunità di carriera e come puoi
+                    contribuire a
+                    rendere ogni viaggio un'esperienza indimenticabile per i nostri clienti.</p>
+            </div>
+        </div>
+
+
+        <div class="intro">
+            <p></p>
+        </div>
+
+        <h2>Posizioni Aperte</h2><br>
+
+        <h3>1. Travel Consultant</h3>
+        <p>Cerchiamo un Travel Consultant con esperienza nel settore turistico, capace di creare itinerari
+            personalizzati e
+            di fornire assistenza ai clienti durante tutto il processo di prenotazione e viaggio.</p>
+
+        <h3>2. Digital Marketing Specialist</h3>
+        <p>Siamo alla ricerca di un Digital Marketing Specialist che abbia familiarità con le strategie di marketing
+            digitale, SEO, gestione dei social media e creazione di contenuti coinvolgenti per promuovere i nostri
+            servizi.
+        </p>
+
+        <h3>3. Tour Guide</h3>
+        <p>Se ami condividere la tua passione per i viaggi e hai una buona conoscenza di diverse destinazioni
+            turistiche,
+            considera di unirti a noi come Tour Guide. La capacità di parlare più lingue è un plus.</p>
+
+        <h3>Come Candidarsi</h3>
+
+        <p>Per candidarti per una delle posizioni sopra elencate, invia il tuo curriculum vitae aggiornato e una lettera
+            motivazionale all'indirizzo email <strong>jobs@weflight.com</strong>. Assicurati di indicare chiaramente il
+            titolo della posizione per cui stai applicando nell'oggetto dell'email.</p>
+
+        <p>Il nostro team di selezione esaminerà le candidature e contatterà i candidati idonei per un colloquio. Non
+            vediamo l'ora di conoscere persone entusiaste e desiderose di contribuire al nostro obiettivo di fornire
+            esperienze di viaggio straordinarie!</p>
+
+        <p>Grazie per il tuo interesse a far parte della squadra WeFlight!</p>
+
+        <button type="button" class="btn btn-primary btn-lg">UNISCITI A NOI</button>
+
+        <footer class="" style="background-color: #a3e8dc; color: #004c74;">
+            <div class="container mt-2">
+                <div class="row text-center">
+                    <div class="d-flex justify-content-center py-4 my-4">
+                        <div class="col-6 offset-1">
+                            <form>
+                                <h5>Iscriviti alla nostra newsletter!</h5>
+                                <p>Ricevi offerte mensili, curiosità e novità da WeFlight.</p>
+                                <div class="d-flex w-100 gap-2">
+                                    <label for="newsletter1" class="visually-hidden">Email</label>
+                                    <input id="newsletter1" type="text" class="form-control" placeholder="Email">
+                                    <button class="btn" type="button">Iscriviti</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="row text-center">
+                    <div class="col-6 col-sm-6 col-md-3 text-start">
+                        <h5>Destinazioni</h5>
+                        <ul class="nav flex-column">
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Europa</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Stati Uniti</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Africa</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Asia</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Oceania</a></li>
+                        </ul>
+                    </div>
+    
+                    <div class="col-6 col-sm-6 col-md-3 text-start">
+                        <h5>WeFlight</h5>
+                        <ul class="nav flex-column">
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Gruppo</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Lavora con noi</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Area riservata</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Contatti</a></li>
+                        </ul>
+                    </div>
+    
+                    <div class="col-12 col-sm-6 col-md-3 text-md-start">
+                        <h5>Info e condizioni di vendita</h5>
+                        <ul class="nav flex-column">
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Metodi di pagamento</a>
+                            </li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Termini e condizioni</a>
+                            </li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+    
+                    <div class="col-12 col-sm-6 col-md-3 text-md-start">
+                        <h5>Community & Social</h5>
+                        <ul class="nav flex-column">
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Instagram</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Facebook</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Twitter</a></li>
+                        </ul>
+                    </div>
+    
+    
+    
+                </div>
+    
+                <div class="d-flex justify-content-between py-4 my-4 border-top border-dark">
+                    <p>© 2024 WeFlight. Tutti i diritti riservati.</p>
+                    <ul class="list-unstyled d-flex">
+                        <li class="ms-3"><a class="link-dark" href="#"><img src="assets/img/instagram.svg" class="bi"
+                                    width="24" height="24">
+    
+                            </a></li>
+                        <li class="ms-3"><a class="link-dark" href="#"><img src="assets/img/facebook.svg" class="bi"
+                                    width="24" height="24"></a>
+                        </li>
+                        <li class="ms-3"><a class="link-dark" href="#"><img src="assets/img/x-twitter.svg" class="bi"
+                                    width="24" height="24">
+    
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+
+
+        <script src="js/bootstrap.bundle.min.js"></script>
+    </body>
+
 
 </html>
 
