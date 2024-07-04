@@ -16,44 +16,53 @@
 
 <body>
     <header>
-        <div class="container-fluid text-center justify-content-around">
-        <div class="row py-3 mb-4"> 
-            <div class="col-4 col-sm-3 mb-2">
-                <a href="home.html" class="text-decoration-none">
-                    <img class="logo" src="assets/img/logo.png" alt="">
-                </a>
-            </div>
-            <div class="col-auto"></div>
-            <div class="col-4 dropdown ms-auto">
-                <img class="w-75 h-auto" src="assets/img/dropdown.png" data-bs-toggle="dropdown" aria-expanded="false">
-    
-                
-                <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
-            </div>
-            <div class="col-sm-2 ms-auto d-flex icons" id="">
-                <a href="home.html" class="text-decoration-none icons">
-                        <img class="w-50 h-auto" src="assets/img/search.png" alt="">
+        <div class="container-fluid text-center">
+            <div class="row py-3  align-items-center justify-content-center">
+                <div class="col-4 col-sm-2 col-md-2 col-lg-2">
+                    <a href="home.html" class="text-decoration-none">
+                        <img class="logo" src="assets/img/logo.png" alt="">
+                    </a>
+                </div>
+                <div class="col">
+                    <ul class="nav  justify-content-center" id="navbar">
+                        <li><button type="button" class="btn btn-outline btn mx-5">Destinazioni</button></li>
+                        <li><button type="button" class="btn btn-outline btn mx-5">Pacchetti</button></li>
+                        <li><button type="button" class="btn btn-outline btn mx-5">Chi Siamo</button></li>
+                    </ul>
+
+                    <div class="dropdown-center" id="menu">
+                        <button class="btn btn-lg dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Menù
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Action two</a></li>
+                            <li><a class="dropdown-item" href="#">Action three</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-4 ms-auto" id="dropdown">
+                    <img class="w-75 h-auto" src="assets/img/dropdown.png" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+
+
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-2 col-lg-1  d-flex icons" id="">
+                    <a href="home.html" class="text-decoration-none icons">
+                        <img class="w-100 h-auto" src="assets/img/search.png" alt="">
                     </a>
                     <a href="home.html" class="text-decoration-none text-start icons">
-                        <img class="w-50 h-auto" src="assets/img/login.png" alt="">
+                        <img class="w-100 h-auto" src="assets/img/login.png" alt="">
                     </a>
+                </div>
             </div>
-
-
-    
-        </div>
-        
-            <ul class="nav mt-4 mb-5 pb-3 justify-content-center" id="navbar">
-                <li><button type="button" class="btn btn-outline btn mx-4">Destinazioni</button></li>
-                <li><button type="button" class="btn btn-outline btn mx-4">Pacchetti</button></li>
-                <li><button type="button" class="btn btn-outline btn mx-4">Chi Siamo</button></li>
-            </ul>
-        </div>
-
     </header>
 
 

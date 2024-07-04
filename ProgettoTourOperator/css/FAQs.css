@@ -7,7 +7,7 @@ p{
     margin: 0 auto;
     padding-left: 16px;
     padding-right: 16px;
-    margin-bottom: 5%;  
+    margin-bottom: 3%;  
 }
 
 #cartaSingola{
@@ -19,6 +19,11 @@ p{
 }
 .card-link{
     color: aliceblue; 
+}
+
+#cardAssis{
+    margin-left: 0%;
+
 }
 
 #navPag{
@@ -33,6 +38,11 @@ strong{
     color: #004c74;
 }
 
+.card-link{
+    color:#004c74;
+    font-style:bold;
+}
+
 .card-link:hover{
     color: #f64242;
 }
@@ -41,11 +51,6 @@ strong{
     background-color: #49a9a644;
     padding: 1%;
     color: #419895;
-}
-
-.card-link{
-    color:#004c74;
-    font-style:bold;
 }
 
 #titoloPag{
@@ -96,12 +101,13 @@ ol.breadcrumb{
     color: #004c74;
     border-color: #49a9a644;
     background-color: #cdececa0;
+    margin-bottom: 5%;
 }
 
 .accordion-body, .accordion-header{
     color: #004c74;
 }
-.testo{
-    margin:10px;
-}
 
+#riquadroAssistenza{
+    margin: 3%;
+}
