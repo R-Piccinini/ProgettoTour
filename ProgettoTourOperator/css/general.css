@@ -1,8 +1,19 @@
+main {
+    flex: 1;
+}
+
 body {
+    height: 100%;
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
+}
+
+.contenitore-pagina {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 h1 {
@@ -73,6 +84,11 @@ header {
     display: none;
 }
 
+#footer {
+    width: 100%;
+    color: #004c74;
+    background-color: #a3e8dc;
+}
 
 @media screen and (max-width: 576px) {
     .logo {
@@ -112,3 +128,4 @@ header {
         display: none;
     }
 }
+
