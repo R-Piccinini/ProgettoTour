@@ -1,0 +1,103 @@
+p{
+    color: #004c74 ;
+}
+
+#cardFaq{
+    max-width: 1140px;
+    margin: 0 auto;
+    padding-left: 16px;
+    padding-right: 16px;
+    margin-bottom: 5%;  
+}
+
+#cartaSingola{
+    margin: 3%;
+    padding: 22px 15px 18px 21px;
+    border: 2pt solid var(--tertiary-blue, #419895);
+    border-radius: 8px;
+    height: 156px;
+}
+.card-link{
+    color: aliceblue; 
+}
+
+#navPag{
+    color: #004c74;
+}
+
+#navPag:hover{
+    color: #f64242;
+}
+
+strong{
+    color: #004c74;
+}
+
+.card-link:hover{
+    color: #f64242;
+}
+
+.card-title{
+    background-color: #49a9a644;
+    padding: 1%;
+    color: #419895;
+}
+
+.card-link{
+    color:#004c74;
+    font-style:bold;
+}
+
+#titoloPag{
+    color: #ba2644;
+    margin: 2%;
+}
+
+#faqDomande{
+    color: #ba2644;
+    margin: 3%;
+}
+
+.linkRitorno{
+    color: #004c74;
+}
+
+.accordion-button:not(.collapsed) {
+    color: var(--bs-accordion-active-color);
+    background-color: #cdececa0;
+}
+
+#navbarina{
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #cdececa0;
+    padding: 1%;
+    height: 0%;
+    margin-bottom :1%;
+}
+
+ol.breadcrumb{
+    margin-bottom: 0%;
+    color: #004c74;
+}
+
+#bottoneAccordo{
+    color: #004c74;
+}
+
+#bottoneAccordo:hover{
+    font-weight:500;
+    border: 1pt solid var(--tertiary-blue,#a8e2e2c4);
+}
+
+.accordion{
+    color: #004c74;
+    border-color: #49a9a644;
+    background-color: #cdececa0;
+}
+
+.accordion-body, .accordion-header{
+    color: #004c74;
+}
