@@ -60,6 +60,7 @@ header {
     height: auto;
 }
 
+
 .btn {
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
@@ -75,7 +76,11 @@ header {
     background-color: #ba2644;
 }
 
-.dropdown {
+#dropdown {
+    display: none;
+}
+
+#menu {
     display: none;
 }
 
@@ -99,7 +104,28 @@ header {
         display: none;
     }
 
-    .dropdown {
+    #dropdown {
         display: inline;
     }
+
+    #menu {
+        display: none;
+    }
 }
+
+@media screen and (max-width: 992px) and (min-width: 577px) {
+
+    .logo {
+        height: 100%;
+        width: 100%;
+    }
+
+    #menu {
+        display: inline;
+    }
+
+    #navbar {
+        display: none;
+    }
+}
+
