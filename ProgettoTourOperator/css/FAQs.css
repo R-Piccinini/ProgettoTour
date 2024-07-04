@@ -101,7 +101,7 @@ ol.breadcrumb{
     color: #004c74;
     border-color: #49a9a644;
     background-color: #cdececa0;
-    margin-bottom: 5%;
+    margin-bottom: 3%;
 }
 
 .accordion-body, .accordion-header{
@@ -109,5 +109,9 @@ ol.breadcrumb{
 }
 
 #riquadroAssistenza{
+    margin-bottom: 3%;
+}
+#cardAssis{
     margin: 3%;
 }
+
