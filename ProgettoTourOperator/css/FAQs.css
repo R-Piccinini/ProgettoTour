@@ -17,14 +17,29 @@ p{
     border-radius: 8px;
     height: 156px;
 }
+.card-link{
+    color: aliceblue; 
+}
 
-#cartaSingola:hover{
-    color: aliceblue;
-    background-color: #49a9a66d;
-    border-color: #4198959f;
+#navPag{
+    color: #004c74;
+}
+
+#navPag:hover{
+    color: #f64242;
+}
+
+strong{
+    color: #004c74;
+}
+
+.card-link:hover{
+    color: #f64242;
 }
 
 .card-title{
+    background-color: #49a9a644;
+    padding: 1%;
     color: #419895;
 }
 
@@ -33,13 +48,23 @@ p{
     font-style:bold;
 }
 
-h3{
+#titoloPag{
+    color: #ba2644;
+    margin: 2%;
+}
+
+#faqDomande{
     color: #ba2644;
     margin: 3%;
 }
 
 .linkRitorno{
     color: #004c74;
+}
+
+.accordion-button:not(.collapsed) {
+    color: var(--bs-accordion-active-color);
+    background-color: #cdececa0;
 }
 
 #navbarina{
@@ -58,7 +83,21 @@ ol.breadcrumb{
     color: #004c74;
 }
 
-#casa{
+#bottoneAccordo{
+    color: #004c74;
+}
 
+#bottoneAccordo:hover{
+    font-weight:500;
+    border: 1pt solid var(--tertiary-blue,#a8e2e2c4);
+}
+
+.accordion{
+    color: #004c74;
+    border-color: #49a9a644;
+    background-color: #cdececa0;
+}
+
+.accordion-body, .accordion-header{
     color: #004c74;
 }
