@@ -5,9 +5,15 @@ p{
 #cardFaq{
     max-width: 1140px;
     margin: 0 auto;
+    padding-bottom: 10%;
     padding-left: 16px;
     padding-right: 16px;
     margin-bottom: 3%;  
+}
+
+#bottoneAccediFaq{
+  width: 209%;
+  height: 65%;
 }
 
 #cartaSingola{
