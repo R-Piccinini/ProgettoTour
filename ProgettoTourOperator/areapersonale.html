@@ -15,16 +15,36 @@
 
 
 <body>
+    <!-- Header e navbar -->
     <header>
-        <div class="container-fluid text-center justify-content-around">
-            <div class="row py-3 mb-4">
-                <div class="col-4 col-sm-3 mb-2">
+        <div class="container-fluid text-center">
+            <div class="row py-3  align-items-center justify-content-center">
+                <div class="col-4 col-sm-2 col-md-2 col-lg-2">
                     <a href="home.html" class="text-decoration-none">
                         <img class="logo" src="assets/img/logo.png" alt="">
                     </a>
                 </div>
-                <div class="col-auto"></div>
-                <div class="col-4 dropdown ms-auto">
+                <div class="col">
+                    <ul class="nav  justify-content-center" id="navbar">
+                        <li><button type="button" class="btn btn-outline btn mx-5">Destinazioni</button></li>
+                        <li><button type="button" class="btn btn-outline btn mx-5">Pacchetti</button></li>
+                        <li><button type="button" class="btn btn-outline btn mx-5">Chi Siamo</button></li>
+                    </ul>
+
+                    <div class="dropdown-center" id="menu">
+                        <button class="btn btn-lg dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Menù
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Action two</a></li>
+                            <li><a class="dropdown-item" href="#">Action three</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-4 ms-auto" id="dropdown">
                     <img class="w-75 h-auto" src="assets/img/dropdown.png" data-bs-toggle="dropdown"
                         aria-expanded="false">
 
@@ -35,113 +55,135 @@
                         <li><a class="dropdown-item" href="#">Something else here</a></li>
                     </ul>
                 </div>
-                <div class="col-sm-2 ms-auto d-flex icons" id="">
+                <div class="col-sm-2 col-lg-1  d-flex icons" id="">
                     <a href="home.html" class="text-decoration-none icons">
-                        <img class="w-50 h-auto" src="assets/img/search.png" alt="">
+                        <img class="w-100 h-auto" src="assets/img/search.png" alt="">
                     </a>
-                    <a href="home.html" class="text-decoration-none text-start icons">
-                        <img class="w-50 h-auto" src="assets/img/login.png" alt="">
+                    <a href="#" class="text-decoration-none text-start icons" id="inputAccedi" data-bs-toggle="modal"
+                        data-bs-target="#formAccedi">
+                        <img class="w-100 h-auto" src="assets/img/login.png" alt="">
                     </a>
+                    <div class="modal fade" id="formAccedi" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Effettua l'accesso</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form>
+                                        <div class="mb-3">
+                                            <label for="EmailModal" class="form-label">Email</label>
+                                            <input type="email" class="form-control" id="EmailModal"
+                                                aria-describedby="emailHelp">
+                                            <div id="emailHelp" class="form-text">Non condivideremo mai i tuoi dati.</div>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="PasswordModal" class="form-label">Password</label>
+                                            <input type="password" class="form-control" id="PasswordModal">
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button id="bottone-modal" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Torna
+                                        indietro</button>
+                                    <button id="bottone-modal" type="button" class="btn btn-primary">Accedi</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-
-
-
             </div>
-
-            <ul class="nav mt-4 mb-5 pb-3 justify-content-center" id="navbar">
-                <li><button type="button" class="btn btn-outline btn mx-4">Destinazioni</button></li>
-                <li><button type="button" class="btn btn-outline btn mx-4">Pacchetti</button></li>
-                <li><button type="button" class="btn btn-outline btn mx-4">Chi Siamo</button></li>
-            </ul>
-        </div>
     </header>
 
-    <div class="container">
-        <div class="row rounded">
-            <div class="col-12 col-lg-4">
-                <div class="d-flex flex-column p-3 text-white rounded" style="width: 280px; background-color: #004c74;">
-                    <a href="/"
-                        class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
-                        <span class="bi me-2 fs-4" width="40" height="32">Area Personale</span>
-                    </a>
-                    <hr>
-                    <ul class="nav nav-pills flex-column mb-auto">
-                        <li class="nav-item my-1">
-                            <a href="#" class="nav-link" onmouseover="aggiungiSfondo(this)"
-                                onmouseout="rimuoviSfondo(this)" onclick="attivaSfondo(this)">
-                                <svg class="bi me-2" width="16" height="16">
-                                    <use xlink:href="#home"></use>
-                                </svg>
-                                Viaggi
-                            </a>
-                        </li>
-                        <li class="nav-item my-1">
-                            <a href="#" class="nav-link" onmouseover="aggiungiSfondo(this)"
-                                onmouseout="rimuoviSfondo(this)" onclick="attivaSfondo(this)">
-                                <svg class="bi me-2" width="16" height="16">
-                                    <use xlink:href="#speedometer2"></use>
-                                </svg>
-                                Wishlist
-                            </a>
-                        </li>
-                        <li class="nav-item my-1">
-                            <a href="#" class="nav-link" onmouseover="aggiungiSfondo(this)"
-                                onmouseout="rimuoviSfondo(this)" onclick="attivaSfondo(this)">
-                                <svg class="bi me-2" width="16" height="16">
-                                    <use xlink:href="#table"></use>
-                                </svg>
-                                Info Account
-                            </a>
-                        </li>
-                        <li class="nav-item my-1">
-                            <a href="#" class="nav-link" onmouseover="aggiungiSfondo(this)"
-                                onmouseout="rimuoviSfondo(this)" onclick="attivaSfondo(this)">
-                                <svg class="bi me-2" width="16" height="16">
-                                    <use xlink:href="#grid"></use>
-                                </svg>
-                                Lista buoni
-                            </a>
-                        </li>
-                    </ul>
+    <div class="contenuto p-5">
+        <!-- Contenuti principali -->
+        <div class="container mt-5">
+            <div class="row rounded">
+                <!-- Prima colonna con contenuti -->
+                <div class="col-12 col-lg-4">
+                    <div class="d-flex flex-column p-3 text-white rounded" id="navVert">
+                        <a href="areapersonale.html"
+                            class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+                            <span class="bi me-2 fs-4" width="40" height="32">Area Personale</span>
+                        </a>
+                        <hr>
+                        <ul class="nav nav-pills flex-column mb-auto">
+                            <li class="nav-item my-1">
+                                <a href="#" class="nav-link" onmouseover="aggiungiSfondo(this)"
+                                    onmouseout="rimuoviSfondo(this)" onfocus="attivaSfondo(this)"
+                                    onclick="mostraSezione('viaggi')">
+                                    <svg class="bi me-2" width="16" height="16"></svg>
+                                    Viaggi
+                                </a>
+                            </li>
+                            <li class="nav-item my-1">
+                                <a href="#" class="nav-link" onmouseover="aggiungiSfondo(this)"
+                                    onmouseout="rimuoviSfondo(this)" onfocus="attivaSfondo(this)"
+                                    onclick="mostraSezione('wishlist')">
+                                    <svg class="bi me-2" width="16" height="16"></svg>
+                                    Wishlist
+                                </a>
+                            </li>
+                            <li class="nav-item my-1">
+                                <a href="#" class="nav-link" onmouseover="aggiungiSfondo(this)"
+                                    onmouseout="rimuoviSfondo(this)" onfocus="attivaSfondo(this)"
+                                    onclick="mostraSezione('info-account')">
+                                    <svg class="bi me-2" width="16" height="16"></svg>
+                                    Info Account
+                                </a>
+                            </li>
+                            <li class="nav-item my-1">
+                                <a href="#" class="nav-link" onmouseover="aggiungiSfondo(this)"
+                                    onmouseout="rimuoviSfondo(this)" onfocus="attivaSfondo(this)"
+                                    onclick="mostraSezione('lista-buoni')">
+                                    <svg class="bi me-2" width="16" height="16"></svg>
+                                    Lista buoni
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
+                <!-- Seconda colonna con contenuti -->
+                <div class="col-12 col-lg-8">
+                    <div class="rounded" id="sezione-contenuti">
+                        <h2>Benvenuto nell'Area Personale</h2>
+                        <p>Qui puoi gestire i tuoi viaggi, visualizzare la tua wishlist,
+                            modificare
+                            le informazioni del tuo
+                            account e controllare la tua lista di buoni.</p>
 
-            <div class="col-12 col-lg-8">
-                <div class="content">
-                    <h2 style="color: #ff8a21;">Benvenuto nell'Area Personale</h2>
-                    <p style="color: #f64242">Qui puoi gestire i tuoi viaggi, visualizzare la tua wishlist,
-                        modificare
-                        le informazioni del tuo
-                        account e controllare la tua lista di buoni.</p>
-
-                    <div id="viaggi" class="section">
-                        <h3 style="color: white;">Viaggi</h3>
-                        <p>Dettagli sui tuoi viaggi prenotati.</p>
                         <!-- Contenuto dei viaggi -->
-                    </div>
+                        <div class="sezione viaggi">
+                            <h3>Viaggi</h3>
+                            <p>Dettagli sui tuoi viaggi prenotati.</p>
+                        </div>
 
-                    <div id="wishlist" class="section">
-                        <h3>Wishlist</h3>
-                        <p style="color: #a3e8dc;">Elementi salvati nella tua wishlist.</p>
                         <!-- Contenuto della wishlist -->
-                    </div>
+                        <div class="sezione wishlist">
+                            <h3>Wishlist</h3>
+                            <p>Elementi salvati nella tua wishlist.</p>
+                        </div>
 
-                    <div id="info-account" class="section">
-                        <h3>Info Account</h3>
-                        <p>Informazioni personali e impostazioni dell'account.</p>
-                        <!-- Contenuto delle informazioni account -->
-                    </div>
+                        <!-- Contenuto delle info account -->
+                        <div class="sezione info-account">
+                            <h3>Info Account</h3>
+                            <p>Informazioni personali e impostazioni dell'account.</p>
+                        </div>
 
-                    <div id="lista-buoni" class="section">
-                        <h3>Lista Buoni</h3>
-                        <p>Buoni sconto disponibili.</p>
                         <!-- Contenuto della lista buoni -->
+                        <div class="sezione lista-buoni">
+                            <h3>Lista Buoni</h3>
+                            <p>Buoni sconto disponibili.</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
+    <!-- Footer -->
     <footer class="" id="footer">
         <div class="container mt-2">
             <div class="row text-center">

@@ -8,6 +8,11 @@
     color: #004c74;
 }
 
+#bottone-modal {
+    color: white;
+    border-color: white;
+}
+
 .nav-link {
     color: white;
 }
@@ -17,5 +22,28 @@
 }
 
 h2 {
+    color: #ff8a21;
+}
+
+h3 {
+    color: #ff8a21;
+}
+
+#sezione-contenuti p {
+    color: white;
+}
+
+.sezione {
+    display: none;
+}
+
+#navVert {
+    width: 280px;
+    background-color: #004c74;
+}
+
+#sezione-contenuti {
+    padding: 30px;
+    background-color: #004c74;
     color: white;
 }

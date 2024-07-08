@@ -23,9 +23,28 @@ document.addEventListener('click', function (event) {
     }
 })
 
-/*function categoria1(){
-    document.querySelectorAll(".container").forEach(function(element) {
-       element.style.display = "none";
-   });
-   document.getElementById("containerCat1").style.display = "block";
-}*/
+// Funzione che mostra la sezione
+function mostraSezione(sezione) {
+    // Nasconde tutte le sezioni
+    var sezioni = document.querySelectorAll('.sezione');
+    sezioni.forEach(function (item) {
+        item.style.display = 'none';
+    });
+
+    // Mostra la sezione selezionata
+    var sezioneSelezionata = document.querySelector('.' + sezione);
+    if (sezioneSelezionata) {
+        sezioneSelezionata.style.display = 'block';
+    }
+
+    var h2 = document.querySelector('#sezione-contenuti h2')
+    if (h2) {
+        h2.style.display = 'none';
+    }
+
+    var p = document.querySelector('#sezione-contenuti p')
+    if (p) {
+        p.style.display = 'none';
+    }
+}
+
