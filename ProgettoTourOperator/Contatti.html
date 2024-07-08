@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Template</title>
+    <title>Contatti</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/general.css">
     <link rel="stylesheet" href="css/Contatti.css">
@@ -65,61 +65,45 @@
             </div>
     </header>
 
-<body>
-    <div class="container">
-        <h2 class="text-center mb-4">Contatti</h2>
+    <div class="contenuto py-4">
+        <div class="container">
+            <h2 class="text-center mb-4">Contatti</h2>
 
-        <div class="row mb-5">
-            <div class="col-md-6">
-                <h4>Informazioni di Contatto</h4>
-                <ul class="list-unstyled">
-                    <li><strong>Indirizzo:</strong> Via dei Viaggiatori, 123, 00100 Roma</li>
-                    <li><strong>Telefono:</strong> +39 0123 456789</li>
-                    <li><strong>Email:</strong> info@weflight.com</li>
-                </ul>
+            <div class="row mb-5">
+                <div class="col-md-6">
+                    <h4>Informazioni di Contatto</h4>
+                    <ul class="list-unstyled">
+                        <li><strong>Indirizzo:</strong> Via dei Viaggiatori, 123, 00100 Roma</li>
+                        <li><strong>Telefono:</strong> +39 0123 456789</li>
+                        <li><strong>Email:</strong> info@weflight.com</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <h4>Orari di Apertura</h4>
+                    <p>Il nostro ufficio è aperto dal lunedì al venerdì dalle 9:00 alle 18:00.</p>
+                </div>
             </div>
-            <div class="col-md-6">
-                <h4>Orari di Apertura</h4>
-                <p>Il nostro ufficio è aperto dal lunedì al venerdì dalle 9:00 alle 18:00.</p>
-            </div>
+
+            <h4>Invia un Messaggio</h4>
+            <form>
+                <div class="form-group">
+                    <label for="name">Nome</label>
+                    <input type="text" class="form-control" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Messaggio</label>
+                    <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+                </div>
+                <div>
+                    <button type="submit" class="btn my-4">Invia Messaggio</button>
+                </div>
+            </form>
         </div>
-
-        <h4>Invia un Messaggio</h4>
-        <form>
-            <div class="form-group">
-                <label for="name">Nome</label>
-                <input type="text" class="form-control" id="name" name="name" required>
-            </div>
-            <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" class="form-control" id="email" name="email" required>
-            </div>
-            <div class="form-group">
-                <label for="message">Messaggio</label>
-                <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary">Invia Messaggio</button>
-        </form>
     </div>
-
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
-
-</body>
-
-</html>
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     <footer id="footer">
         <div class="container mt-2">
@@ -210,9 +194,9 @@
             </div>
         </div>
     </footer>
-    </div>
+    
     <script src="js/bootstrap.bundle.min.js"></script>
-</body>
 
+</body>
 
 </html>
