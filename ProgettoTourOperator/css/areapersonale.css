@@ -29,6 +29,14 @@ h3 {
     color: #ff8a21;
 }
 
+#formAccedi {
+    background-color: #004c74;
+}
+
+#formRegistrati {
+    background-color: #004c74;
+}
+
 #sezione-contenuti p {
     color: white;
 }
@@ -38,7 +46,7 @@ h3 {
 }
 
 #navVert {
-    width: 280px;
+    width: 90%;
     background-color: #004c74;
 }
 
@@ -46,4 +54,11 @@ h3 {
     padding: 30px;
     background-color: #004c74;
     color: white;
+}
+
+@media screen and (max-width: 767px) {
+    #navVert {
+        width: 80%;
+        text-align: center;
+    }
 }
