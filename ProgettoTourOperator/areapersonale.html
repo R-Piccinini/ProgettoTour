@@ -78,20 +78,24 @@
                                             <label for="emailModal" class="form-label">Email</label>
                                             <input type="email" class="form-control" id="emailModal"
                                                 aria-describedby="emailHelp" required>
-                                            <div id="emailHelp" class="form-text">Non condivideremo mai i tuoi dati.</div>
                                         </div>
                                         <div class="mb-3">
                                             <label for="passwordModal" class="form-label">Password</label>
                                             <input type="password" class="form-control" id="passwordModal" required>
                                         </div>
-                                        <p>Se non sei ancora registrato clicca <a href="#" class="text-decoration-underline" data-bs-toggle="modal" data-bs-target="#formRegistrati">qui</a> per registrarti</p>
+                                        <p> Hai dimenticato la tua password? Clicca <a href="#"
+                                            class="text-decoration-underline" data-bs-toggle="modal"
+                                            data-bs-target="#formRegistrati">qui</a> per reimpostarla</p>
+                                        <p>Se non sei ancora registrato clicca <a href="#"
+                                                class="text-decoration-underline" data-bs-toggle="modal"
+                                                data-bs-target="#formRegistrati">qui</a> per registrarti</p>
                                     </form>
                                 </div>
                                 <div class="modal-footer">
                                     <button id="bottone-modal" type="button" class="btn btn-secondary"
                                         data-bs-dismiss="modal">Torna
                                         indietro</button>
-                                    <button id="bottone-modal" type="button" class="btn btn-primary">Accedi</button>
+                                    <button id="bottone-modal" type="button" class="btn btn-primary"><a href="areapersonale.html?=id" class="text-white">Accedi</a></button>
                                 </div>
                             </div>
                         </div>
@@ -101,7 +105,8 @@
                         <div class="modal-dialog modal-dialog-centered">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h1 class="modal-title fs-5" id="formModalRegistrati">Inserisci i tuoi dati per la registrazione</h1>
+                                    <h1 class="modal-title fs-5" id="formModalRegistrati">Inserisci i tuoi dati per la
+                                        registrazione</h1>
                                     <button type="button" class="btn-close" data-bs-dismiss="modal"
                                         aria-label="Close"></button>
                                 </div>
@@ -111,20 +116,28 @@
                                             <label for="emailModal" class="form-label">Email</label>
                                             <input type="email" class="form-control" id="emailModal"
                                                 aria-describedby="emailHelp" required>
-                                            <div id="emailHelp" class="form-text">Non condivideremo mai i tuoi dati.</div>
+                                            <div id="emailHelp" class="form-text">Non condivideremo mai i tuoi dati.
+                                            </div>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="nicknameModal" class="form-label">Nome Utente</label>
+                                            <input type="name" class="form-control" id="nicknameModal" required>
                                         </div>
                                         <div class="mb-3">
                                             <label for="passwordModal" class="form-label">Password</label>
                                             <input type="password" class="form-control" id="passwordModal" required>
                                         </div>
                                         <div class="mb-3">
-                                            <label for="confermaPasswordModal" class="form-label">Conferma Password</label>
-                                            <input type="password" class="form-control" id="confermaPasswordModal" required>
+                                            <label for="confermaPasswordModal" class="form-label">Conferma
+                                                Password</label>
+                                            <input type="password" class="form-control" id="confermaPasswordModal"
+                                                required>
                                         </div>
                                     </form>
                                 </div>
                                 <div class="modal-footer">
-                                    <button id="bottone-modal" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Torna
+                                    <button id="bottone-modal" type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Torna
                                         indietro</button>
                                     <button id="bottone-modal" type="button" class="btn btn-primary">Registrati</button>
                                 </div>
@@ -221,7 +234,7 @@
         </div>
     </div>
     <!-- Footer -->
-    <footer class="" id="footer">
+    <footer class="mt-auto" id="footer">
         <div class="container mt-2">
             <div class="row text-center">
                 <div class="d-flex justify-content-center py-4 my-4">
