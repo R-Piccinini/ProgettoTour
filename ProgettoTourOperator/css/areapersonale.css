@@ -29,12 +29,18 @@ h3 {
     color: #ff8a21;
 }
 
-#formAccedi {
+.modal-content {
     background-color: #004c74;
+    opacity: 100%;
+    color: white;
 }
 
-#formRegistrati {
-    background-color: #004c74;
+.modal-backdrop {
+    background-color: #a3e8dc;
+}
+
+#emailHelp {
+    color: lightgray;
 }
 
 #sezione-contenuti p {
