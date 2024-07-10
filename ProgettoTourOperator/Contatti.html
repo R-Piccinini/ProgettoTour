@@ -64,46 +64,50 @@
                 </div>
             </div>
     </header>
+<div class="contenuto py-4">
+    <div class="container">
+        <h2 class="text-center mb-4">Contatti</h2>
 
-    <div class="contenuto py-4">
-        <div class="container">
-            <h2 class="text-center mb-4">Contatti</h2>
-
-            <div class="row mb-5">
-                <div class="col-md-6">
-                    <h4>Informazioni di Contatto</h4>
-                    <ul class="list-unstyled">
-                        <li><strong>Indirizzo:</strong> Via dei Viaggiatori, 123, 00100 Roma</li>
-                        <li><strong>Telefono:</strong> +39 0123 456789</li>
-                        <li><strong>Email:</strong> info@weflight.com</li>
-                    </ul>
-                </div>
-                <div class="col-md-6">
-                    <h4>Orari di Apertura</h4>
-                    <p>Il nostro ufficio è aperto dal lunedì al venerdì dalle 9:00 alle 18:00.</p>
-                </div>
+        <div class="row mb-5">
+            <div class="col-md-6">
+                <h4>Informazioni di Contatto</h4>
+                <ul class="list-unstyled">
+                    <li><strong>Indirizzo:</strong> Via dei Viaggiatori, 123, 00100 Roma</li>
+                    <li><strong>Telefono:</strong> +39 0123 456789</li>
+                    <li><strong>Email:</strong> info@weflight.com</li>
+                </ul>
             </div>
-
-            <h4>Invia un Messaggio</h4>
-            <form>
-                <div class="form-group">
-                    <label for="name">Nome</label>
-                    <input type="text" class="form-control" id="name" name="name" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" class="form-control" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="message">Messaggio</label>
-                    <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
-                </div>
-                <div>
-                    <button type="submit" class="btn my-4">Invia Messaggio</button>
-                </div>
-            </form>
+            <div class="col-md-6">
+                <h4>Orari di Apertura</h4>
+                <p>Il nostro ufficio è aperto dal lunedì al venerdì dalle 9:00 alle 18:00.</p>
+            </div>
         </div>
+
+        <h4>Invia un Messaggio</h4>
+        <form>
+            <div class="form-row">
+            <div class="form-group d-flex align-items-center">
+                <label for="name" class="mr-2"></label>
+                <input type="text" class="form-control" id="name" name="name" placeholder="Inserisci il tuo nome" required>
+            
+                <label for="email" class="mx-2"></label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="Inserisci la tua email" required>
+            </div>
+            </div>
+            <div class="form-group">
+                <label for="message">Messaggio</label>
+                <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+            </div>
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="privacy" name="privacy" required>
+                <label class="form-check-label" for="privacy">Accetto i termini sulla privacy</label>
+            </div>
+            <div>
+                <button type="submit" class="btn my-4">Invia Messaggio</button>
+            </div>
+        </form>
     </div>
+</div>
 
     <footer id="footer">
         <div class="container mt-2">
