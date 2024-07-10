@@ -32,7 +32,7 @@ h3 {
 .modal-content {
     background-color: #004c74;
     opacity: 100%;
-    color: white;
+    color: black;
 }
 
 .modal-backdrop {
@@ -40,6 +40,10 @@ h3 {
 }
 
 #emailHelp {
+    color: lightgray;
+}
+
+#registerHelp {
     color: lightgray;
 }
 

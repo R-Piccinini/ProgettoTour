@@ -74,18 +74,18 @@
                                 </div>
                                 <div class="modal-body">
                                     <form>
-                                        <div class="mb-3">
-                                            <label for="emailModal" class="form-label">Email</label>
-                                            <input type="email" class="form-control" id="emailModal"
-                                                aria-describedby="emailHelp" required>
+                                        <div class="form-floating mb-3">
+                                            <input type="email" class="form-control rounded-3" id="floatingInput"
+                                                required placeholder="name@example.com">
+                                            <label for="floatingInput">Email</label>
                                         </div>
-                                        <div class="mb-3">
-                                            <label for="passwordModal" class="form-label">Password</label>
-                                            <input type="password" class="form-control" id="passwordModal" required>
-                                        </div>
+                                        <div class="form-floating mb-3">
+                                            <input type="password" class="form-control rounded-3" id="floatingPassword" placeholder="Password">
+                                            <label for="floatingPassword">Password</label>
+                                          </div>
                                         <p> Hai dimenticato la tua password? Clicca <a href="#"
-                                            class="text-decoration-underline" data-bs-toggle="modal"
-                                            data-bs-target="#formRegistrati">qui</a> per reimpostarla</p>
+                                                class="text-decoration-underline" data-bs-toggle="modal"
+                                                data-bs-target="#formRegistrati">qui</a> per reimpostarla</p>
                                         <p>Non sei ancora registrato? Clicca <a href="#"
                                                 class="text-decoration-underline" data-bs-toggle="modal"
                                                 data-bs-target="#formRegistrati">qui</a> per registrarti</p>
@@ -95,7 +95,8 @@
                                     <button id="bottone-modal" type="button" class="btn btn-secondary"
                                         data-bs-dismiss="modal">Torna
                                         indietro</button>
-                                    <button id="bottone-modal" type="button" class="btn"><a href="areapersonale.html?=id" class="text-white">Accedi</a></button>
+                                    <button id="bottone-modal" type="button" class="btn"><a
+                                            href="areapersonale.html?=id" class="text-white">Accedi</a></button>
                                 </div>
                             </div>
                         </div>
@@ -140,6 +141,8 @@
                                         data-bs-dismiss="modal">Torna
                                         indietro</button>
                                     <button id="bottone-modal" type="button" class="btn">Registrati</button>
+                                    <div id="registerHelp" class="text">Non condivideremo mai i tuoi dati.
+                                    </div>
                                 </div>
                             </div>
                         </div>
