@@ -25,14 +25,53 @@
     background-position: center;
 }
 
-.divisore {
+#cssportal-grid {
+	display: grid;
+	grid-template-rows: repeat(2, 1fr);
+	grid-template-columns: repeat(4, 1fr);
+	gap: 0;
+	width: 100%;
+	height: 100%;
+}
+
+#div1 {
+	grid-area: 1 / 1 / 2 / 3;
+	background-color: rgba(175,237,114, 0.5);
+}
+
+#div2 {
+	grid-area: 2/1/3/2;
+	background-color: rgba(183,110,90, 0.5);
+}
+
+#div3 {
+	grid-area: 2/2/3/3;
+	background-color: rgba(14,242,84, 0.5);
+}
+
+#div4 {
+	grid-area: 1 / 3 / 3 / 4;
+	background-color: rgba(225,88,174, 0.5);
+}
+
+#div5 {
+	grid-area: 1/4/2/5;
+	background-color: rgba(183,64,39, 0.5);
+}
+
+#div6 {
+	grid-area: 2/4/3/5;
+	background-color: rgba(188,152,119, 0.5);
+}
+
+/*.divisore {
     width: 100%;
     height: 3rem;
     background-color: rgba(0, 0, 0, .1);
     border: solid rgba(0, 0, 0, .15);
     border-width: 1px 0;
     box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
-}
+}*/
 
 @media screen and (max-width: 576px) {
 
