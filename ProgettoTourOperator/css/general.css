@@ -79,6 +79,38 @@ header {
     display: none;
 }
 
+.modal-content {
+    background-color: #004c74;
+    opacity: 100%;
+    color: black;
+}
+
+#bottone-modal {
+    color: white;
+    border-color: white;
+}
+
+#formtext {
+    color: white;
+}
+
+#formcheck {
+    color: white;
+    float: inline-start;
+}
+
+.modal-backdrop {
+    background-color: #a3e8dc;
+}
+
+#emailHelp {
+    color: lightgray;
+}
+
+#registerHelp {
+    color: lightgray;
+}
+
 #menu {
     display: none;
 }

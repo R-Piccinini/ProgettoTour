@@ -8,11 +8,6 @@
     color: #004c74;
 }
 
-#bottone-modal {
-    color: white;
-    border-color: white;
-}
-
 .nav-link {
     color: white;
 }
@@ -27,33 +22,6 @@ h2 {
 
 h3 {
     color: #ff8a21;
-}
-
-.modal-content {
-    background-color: #004c74;
-    opacity: 100%;
-    color: black;
-}
-
-#formtext {
-    color: white;
-}
-
-#formcheck {
-    color: white;
-    float: inline-start;
-}
-
-.modal-backdrop {
-    background-color: #a3e8dc;
-}
-
-#emailHelp {
-    color: lightgray;
-}
-
-#registerHelp {
-    color: lightgray;
 }
 
 #sezione-contenuti p {
