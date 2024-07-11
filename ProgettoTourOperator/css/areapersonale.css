@@ -35,6 +35,15 @@ h3 {
     color: black;
 }
 
+#formtext {
+    color: white;
+}
+
+#formcheck {
+    color: white;
+    float: inline-start;
+}
+
 .modal-backdrop {
     background-color: #a3e8dc;
 }
