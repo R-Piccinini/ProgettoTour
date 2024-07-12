@@ -350,14 +350,74 @@
             </div>
         </div>
         <!-- Contenitore griglia -->
-        <div class="container">
+        <div class="container mt-3">
             <div id="cssportal-grid">
-                <div id="div1"><img src="https://placehold.co/200x100" class="card-img-top" alt="..."></div>
-                <div id="div2"><img src="https://placehold.co/100x100" class="card-img-top" alt="..."></div>
-                <div id="div3"><img src="https://placehold.co/100x100" class="card-img-top" alt="..."></div>
-                <div id="div4"><img src="https://placehold.co/100x200" class="card-img-top" alt="..."></div>
-                <div id="div5"><img src="https://placehold.co/100x100" class="card-img-top" alt="..."></div>
-                <div id="div6"><img src="https://placehold.co/100x100" class="card-img-top" alt="..."></div>
+                <!-- Primo elemento griglia -->
+                <div class="card text-white text-center" id="div1" onmouseover="playPause('video1')"
+                    onmouseout="stayPause('video1')" onclick="togglePause('video1')">
+                    <video src="assets/Video/West Virginia.mp4" id="video1" class="card-img rounded"
+                        preload="auto" loop alt="...">
+                    </video>
+                    <div class="card-img-overlay">
+                        <h2 class="card-title">West Virginia</h2>
+                        <p class="card-text">Trekking tra le foreste secolari</p>
+                    </div>
+                </div>
+                <!-- Secondo elemento griglia -->
+                <div class="card text-white text-center" id="div2" onmouseover="playPause('video2')"
+                    onmouseout="stayPause('video2')" onclick="togglePause('video2')">
+                    <video src="assets/Video/Marocco.mp4" id="video2" class="card-img rounded"
+                        preload="auto" loop alt="...">
+                    </video>
+                    <div class="card-img-overlay">
+                        <h2 class="card-title">Marocco</h2>
+                        <p class="card-text">Trekking tra le foreste secolari</p>
+                    </div>
+                </div>
+                <!-- Terzo elemento griglia -->
+                <div class="card text-white text-center" id="div3" onmouseover="playPause('video3')"
+                    onmouseout="stayPause('video3')" onclick="togglePause('video3')">
+                    <video src="assets/Video/Giappone.mp4" id="video3" class="card-img rounded"
+                        preload="auto" loop alt="...">
+                    </video>
+                    <div class="card-img-overlay">
+                        <h2 class="card-title">Giappone</h2>
+                        <p class="card-text">Trekking tra le foreste secolari</p>
+                    </div>
+                </div>
+                <!-- Quarto elemento griglia -->
+                <div class="card text-white text-center" id="div4" onmouseover="playPause('video4')"
+                    onmouseout="stayPause('video4')" onclick="togglePause('video4')">
+                    <video src="assets/Video/Venezia.mp4" id="video4" class="card-img rounded"
+                        preload="auto" loop alt="...">
+                    </video>
+                    <div class="card-img-overlay">
+                        <h2 class="card-title">Venezia</h2>
+                        <p class="card-text">Trekking tra le foreste secolari</p>
+                    </div>
+                </div>
+                <!-- Quinto elemento griglia -->
+                <div class="card text-white text-center" id="div5" onmouseover="playPause('video5')"
+                    onmouseout="stayPause('video5')" onclick="togglePause('video5')">
+                    <video src="assets/Video/Rio delle Amazzoni.mp4" id="video5" class="card-img rounded"
+                        preload="auto" loop alt="...">
+                    </video>
+                    <div class="card-img-overlay">
+                        <h2 class="card-title">Rio delle Amazzoni</h2>
+                        <p class="card-text">Trekking tra le foreste secolari</p>
+                    </div>
+                </div>
+                <!-- Sesto elemento griglia -->
+                <div class="card text-white text-center" id="div6" onmouseover="playPause('video6')"
+                    onmouseout="stayPause('video6')" onclick="togglePause('video6')">
+                    <video src="assets/Video/Nuova Zelanda.mp4" id="video6" class="card-img rounded"
+                        preload="auto" loop alt="...">
+                    </video>
+                    <div class="card-img-overlay">
+                        <h2 class="card-title">Nuova Zelanda</h2>
+                        <p class="card-text">Trekking tra le foreste secolari</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -466,6 +526,7 @@
     </footer>
 
     <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/home.js"></script>
 </body>
 
 
