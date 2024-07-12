@@ -118,6 +118,22 @@ header {
 #footer {
     color: #004c74;
     background-color: #a3e8dc;
+   
+}
+
+.dropdown-menu{
+    background-color: #a3e8dc;
+    border-color: #ba2644;
+}
+
+.dropdown-item{
+    color: #ba2644;
+}
+
+.dropdown-item:hover{
+    background-color: #ba2644;
+    color: white;
+   
 }
 
 @media screen and (max-width: 576px) {
