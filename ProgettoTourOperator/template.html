@@ -23,10 +23,25 @@
                     </a>
                 </div>
                 <div class="col">
-                    <ul class="nav  justify-content-center" id="navbar">
-                        <li><button type="button" class="btn btn-outline btn mx-5">Destinazioni</button></li>
-                        <li><button type="button" class="btn btn-outline btn mx-5">Pacchetti</button></li>
-                        <li><button type="button" class="btn btn-outline btn mx-5">Chi Siamo</button></li>
+                    <ul class="nav justify-content-evenly text-decoration-none" id="navbar">
+                        <li><a role="button" href="ChiSiamo.html" class="btn btn-outline btn mx-4">Chi Siamo</a></li>
+                        <li>
+                            <div class="dropdown-center">
+                                <button class="btn btn-outline btn mx-4" type="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    Destinazioni
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Europa</a></li>
+                                    <li><a class="dropdown-item" href="#">Asia</a></li>
+                                    <li><a class="dropdown-item" href="#">America</a></li>
+                                    <li><a class="dropdown-item" href="#">Oceania</a></li>
+                                    <li><a class="dropdown-item" href="#">Africa</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a role="button" href="..." class="btn btn-outline btn mx-4">Pacchetti</a></li>
+                        <li><a role="button" href="Contatti.html" class="btn btn-outline btn mx-4">Contatti</a></li>
                     </ul>
 
                     <div class="dropdown-center" id="menu">
@@ -34,41 +49,72 @@
                             data-bs-auto-close="outside" aria-expanded="false">Menù</button>
                         <ul class="dropdown-menu text-center" id="header-drop">
                             <li><a class="dropdown-item" href="ChiSiamo.html">Chi Siamo</a></li>
-                            <li>
-                                <div class="accordion-flush accordion" id="accordionHeader">
+                            <li class="">
+                                <div class="accordion accordion-flush" id="accordiondest">
                                     <div class="accordion-item">
-                                        <h5 class="accordion-header">
-                                            <button class="accordion-button collapsed" type="button"
-                                                data-bs-toggle="collapse" data-bs-target="#flush-collapseOne"
-                                                aria-expanded="false" aria-controls="flush-collapseOne">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button p-2" type="button" id="destinazioni"
+                                                data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                                                aria-expanded="true" aria-controls="collapseOne">
                                                 Destinazioni
                                             </button>
-                                        </h5>
-                                        <div id="flush-collapseOne" class="accordion-collapse collapse"
-                                            data-bs-parent="#accordionHeader">
-                                            <div class="accordion-body">
-                                                <a class="text-muted text-decoration-none" href="#">Pacchetti</a>
-                                                <a class="text-muted text-decoration-none" href="#">Pacchetti</a>
-                                                <a class="text-muted text-decoration-none" href="#">Pacchetti</a>
-                                                <a class="text-muted text-decoration-none" href="#">Pacchetti</a>
+                                        </h2>
+                                        <div id="collapseOne" class="accordion-collapse collapse show"
+                                            data-bs-parent="#accordiondest">
+                                            <div class="accordion-body p-0" id="destinazioni">
+                                                <ul class="listadest">
+                                                    <li><a class="dest p-2" href="#">Europa</a></li>
+                                                    <li><a class="dest p-2" href="#">Asia</a></li>
+                                                    <li><a class="dest p-2" href="#">America</a></li>
+                                                    <li><a class="dest p-2" href="#">Oceania</a></li>
+                                                    <li><a class="dest p-2" href="#">Africa</a></li>
+                                                </ul>
                                             </div>
                                         </div>
+                                    </div>
                             </li>
                             <li><a class="dropdown-item" href="#">Pacchetti</a></li>
-                            <li><a class="dropdown-item" href="#">Contatti</a></li>
+                            <li><a class="dropdown-item" href="Contatti.html">Contatti</a></li>
                         </ul>
                     </div>
                 </div>
 
                 <div class="col-4 ms-auto" id="dropdown">
                     <img class="w-75 h-auto" src="assets/img/dropdown.png" data-bs-toggle="dropdown"
-                        aria-expanded="false">
+                        aria-expanded="false" data-bs-auto-close="outside">
 
 
-                    <ul class="dropdown-menu ">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    <ul class="dropdown-menu text-center">
+                        <li><a class="dropdown-item" href="#">Area Personale</a></li>
+                        <li><a class="dropdown-item" href="ChiSiamo.html">Chi Siamo</a></li>
+                        <li>
+                        <li class="">
+                            <div class="accordion accordion-flush" id="accordiondest">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button p-2" type="button" id="destinazioni"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true"
+                                            aria-controls="collapseOne">
+                                            Destinazioni
+                                        </button>
+                                    </h2>
+                                    <div id="collapseOne" class="accordion-collapse collapse show"
+                                        data-bs-parent="#accordiondest">
+                                        <div class="accordion-body p-0" id="destinazioni">
+                                            <ul class="listadest">
+                                                <li><a class="dest p-2" href="#">Europa</a></li>
+                                                <li><a class="dest p-2" href="#">Asia</a></li>
+                                                <li><a class="dest p-2" href="#">America</a></li>
+                                                <li><a class="dest p-2" href="#">Oceania</a></li>
+                                                <li><a class="dest p-2" href="#">Africa</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                        </li>
+                        </li>
+                        <li><a class="dropdown-item" href="#">Pacchetti</a></li>
+                        <li><a class="dropdown-item" href="Contatti.html">Contatti</a></li>
                     </ul>
                 </div>
                 <div class="col-sm-2 col-lg-1  d-flex icons" id="">

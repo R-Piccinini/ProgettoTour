@@ -11,7 +11,7 @@ body {
     background-color: #a3e8dc;
 }
 
-.contenuto{
+.contenuto {
     background-color: #f8f9fa;
 }
 
@@ -118,22 +118,66 @@ header {
 #footer {
     color: #004c74;
     background-color: #a3e8dc;
-   
+
 }
 
-.dropdown-menu{
+.dropdown-menu {
     background-color: #a3e8dc;
     border-color: #ba2644;
 }
 
-.dropdown-item{
+.dropdown-item {
     color: #ba2644;
 }
 
-.dropdown-item:hover{
+.dropdown-item:hover {
     background-color: #ba2644;
     color: white;
-   
+
+}
+
+
+.listadest {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0;
+    padding: 0;
+}
+
+.dest {
+    background-color: #a3e8dc;
+    border-color: #ba2644;
+    color: #ba2644;
+    display: block;
+    text-decoration: none;
+}
+
+.dest:hover {
+    background-color: #ba2644;
+    color: white;
+}
+
+#destinazioni{
+    background-color: #a3e8dc;
+    border-color: #ba2644;
+    color: #ba2644;
+    display: block;
+    text-align: center;
+}
+
+#destinazioni:hover{
+    background-color: #ba2644;
+    color: white;
+}   
+
+#destinazioni::after {
+    background-image: none;
+    width: 0;
+}
+
+#destinazioni:not(.collapsed)::after {
+    background-image: none;
+    width: 0;
 }
 
 @media screen and (max-width: 576px) {
@@ -174,4 +218,3 @@ header {
         display: none;
     }
 }
-
