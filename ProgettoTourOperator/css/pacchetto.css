@@ -1,0 +1,11 @@
+#imgpacchetto{
+    background-image: url("../assets/Destinazioni/Japone.png");
+    background-position: center;
+    color: white;
+    
+}
+
+.titolopacchetto{
+    display: inline-block;
+    background-color: #49a9a6;
+}
