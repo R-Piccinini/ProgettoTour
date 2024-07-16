@@ -7,7 +7,7 @@
 
 .titolopacchetto{
     display: inline-block;
-    background-color: #49a9a6ac;
+    background-color: #ff8921b8;
 }
 
 #titoloPacchetto{
@@ -35,11 +35,14 @@ i{
 }
 
 #BottoneAcq{
-    border-color: #a3ebdc; 
-    color: #a3e8dc;
+    border-color: #ff8a21; 
+    color: white;
+    background-color: #ff8a21;
 }
 
 #BottoneAcq:hover{
-    border-color: #ba2644;
+    border-color: #f64242;
+    color: white;
+    background-color:#f64242;
 
 }
