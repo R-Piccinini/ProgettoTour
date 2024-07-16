@@ -7,13 +7,13 @@
 
 .titolopacchetto{
     display: inline-block;
-    background-color: #ff8921b8;
+    background-color: #f64242bc;
 }
 
 #titoloPacchetto{
     padding-left: 6%;
-
 }
+
 .titoloPacchettoCitta{
     display: inline-block;
     color:#004c74;
@@ -44,5 +44,4 @@ i{
     border-color: #f64242;
     color: white;
     background-color:#f64242;
-
 }
