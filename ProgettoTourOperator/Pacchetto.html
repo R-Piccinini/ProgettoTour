@@ -11,6 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/043c3b148f.js" crossorigin="anonymous"></script>
 </head>
 
 
@@ -226,41 +227,75 @@
     <div class="contenuto py-4">
         <div class="my-5  " id="imgpacchetto">
             <br><br><br><br><br>
-            <div class="container py-3 mx-1 m-5 text-center text-md-start shadow-lg">
-                <h1 class="titolopacchetto  rounded-3 p-3">Nome pacchetto</h1>
+            <div class="container py-3 mx-1 text-md-start shadow-lg" id="titoloPacchetto">
+                <h1 class="titolopacchetto  rounded-3 p-3">Europa</h1>
             </div>
         </div>
 
         <div class="container-fluid">
             <div class="row justify-content-evenly">
-                <div class="col-10 col-md-7 rounded DescPacchetto">
+                <div class="col-12 col-sm-6 rounded DescPacchetto">
+                    <h2 class="titoloPacchettoCitta  rounded-3 p-2">Roma</h2>
                     <p>
-                    <h3>Descrizione</h3>
-                    inserire qui descrizione
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                    culpa qui officia deserunt mollit anim id est laborum."
+                    <h3>La città eterna</h3>
+                    Roma, capitale d'Italia, è una città ricca di storia, arte e cultura. Conosciuta come "La Città
+                    Eterna", Roma offre un affascinante viaggio nel tempo attraverso le sue strade acciottolate,
+                    monumenti antichi e opere d'arte inestimabili.
+                    Roma è anche celebre per la sua cucina deliziosa. Non perdere l'occasione di assaporare piatti
+                    tradizionali come la pasta alla carbonara, l'amatriciana, la cacio e pepe e il supplì. Le trattorie
+                    locali e i ristoranti offrono un'autentica esperienza culinaria che soddisferà tutti i gusti.
+                    La vita notturna romana è vibrante e variegata. Dalle eleganti enoteche ai vivaci bar e club, c'è
+                    qualcosa per ogni tipo di viaggiatore. Quartieri come Trastevere, Testaccio e Campo de' Fiori sono
+                    famosi per la loro atmosfera vivace e le numerose opzioni di intrattenimento.
                     </p>
                 </div>
-                <div class="col-10 col-md-3 py-5 h-100 bg-secondary text-center rounded CarPacchetto">
-                    <div class="border-primary border-bottom">
-                        <h4>nome pacchetto</h4>
-                        <h5> prezzo</h5>
-                        <h4 class="">Cosa è incluso</h4>
+                <div class="col-12 col-sm-3 py-2 p-2 text-center rounded CarPacchetto" style="background-color: #004c74;" id="CardPacchetto">
+                    <div class="border-dark w-100 text-wrap">
+                        <h4 style="color: white;">Roma 8 giorni</h4>
+                        <p style="color: white;">Partenza 20 Agosto</p>
+                        <h3 style="color: #a3e8dc;">1.239€</h3>
+                        <h7 class="" style="color: white;">Acconto a partire da 100€</h7><br>
+
+                        <p class="d-inline-flex gap-1">
+                            <a class="btn mt-3" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                            Cosa è incluso
+                            </a>
+                          </p>
+                          <div class="collapse" id="collapseExample">
+                             <div class="row justify-content-evenly">
+                        <div class="col-6">
+                            <i class="fa-solid fa-bed fa-xl" style="color: #a3ebdc;"></i>
+                        </div>
+                        <div class="col-6">
+                            <p class="text-start" style="color: white;">Sistemazione in camera multipla
+                                con bagno privato</p>
+                        </div>
+                        <div class="col-6">
+                            <i class="fa-solid fa-piggy-bank fa-xl" style="color: #a3ebdc;"></i>
+                        </div>
+                        <div class="col-6">
+                            <p class="text-start" style="color: white;">Rimborso del 100% fino a un mese prima della partenza</p>
+                        </div>
+                        <div class="col-6">
+                           <i class="fa-solid fa-suitcase-rolling fa-xl" style="color: #a3ebdc;"></i>
+                        </div>
+                        <div class="col-6">
+                            <p class="text-start" style="color: white;">Assicurazione medico-bagaglio</p>
+                        </div>
+                        <div class="col-6">
+                             <i class="fa-solid fa-wine-glass fa-xl " style="color: #a3ebdc;"></i>
+                         </div>
+                         <div class="col-6">
+                             <p class="text-start" style="color: white;">Gita con degustazione presso i fori romani</p>
+                         </div>
+                            <button class="btn w-75 my-2" id="BottoneAcq">Acquista biglietto</button>
                     </div>
-                    <div class="text-start CarPacchetto2 py-3">
-                        <ul class="list-group list-group-flush ">
-                            <li class="list-group-item bg-secondary border-0">An item</li>
-                            <li class="list-group-item bg-secondary border-0">A second item</li>
-                            <li class="list-group-item bg-secondary border-0">A third item</li>
-                            <li class="list-group-item bg-secondary border-0">A fourth item</li>
-                            <li class="list-group-item bg-secondary border-0">And a fifth one</li>
-                        </ul>
+
+                          </div>
+                        
+                          
                     </div>
-                    <div class="CarPacchetto3 border-primary border-top">
-                        <button class="btn w-75">aaaaaaa</button>
+                       
                     </div>
                 </div>
             </div>

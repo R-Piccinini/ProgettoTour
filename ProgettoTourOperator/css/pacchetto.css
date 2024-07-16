@@ -7,5 +7,39 @@
 
 .titolopacchetto{
     display: inline-block;
-    background-color: #49a9a6;
+    background-color: #49a9a6ac;
+}
+
+#titoloPacchetto{
+    padding-left: 6%;
+
+}
+.titoloPacchettoCitta{
+    display: inline-block;
+    color:#004c74;
+}
+
+p{
+    color:#004c74;
+}
+
+i{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#CardPacchetto{
+    height: 0%;
+}
+
+#BottoneAcq{
+    border-color: #a3ebdc; 
+    color: #a3e8dc;
+}
+
+#BottoneAcq:hover{
+    border-color: #ba2644;
+
 }
