@@ -227,13 +227,107 @@
         <!-- Contenitore Preventivo -->
         <h1 class="text-center">Crea il tuo preventivo</h1>
         <div class="container p-3 bg-dark text-white rounded p-5">
-            <div class="row justify-content-center">
+            <div class="justify-content-center">
                 <!-- Contenitore form -->
-                <div id="multi-step-form">
-                    <form class="row" id="form-content">
-                        <!-- Qui vengono inseriti dinamicamente i passaggi del form -->
-                    </form>
-                </div>
+                <form id="form-content">
+                    <!-- Step 1 -->
+                    <div class="row active" id="step-1">
+                        <h4>STEP 1</h4>
+                        <div class="form-group col-4">
+                            <label for="nome">Nome</label>
+                            <input type="text" class="form-control" id="nome" required>
+                        </div>
+                        <div class="form-group col-4+">
+                            <label for="cognome">Cognome</label>
+                            <input type="text" class="form-control" id="cognome" required>
+                        </div>
+                        <div class="form-group col-4">
+                            <label for="indirizzo">Indirizzo</label>
+                            <input type="text" class="form-control" id="indirizzo" required>
+                        </div>
+                        <div class="form-group col-4">
+                            <label for="dataNascita">Data di Nascita</label>
+                            <input type="date" class="form-control" id="dataNascita" required>
+                        </div>
+                        <div class="form-group col-4">
+                            <label for="numTel">Numero di telefono</label>
+                            <input type="tel" class="form-control" id="numTel" required>
+                        </div>
+                        <div class="form-group col-4">
+                            <button type="button" class="btn my-3" id="next-btn" onclick="nextStep()">Avanti</button>
+                        </div>
+                    </div>
+                    <!-- Step 2 -->
+                    <div class="row" id="step-2">
+                        <h2>Step 2</h2>
+                        <div class="d-flex justify-content-center">
+                            <div class="form-group col-6">
+                                <label for="partenza">Partenza:</label>
+                                <select class="form-select" id="partenza" name="partenza">
+                                    <option>Milano</option>
+                                    <option>Roma</option>
+                                    <option>Napoli</option>
+                                    <option>Bari</option>
+                                    <option>Palermo</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-6">
+                                <label for="destinazione">Destinazione:</label>
+                                <select class="form-select" id="destinazione" name="destinazione">
+                                    <optgroup label="Europa">
+                                        <option>Francia</option>
+                                        <option>Inghilterra</option>
+                                        <option>Spagna</option>
+                                        <option>Grecia</option>
+                                        <option>Germania</option>
+                                    </optgroup>
+                                    <optgroup label="Internazionale">
+                                        <option>Oceania</option>
+                                        <option>Stati Uniti</option>
+                                        <option>Asia</option>
+                                        <option>Nord America</option>
+                                        <option>Sud America</option>
+                                        <option>Africa</option>
+                                    </optgroup>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group col-4">
+                            <button type="button" class="btn my-3" id="prev-btn" onclick="prevStep()">Indietro</button>
+                            <button type="button" class="btn" id="next-btn" onclick="nextStep()">Avanti</button>
+                        </div>
+                    </div>
+                    <!-- Step 3 -->
+                    <div class="row" id="step-3">
+                        <h2>Step 3</h2>
+                        <div class="form-group col-6">
+                            <label for="sistemazione">Tipologia di sistemazione:</label>
+                            <select class="form-select" id="sistemazione" name="sistemazione">
+                                <option>Ostello</option>
+                                <option>B&B</option>
+                                <option>Hotel</option>
+                                <option>Resort</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-6">
+                            <label for="numero-viaggiatori">Numero di viaggiatori</label>
+                            <input type="number" id="numero-viaggiatori" name="numero-viaggiatori" min="1" required>
+                        </div>
+                        <div class="form-group col-6">
+                            <label for="numero-giorni">Numero di giorni</label>
+                            <input type="number" id="numero-giorni" name="numero-giorni" min="1" required>
+                        </div>
+                        <div class="form-group col-4">
+                            <button type="button" class="btn my-3" id="prev-btn" onclick="prevStep()">Indietro</button>
+                            <button type="button" class="btn" id="next-btn" onclick="nextStep()">Avanti</button>
+                        </div>
+                    </div>
+                    <!-- Step 4 (Riepilogo) -->
+                    <div class="row">
+
+                    </div>
+
+                </form>
             </div>
         </div>
     </div>

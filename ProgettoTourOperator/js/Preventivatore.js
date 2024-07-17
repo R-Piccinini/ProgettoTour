@@ -56,102 +56,19 @@ function showStep() {
   const formContent = document.getElementById('form-content');
   const nextBtn = document.getElementById('next-btn');
   const prevBtn = document.getElementById('prev-btn');
-  formContent.innerHTML = '';
-
+  
   switch (currentStep) {
     case 1:
-      formContent.innerHTML = `
-                <h4>STEP 1</h4>
-                <div class="form-group col-6">
-                    <label for="nome">Nome</label>
-                    <input type="text" class="form-control" id="nome" required>
-                </div>
-                <div class="form-group col-6">
-                    <label for="cognome">Cognome</label>
-                    <input type="text" class="form-control" id="cognome" required>
-                </div>
-                <div class="form-group col-6">
-                    <label for="indirizzo">Indirizzo</label>
-                    <input type="text" class="form-control" id="indirizzo" required>
-                </div>
-                <div class="form-group col-6">
-                    <label for="dataNascita">Data di Nascita</label>
-                    <input type="date" class="form-control" id="dataNascita" required>
-                </div>
-                <div class="form-group col-4">
-                    <button type="button" class="btn my-3" id="next-btn" onclick="nextStep()">Avanti</button>
-                </div>
-            `;
+
       break;
     case 2:
-      formContent.innerHTML = `
-                <h2>Step 2</h2>
-                <div class="d-flex justify-content-center">
-                    <div class="form-group col-4">
-                        <label for="partenza">Partenza:</label>
-                        <select id="partenza" name="partenza">
-                            <option>Milano</option>
-                            <option>Roma</option>
-                            <option>Napoli</option>
-                            <option>Bari</option>
-                            <option>Palermo</option>
-                        </select>
-                    </div>
-                    <div class="form-group col-4">
-                        <label for="destinazione">Destinazione:</label>
-                        <select id="destinazione" name="destinazione">
-                            <optgroup label="Europa">
-                                <option>Francia</option>
-                                <option>Inghilterra</option>
-                                <option>Spagna</option>
-                                <option>Grecia</option>
-                                <option>Germania</option>
-                            </optgroup>
-                            <optgroup label="Internazionale">
-                                <option>Oceania</option>
-                                <option>Stati Uniti</option>
-                                <option>Asia</option>
-                                <option>Nord America</option>
-                                <option>Sud America</option>
-                                <option>Africa</option>
-                            </optgroup>
-                        </select>
-                    </div>
-                </div>
-                <div class="form-group col-4">
-                    <button type="button" class="btn my-3" id="prev-btn" onclick="prevStep()">Indietro</button>
-                    <button type="button" class="btn" id="next-btn" onclick="nextStep()">Avanti</button>
-                </div>
-            `;
+
       break;
     case 3:
-      formContent.innerHTML = `
-                <h2>Step 3</h2>
-                <div class="form-group col-6">
-                    <label for="sistemazione">Tipologia di sistemazione:</label>
-                    <select id="sistemazione" name="sistemazione">
-                        <option>Ostello</option>
-                        <option>B&B</option>
-                        <option>Hotel</option>
-                        <option>Resort</option>
-                    </select>
-                </div>
-                <div class="form-group col-6">
-                    <label for="numero-viaggiatori">Numero di viaggiatori</label>
-                    <input type="number" id="numero-viaggiatori" name="numero-viaggiatori" min="1" required>
-                </div>
-                <div class="form-group col-6">
-                    <label for="numero-giorni">Numero di giorni</label>
-                    <input type="number" id="numero-giorni" name="numero-giorni" min="1" required>
-                </div>
-                <div class="form-group col-4">
-                    <button type="button" class="btn my-3" id="prev-btn" onclick="prevStep()">Indietro</button>
-                    <button type="button" class="btn" id="next-btn" onclick="nextStep()">Avanti</button>
-                </div>
-            `;
+
       break;
     case 4:
-      calculateSummary();
+
       break;
   }
 }
