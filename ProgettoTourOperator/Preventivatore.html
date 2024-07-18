@@ -226,18 +226,18 @@
     <div class="contenuto p-3">
         <!-- Contenitore Preventivo -->
         <h1 class="text-center">Crea il tuo preventivo</h1>
-        <div class="container p-3 bg-dark text-white rounded p-5">
+        <div class="container p-3 bg-dark text-white rounded p-3">
             <div class="justify-content-center">
                 <!-- Contenitore form -->
                 <form id="form-content">
                     <!-- Step 1 -->
-                    <div class="row active" id="step-1">
-                        <h4>STEP 1</h4>
+                    <div class="row justify-content-center" id="step-1">
+                        <h2>Step 1</h2>
                         <div class="form-group col-4">
                             <label for="nome">Nome</label>
                             <input type="text" class="form-control" id="nome" required>
                         </div>
-                        <div class="form-group col-4+">
+                        <div class="form-group col-4">
                             <label for="cognome">Cognome</label>
                             <input type="text" class="form-control" id="cognome" required>
                         </div>
@@ -253,60 +253,52 @@
                             <label for="numTel">Numero di telefono</label>
                             <input type="tel" class="form-control" id="numTel" required>
                         </div>
-                        <div class="form-group col-4">
-                            <button type="button" class="btn my-3" id="next-btn" onclick="nextStep()">Avanti</button>
-                        </div>
                     </div>
+
                     <!-- Step 2 -->
                     <div class="row" id="step-2">
                         <h2>Step 2</h2>
-                        <div class="d-flex justify-content-center">
-                            <div class="form-group col-6">
-                                <label for="partenza">Partenza:</label>
-                                <select class="form-select" id="partenza" name="partenza">
-                                    <option>Milano</option>
-                                    <option>Roma</option>
-                                    <option>Napoli</option>
-                                    <option>Bari</option>
-                                    <option>Palermo</option>
-                                </select>
-                            </div>
-                            <div class="form-group col-6">
-                                <label for="destinazione">Destinazione:</label>
-                                <select class="form-select" id="destinazione" name="destinazione">
-                                    <optgroup label="Europa">
-                                        <option>Francia</option>
-                                        <option>Inghilterra</option>
-                                        <option>Spagna</option>
-                                        <option>Grecia</option>
-                                        <option>Germania</option>
-                                    </optgroup>
-                                    <optgroup label="Internazionale">
-                                        <option>Oceania</option>
-                                        <option>Stati Uniti</option>
-                                        <option>Asia</option>
-                                        <option>Nord America</option>
-                                        <option>Sud America</option>
-                                        <option>Africa</option>
-                                    </optgroup>
-                                </select>
-                            </div>
+                        <div class="form-group col-4 mx-4">
+                            <label for="partenza">Partenza:</label>
+                            <select class="form-select" id="partenza" name="partenza">
+                                <option>Milano +60€</option>
+                                <option>Roma +80€</option>
+                                <option>Napoli +100€</option>
+                                <option>Bari +120€</option>
+                                <option>Palermo +150€</option>
+                            </select>
                         </div>
                         <div class="form-group col-4">
-                            <button type="button" class="btn my-3" id="prev-btn" onclick="prevStep()">Indietro</button>
-                            <button type="button" class="btn" id="next-btn" onclick="nextStep()">Avanti</button>
+                            <label for="destinazione">Destinazione:</label>
+                            <select class="form-select" id="destinazione" name="destinazione">
+                                <optgroup label="Europa">
+                                    <option>Francia +300€</option>
+                                    <option>Inghilterra +350€</option>
+                                    <option>Spagna +400€</option>
+                                    <option>Grecia +450€</option>
+                                    <option>Germania +500€</option>
+                                </optgroup>
+                                <optgroup label="Internazionale">
+                                    <option>Oceania +600€</option>
+                                    <option>Stati Uniti +700€</option>
+                                    <option>Asia +800€</option>
+                                    <option>Nord America +900€</option>
+                                    <option>Sud America +1000€</option>
+                                    <option>Africa +1100€</option>
+                                </optgroup>
+                            </select>
                         </div>
                     </div>
                     <!-- Step 3 -->
                     <div class="row" id="step-3">
                         <h2>Step 3</h2>
                         <div class="form-group col-6">
-                            <label for="sistemazione">Tipologia di sistemazione:</label>
-                            <select class="form-select" id="sistemazione" name="sistemazione">
-                                <option>Ostello</option>
-                                <option>B&B</option>
-                                <option>Hotel</option>
-                                <option>Resort</option>
+                            <label for="alloggio">Alloggio:</label>
+                            <select class="form-select" id="alloggio" name="alloggio">
+                                <option>Ostello +50€</option>
+                                <option>B&B +100€</option>
+                                <option>Hotel +200€</option>
+                                <option>Resort +300€</option>
                             </select>
                         </div>
                         <div class="form-group col-6">
@@ -317,16 +309,18 @@
                             <label for="numero-giorni">Numero di giorni</label>
                             <input type="number" id="numero-giorni" name="numero-giorni" min="1" required>
                         </div>
-                        <div class="form-group col-4">
-                            <button type="button" class="btn my-3" id="prev-btn" onclick="prevStep()">Indietro</button>
-                            <button type="button" class="btn" id="next-btn" onclick="nextStep()">Avanti</button>
-                        </div>
                     </div>
                     <!-- Step 4 (Riepilogo) -->
-                    <div class="row">
-
+                    <div class="row" id="step-4">
+                        <div class="row">
+                            <div class="col-4">
+                                <p id="nome-val">Nome: </p>
+                            </div>
+                        </div>
                     </div>
-
+                    <button type="button" class="btn my-3 mx-3" id="prev-btn" onclick="prevStep()">Indietro</button>
+                    <button type="button" class="btn my-3 d-inlineblock" id="next-btn" onclick="nextStep()">Vai
+                        avanti</button>
                 </form>
             </div>
         </div>

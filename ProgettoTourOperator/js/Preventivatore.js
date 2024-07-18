@@ -22,7 +22,7 @@ const prices = {
     'Sud America': 1000,
     'Africa': 1100
   },
-  sistemazione: {
+  alloggio: {
     'Ostello': 50,
     'B&B': 100,
     'Hotel': 200,
@@ -31,13 +31,6 @@ const prices = {
 };
 
 function nextStep() {
-  event.preventDefault();
-
-  const form = document.getElementById('form-content');
-  if (!form.checkValidity()) {
-    form.reportValidity();
-    return;
-  }
 
   if (currentStep < totalSteps) {
     currentStep++;
@@ -52,63 +45,82 @@ function prevStep() {
   }
 }
 
+function saveData() {
+  totale = 0
+  partenza = document.getElementById("partenza").value;
+  arrivo = document.getElementById("arrivo").value;
+  sistemazione = document.getElementById("alloggio").value;
+  minore = document.getElementById("minore").value;
+  viaggiatori = document.getElementById("nViaggiatori").value;
+  giorni = document.getElementById("nGiorni").value;
+  return totale;
+}
+
 function showStep() {
-  const formContent = document.getElementById('form-content');
-  const nextBtn = document.getElementById('next-btn');
   const prevBtn = document.getElementById('prev-btn');
-  
+  const step1 = document.getElementById('step-1');
+  const step2 = document.getElementById('step-2');
+  const step3 = document.getElementById('step-3');
+  const step4 = document.getElementById('step-4');
+
   switch (currentStep) {
     case 1:
-
+      step1.classList.remove('d-none');
+      step1.classList.add('d-flex');
+      step2.classList.remove('d-none');
+      step2.classList.add('d-none');
+      step3.classList.add('d-none');
+      step4.classList.add('d-none');
+      prevBtn.classList.remove('d-inlineblock');
+      prevBtn.classList.add('d-none');
       break;
     case 2:
-
+      step1.classList.remove('d-flex');
+      step1.classList.add('d-none');
+      step2.classList.remove('d-none');
+      step2.classList.add('d-flex');
+      step3.classList.remove('d-flex');
+      step3.classList.add('d-none');
+      step4.classList.remove('d-flex');
+      step4.classList.add('d-none');
+      prevBtn.classList.remove('d-none');
+      prevBtn.classList.add('d-inlineblock');
       break;
     case 3:
-
+      step1.classList.remove('d-flex');
+      step1.classList.add('d-none');
+      step2.classList.remove('d-flex');
+      step2.classList.add('d-none');
+      step3.classList.remove('d-none');
+      step3.classList.add('d-flex');
+      step4.classList.remove('d-flex');
+      step4.classList.add('d-none');
       break;
     case 4:
-
+      step1.classList.remove('d-flex');
+      step1.classList.add('d-none');
+      step2.classList.remove('d-flex');
+      step2.classList.add('d-none');
+      step3.classList.remove('d-flex');
+      step3.classList.add('d-none');
+      step4.classList.remove('d-none');
+      step4.classList.add('d-flex');
       break;
   }
 }
 
-function calculateSummary() {
-  const nome = document.getElementById('nome').value;
-  const cognome = document.getElementById('cognome').value;
-  const indirizzo = document.getElementById('indirizzo').value;
-  const dataNascita = new Date(document.getElementById('dataNascita').value);
-  const today = new Date();
-  const age = today.getFullYear() - dataNascita.getFullYear();
-  const isMinor = age < 18;
-  const partenzaCost = prices.partenza[document.getElementById('partenza').value];
-  const destinazioneCost = prices.destinazione[document.getElementById('destinazione').value];
-  const sistemazioneCost = prices.sistemazione[document.getElementById('sistemazione').value];
-  const numeroViaggiatori = parseInt(document.getElementById('numero-viaggiatori').value);
-  const numeroGiorni = parseInt(document.getElementById('numero-giorni').value);
+function riepilogo() {
+  var nome = $('#first_name').val() + ' ' + $('#last_name').val();
+  var aereoPartenza = $('#partenza').val();
+  var aereoArrivo = $('#arrivo').val();
+  var numeroGiorni = $('#nGiorni').val();
+  var numeroViaggiatori = $('#nViaggiatori').val();
 
-  let totale = (partenzaCost + destinazioneCost + (sistemazioneCost * numeroGiorni)) * numeroViaggiatori;
-
-  if (isMinor) {
-    totale *= 0.9;
-  }
-
-  const riepilogo = `
-        <h2>Step 4</h2>
-        <div>
-            <p>Nome: ${nome}</p>
-            <p>Cognome: ${cognome}</p>
-            <p>Indirizzo: ${indirizzo}</p>
-            <p>Data di nascita: ${dataNascita.toLocaleDateString()}</p>
-            <p>Partenza: ${partenzaCost}€</p>
-            <p>Destinazione: ${destinazioneCost}€</p>
-            <p>Tipologia di sistemazione: ${sistemazioneCost}€</p>
-            <p>Numero di viaggiatori: ${numeroViaggiatori}</p>
-            <p>Numero di giorni: ${numeroGiorni}</p>
-            <p><strong>Totale: ${totale.toFixed(2)}€</strong></p>
-        </div>
-    `;
-  document.getElementById('form-content').innerHTML = riepilogo;
+  $('#nome-val').text(nome);
+  $('#partenza-val').text(aereoPartenza);
+  $('#arrivo-val').text(aereoArrivo);
+  $('#giorni-val').text(numeroGiorni);
+  $('#nViagg-val').text(numeroViaggiatori);
 }
 
-showStep(); // Per avviare il processo di visualizzazione del form
+showStep();
