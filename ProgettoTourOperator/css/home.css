@@ -8,19 +8,24 @@
 }
 
 #card-calda {
-    color: #f64242;
+    color: white;
 }
 
 #sfondodest {
-    background-color: rgba(52, 225, 255, 0.2);
+    background-color: #004b7447;
 }
+
+#sfondodinv {
+    background-color: #004b7447;
+}
+
 
 #sfondodestcalde {
     background-image: url('../assets/Destinazioni/Caló.des.Moro.spagna.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    color: #ba2644;
+    color: white;
 }
 
 #sfondodestfredde {
@@ -88,13 +93,47 @@
 }*/
 
 @media screen and (max-width: 576px) {
-
-    .card-text {
-        display: none;
-    }
-
     #cssportal-grid {
         display: none;
     }
 
+    #titoloreportage{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 770px) {
+
+    .card-text {
+        display: none;
+    }
+}
+#testodescrizione{
+    font-weight:400;
+}
+
+#testodesccard{
+    font-weight:00;
+}
+
+#titolocartacaldo{
+    font-weight:700;
+}
+
+.card-img-top{
+    width: 100%;
+    height: 9vw;
+    object-fit: cover;
+   
+}
+
+@media screen and (max-width: 1751px) {
+
+    .card-img-top {
+        width: 100%;
+        height: 15vw;
+        object-fit: cover;
+    }
+
+    
 }
