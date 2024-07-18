@@ -358,30 +358,30 @@
                         <div class="form-group col-4 mx-4">
                             <label for="partenza">Partenza:</label>
                             <select class="form-select" id="partenza" name="partenza">
-                                <option>Milano +60€</option>
-                                <option>Roma +80€</option>
-                                <option>Napoli +100€</option>
-                                <option>Bari +120€</option>
-                                <option>Palermo +150€</option>
+                                <option value="Milano">Milano (+60€)</option>
+                                <option value="Roma">Roma (+80€)</option>
+                                <option value="Napoli">Napoli (+100€)</option>
+                                <option value="Bari">Bari (+120€)</option>
+                                <option value="Palermo">Palermo (+150€)</option>
                             </select>
                         </div>
                         <div class="form-group col-4">
                             <label for="destinazione">Destinazione:</label>
                             <select class="form-select" id="destinazione" name="destinazione">
                                 <optgroup label="Europa">
-                                    <option>Francia +300€</option>
-                                    <option>Inghilterra +350€</option>
-                                    <option>Spagna +400€</option>
-                                    <option>Grecia +450€</option>
-                                    <option>Germania +500€</option>
+                                    <option value="Francia">Francia (+300€)</option>
+                                    <option value="Inghilterra">Inghilterra (+350€)</option>
+                                    <option value="Spagna">Spagna (+400€)</option>
+                                    <option value="Grecia">Grecia (+450€)</option>
+                                    <option value="Germania">Germania (+500€)</option>
                                 </optgroup>
                                 <optgroup label="Internazionale">
-                                    <option>Oceania +600€</option>
-                                    <option>Stati Uniti +700€</option>
-                                    <option>Asia +800€</option>
-                                    <option>Nord America +900€</option>
-                                    <option>Sud America +1000€</option>
-                                    <option>Africa +1100€</option>
+                                    <option value="Oceania">Oceania (+600€)</option>
+                                    <option value="Stati Uniti">Stati Uniti (+700€)</option>
+                                    <option value="Asia">Asia (+800€)</option>
+                                    <option value="Nord America">Nord America (+900€)</option>
+                                    <option value="Sud America">Sud America (+1000€)</option>
+                                    <option value="Africa">Africa (+1100€)</option>
                                 </optgroup>
                             </select>
                         </div>
@@ -392,26 +392,31 @@
                         <div class="form-group col-6">
                             <label for="alloggio">Alloggio:</label>
                             <select class="form-select" id="alloggio" name="alloggio">
-                                <option>Ostello +50€</option>
-                                <option>B&B +100€</option>
-                                <option>Hotel +200€</option>
-                                <option>Resort +300€</option>
+                                <option value="Ostello" id="Ostello">Ostello (+50€)</option>
+                                <option value="B&B">B&B (+100€)</option>
+                                <option value="Hotel">Hotel (+200€)</option>
+                                <option value="Resort">Resort (+300€)</option>
                             </select>
                         </div>
                         <div class="form-group col-6">
-                            <label for="numero-viaggiatori">Numero di viaggiatori</label>
-                            <input type="number" id="numero-viaggiatori" name="numero-viaggiatori" min="1" required>
+                            <label for="num-viaggiatori">Numero di viaggiatori</label>
+                            <input type="number" id="num-viaggiatori" name="num-viaggiatori" min="1" required>
                         </div>
                         <div class="form-group col-6">
-                            <label for="numero-giorni">Numero di giorni</label>
-                            <input type="number" id="numero-giorni" name="numero-giorni" min="1" required>
+                            <label for="num-giorni">Numero di giorni</label>
+                            <input type="number" id="num-giorni" name="num-giorni" min="1" required>
                         </div>
                     </div>
                     <!-- Step 4 (Riepilogo) -->
                     <div class="row" id="step-4">
                         <div class="row">
                             <div class="col-4">
-                                <p id="nome-val">Nome: </p>
+                                <p id="nome-val"></p>
+                                <p id="partenza-val"></p>
+                                <p id="destinazione-val"></p>
+                                <p id="giorni-val"></p>
+                                <p id="nViagg-val"></p>
+                                <p id="totale-val"></p>
                             </div>
                         </div>
                     </div>
