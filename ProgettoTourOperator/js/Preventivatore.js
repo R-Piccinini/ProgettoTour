@@ -105,22 +105,23 @@ function showStep() {
       step3.classList.add('d-none');
       step4.classList.remove('d-none');
       step4.classList.add('d-flex');
+
+      var nome = $('#nome').val() + ' ' + $('#cognome').val();
+      var aereoPartenza = $('#partenza').val();
+      var aereoArrivo = $('#arrivo').val();
+      var numeroGiorni = $('#nGiorni').val();
+      var numeroViaggiatori = $('#nViaggiatori').val();
+
+      $('#nome-val').text(nome);
+      $('#partenza-val').text(aereoPartenza);
+      $('#arrivo-val').text(aereoArrivo);
+      $('#giorni-val').text(numeroGiorni);
+      $('#nViagg-val').text(numeroViaggiatori);
+
       break;
   }
 }
 
-function riepilogo() {
-  var nome = $('#first_name').val() + ' ' + $('#last_name').val();
-  var aereoPartenza = $('#partenza').val();
-  var aereoArrivo = $('#arrivo').val();
-  var numeroGiorni = $('#nGiorni').val();
-  var numeroViaggiatori = $('#nViaggiatori').val();
 
-  $('#nome-val').text(nome);
-  $('#partenza-val').text(aereoPartenza);
-  $('#arrivo-val').text(aereoArrivo);
-  $('#giorni-val').text(numeroGiorni);
-  $('#nViagg-val').text(numeroViaggiatori);
-}
 
 showStep();
