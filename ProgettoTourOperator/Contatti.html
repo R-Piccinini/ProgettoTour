@@ -24,46 +24,208 @@
                     </a>
                 </div>
                 <div class="col">
-                    <ul class="nav  justify-content-center" id="navbar">
-                        <li><button type="button" class="btn btn-outline btn mx-5">Destinazioni</button></li>
-                        <li><button type="button" class="btn btn-outline btn mx-5">Pacchetti</button></li>
-                        <li><button type="button" class="btn btn-outline btn mx-5">Chi Siamo</button></li>
+                    <ul class="nav justify-content-evenly text-decoration-none" id="navbar">
+                        <li><a role="button" href="ChiSiamo.html" class="btn btn-outline btn mx-4">Chi Siamo</a></li>
+                        <li>
+                            <div class="dropdown-center">
+                                <button class="btn btn-outline btn mx-4" type="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    Destinazioni
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="Destinazione.html/1">Europa</a></li>
+                                    <li><a class="dropdown-item" href="Destinazione.html/2">Asia</a></li>
+                                    <li><a class="dropdown-item" href="Destinazione.html/3">America</a></li>
+                                    <li><a class="dropdown-item" href="Destinazione.html/4">Oceania</a></li>
+                                    <li><a class="dropdown-item" href="Destinazione.html/5">Africa</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a role="button" href="Preventivatore.html" class="btn btn-outline btn mx-4">Preventivo</a>
+                        </li>
+                        <li><a role="button" href="Contatti.html" class="btn btn-outline btn mx-4">Contatti</a></li>
                     </ul>
-
+    
                     <div class="dropdown-center" id="menu">
                         <button class="btn btn-lg dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            Menù
-                        </button>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Action two</a></li>
-                            <li><a class="dropdown-item" href="#">Action three</a></li>
+                            data-bs-auto-close="outside" aria-expanded="false">Menù</button>
+                        <ul class="dropdown-menu text-center" id="header-drop">
+                            <li><a class="dropdown-item" href="ChiSiamo.html">Chi Siamo</a></li>
+                            <li class="">
+                                <div class="accordion accordion-flush" id="accordiondest">
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button p-2" type="button" id="destinazioni"
+                                                data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true"
+                                                aria-controls="collapseOne">
+                                                Destinazioni
+                                            </button>
+                                        </h2>
+                                        <div id="collapseOne" class="accordion-collapse collapse"
+                                            data-bs-parent="#accordiondest">
+                                            <div class="accordion-body p-0" id="destinazioni">
+                                                <ul class="listadest">
+                                                    <li><a class="dest p-2" href="Destinazione.html/1">Europa</a></li>
+                                                    <li><a class="dest p-2" href="Destinazione.html/2">Asia</a></li>
+                                                    <li><a class="dest p-2" href="Destinazione.html/3">America</a></li>
+                                                    <li><a class="dest p-2" href="Destinazione.html/4">Oceania</a></li>
+                                                    <li><a class="dest p-2" href="Destinazione.html/5">Africa</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                            </li>
+                            <li><a class="dropdown-item" href="Preventivatore.html">Preventivo</a></li>
+                            <li><a class="dropdown-item" href="Contatti.html">Contatti</a></li>
                         </ul>
                     </div>
                 </div>
-
+    
                 <div class="col-4 ms-auto" id="dropdown">
-                    <img class="w-75 h-auto" src="assets/img/dropdown.png" data-bs-toggle="dropdown"
-                        aria-expanded="false">
-
-
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    <img class="w-75 h-auto" src="assets/img/dropdown.png" data-bs-toggle="dropdown" aria-expanded="false"
+                        data-bs-auto-close="outside">
+    
+    
+                    <ul class="dropdown-menu text-center">
+                        <li><a class="dropdown-item" href="#">Area Personale</a></li>
+                        <li><a class="dropdown-item" href="ChiSiamo.html">Chi Siamo</a></li>
+                        <li>
+                        <li class="">
+                            <div class="accordion accordion-flush" id="accordiondest">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button p-2" type="button" id="destinazioni"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true"
+                                            aria-controls="collapseOne">
+                                            Destinazioni
+                                        </button>
+                                    </h2>
+                                    <div id="collapseOne" class="accordion-collapse collapse"
+                                        data-bs-parent="#accordiondest">
+                                        <div class="accordion-body p-0" id="destinazioni">
+                                            <ul class="listadest">
+                                                <li><a class="dest p-2" href="Destinazione.html/1">Europa</a></li>
+                                                <li><a class="dest p-2" href="Destinazione.html/2">Asia</a></li>
+                                                <li><a class="dest p-2" href="Destinazione.html/3">America</a></li>
+                                                <li><a class="dest p-2" href="Destinazione.html/4">Oceania</a></li>
+                                                <li><a class="dest p-2" href="Destinazione.html/5">Africa</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                        </li>
+                        </li>
+                        <li><a class="dropdown-item" href="Preventivatore.html">Preventivo</a></li>
+                        <li><a class="dropdown-item" href="Contatti.html">Contatti</a></li>
                     </ul>
                 </div>
                 <div class="col-sm-2 col-lg-1  d-flex icons" id="">
                     <a href="home.html" class="text-decoration-none icons">
                         <img class="w-100 h-auto" src="assets/img/search.png" alt="">
                     </a>
-                    <a href="home.html" class="text-decoration-none text-start icons">
+                    <a href="#" class="text-decoration-none text-start icons" id="inputAccedi" data-bs-toggle="modal"
+                        data-bs-target="#formAccedi">
                         <img class="w-100 h-auto" src="assets/img/login.png" alt="">
                     </a>
                 </div>
             </div>
+            <!-- Modal accedi/registrati -->
+            <div class="modal fade" id="formAccedi" tabindex="-1" aria-labelledby="formModalAccedi" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5 text-white" id="formModalAccedi">Effettua l'accesso</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="form-floating mb-3">
+                                    <input type="email" class="form-control rounded-3" id="floatingInput" required
+                                        placeholder="name@example.com">
+                                    <label for="floatingInput">Email</label>
+                                </div>
+                                <div class="form-floating mb-3">
+                                    <input type="password" class="form-control rounded-3" id="floatingPassword"
+                                        placeholder="Password">
+                                    <label for="floatingPassword">Password</label>
+                                </div>
+                                <p id="formtext"> Hai dimenticato la tua password? Clicca <a href="#"
+                                        class="text-decoration-underline" data-bs-toggle="modal"
+                                        data-bs-target="#formRegistrati">qui</a> per reimpostarla</p>
+                                <p id="formtext">Non sei ancora registrato? Clicca <a href="#"
+                                        class="text-decoration-underline" data-bs-toggle="modal"
+                                        data-bs-target="#formRegistrati">qui</a> per registrarti</p>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button id="bottone-modal" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Torna
+                                indietro</button>
+                            <button id="bottone-modal" type="button" class="btn"><a href="areapersonale.html?=id"
+                                    class="text-white text-decoration-none">Accedi</a></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="formRegistrati" tabindex="-1" aria-labelledby="formModalRegistrati"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5 text-white" id="formModalRegistrati">Inserisci i tuoi dati per
+                                la
+                                registrazione</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="form-floating mb-3">
+                                    <input type="email" class="form-control rounded-3" id="floatingInput" required
+                                        placeholder="name@example.com">
+                                    <label for="floatingInput">Email</label>
+                                    <div id="emailHelp" class="form-text">Non condivideremo mai i tuoi dati.
+                                    </div>
+                                </div>
+    
+                                <div class="form-floating mb-3">
+                                    <input type="name" class="form-control rounded-3" id="floatingName" required
+                                        placeholder="Nome Utente">
+                                    <label for="floatingName">Nome Utente</label>
+                                </div>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div class="form-floating mb-3">
+                                            <input type="password" class="form-control rounded-3" id="floatingPassword"
+                                                placeholder="Password">
+                                            <label for="floatingPassword">Password</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="form-floating mb-3">
+                                            <input type="password" class="form-control rounded-3"
+                                                id="floatingConfirmPassword" placeholder="Conferma Password">
+                                            <label for="floatingConfirmPassword">Conferma Password</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                    <label class="form-check-label" for="defaultCheck1" id="formcheck">
+                                        Accetto le condizioni della <a href="PrivacyPolicy.html">Privacy policy</a>
+                                    </label>
+                                </div>
+                                <div class=""></div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button id="bottone-modal" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Torna
+                                indietro</button>
+                            <button id="bottone-modal" type="button" class="btn">Registrati</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
     </header>
+
     <div class="contenuto py-4">
         <div class="container">
             <h2 class="text-center mb-4">Contatti</h2>
@@ -112,107 +274,105 @@
     </div>
 
     <!-- Footer -->
-    <footer id="footer">
-        <div class="container mt-2">
-            <div class="row text-center">
-                <div class="d-flex justify-content-center py-4 my-4">
-                    <div class="col-6 offset-1">
-                        <form>
-                            <h5>Iscriviti alla nostra newsletter!</h5>
-                            <p>Ricevi offerte mensili, curiosità e novità da WeFlight.</p>
-                            <div class="d-flex w-100 gap-2">
-                                <label for="newsletter1" class="visually-hidden">Email</label>
-                                <input id="newsletter1" type="text" class="form-control" placeholder="Email">
-                                <button class="btn" type="button">Iscriviti</button>
-                            </div>
-                        </form>
-                    </div>
+<footer id="footer">
+    <div class="container mt-2">
+        <div class="row text-center">
+            <div class="d-flex justify-content-center py-4 my-4">
+                <div class="col-6 offset-1">
+                    <form>
+                        <h5>Iscriviti alla nostra newsletter!</h5>
+                        <p>Ricevi offerte mensili, curiosità e novità da WeFlight.</p>
+                        <div class="d-flex w-100 gap-2">
+                            <label for="newsletter1" class="visually-hidden">Email</label>
+                            <input id="newsletter1" type="text" class="form-control" placeholder="Email">
+                            <button class="btn" type="button">Iscriviti</button>
+                        </div>
+                    </form>
                 </div>
             </div>
+        </div>
 
-            <div class="row text-center">
-                <div class="col-6 col-sm-6 col-md-3 text-start">
-                    <h5>Destinazioni</h5>
-                    <ul class="nav flex-column">
-                        <li class="nav-item mb-2"><a href="Destinazioni.html?id=1"
-                                class="nav-link p-0 text-muted">Europa</a></li>
-                        <li class="nav-item mb-2"><a href="Destinazioni.html?id=2" class="nav-link p-0 text-muted">Stati
-                                Uniti</a></li>
-                        <li class="nav-item mb-2"><a href="Destinazioni.html?id=3"
-                                class="nav-link p-0 text-muted">Africa</a></li>
-                        <li class="nav-item mb-2"><a href="Destinazioni.html?id=4"
-                                class="nav-link p-0 text-muted">Asia</a></li>
-                        <li class="nav-item mb-2"><a href="Destinazioni.html?id=5"
-                                class="nav-link p-0 text-muted">Oceania</a></li>
-                    </ul>
-                </div>
-
-                <div class="col-6 col-sm-6 col-md-3 text-start">
-                    <h5>WeFlight</h5>
-                    <ul class="nav flex-column">
-                        <li class="nav-item mb-2"><a href="ChiSiamo.html" class="nav-link p-0 text-muted">Gruppo</a>
-                        </li>
-                        <li class="nav-item mb-2"><a href="LavoraConNoi.html" class="nav-link p-0 text-muted">Lavora con
-                                noi</a>
-                        </li>
-                        <li class="nav-item mb-2"><a href="AreaPersonale.html" class="nav-link p-0 text-muted">Area
-                                riservata</a>
-                        </li>
-                        <li class="nav-item mb-2"><a href="Contatti.html" class="nav-link p-0 text-muted">Contatti</a>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="col-12 col-sm-6 col-md-3 text-md-start">
-                    <h5>Info e condizioni di vendita</h5>
-                    <ul class="nav flex-column">
-                        <li class="nav-item mb-2"><a href="FAQS.html" class="nav-link p-0 text-muted">FAQs</a></li>
-                        <li class="nav-item mb-2"><a href="MetodiDiPagamento.html"
-                                class="nav-link p-0 text-muted">Metodi di
-                                pagamento</a>
-                        </li>
-                        <li class="nav-item mb-2"><a href="TerminiCondizioni.html"
-                                class="nav-link p-0 text-muted">Termini e
-                                condizioni</a>
-                        </li>
-                        <li class="nav-item mb-2"><a href="PrivacyPolicy.html" class="nav-link p-0 text-muted">Privacy
-                                Policy</a>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="col-12 col-sm-6 col-md-3 text-md-start">
-                    <h5>Community & Social</h5>
-                    <ul class="nav flex-column">
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Instagram</a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Facebook</a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Twitter</a></li>
-                    </ul>
-                </div>
-
-
-
-            </div>
-
-            <div class="d-flex justify-content-between py-4 my-4 border-top border-dark">
-                <p>© 2024 WeFlight. Tutti i diritti riservati.</p>
-                <ul class="list-unstyled d-flex">
-                    <li class="ms-3"><a class="link-dark" href="#"><img src="assets/img/instagram.svg" class="bi"
-                                width="24" height="24">
-
-                        </a></li>
-                    <li class="ms-3"><a class="link-dark" href="#"><img src="assets/img/facebook.svg" class="bi"
-                                width="24" height="24"></a>
+        <div class="row text-center">
+            <div class="col-6 col-sm-6 col-md-3 text-start">
+                <h5>Destinazioni</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2"><a href="Destinazioni.html/1" class="nav-link p-0 text-muted">Europa</a>
                     </li>
-                    <li class="ms-3"><a class="link-dark" href="#"><img src="assets/img/x-twitter.svg" class="bi"
-                                width="24" height="24">
-
-                        </a>
+                    <li class="nav-item mb-2"><a href="Destinazioni.html/2" class="nav-link p-0 text-muted">America</a>
+                    </li>
+                    <li class="nav-item mb-2"><a href="Destinazioni.html/3" class="nav-link p-0 text-muted">Africa</a>
+                    </li>
+                    <li class="nav-item mb-2"><a href="Destinazioni.html/4" class="nav-link p-0 text-muted">Asia</a>
+                    </li>
+                    <li class="nav-item mb-2"><a href="Destinazioni.html/5" class="nav-link p-0 text-muted">Oceania</a>
                     </li>
                 </ul>
             </div>
+
+            <div class="col-6 col-sm-6 col-md-3 text-start">
+                <h5>WeFlight</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2"><a href="ChiSiamo.html" class="nav-link p-0 text-muted">Gruppo</a>
+                    </li>
+                    <li class="nav-item mb-2"><a href="LavoraConNoi.html" class="nav-link p-0 text-muted">Lavora con
+                            noi</a>
+                    </li>
+                    <li class="nav-item mb-2"><a href="AreaPersonale.html" class="nav-link p-0 text-muted">Area
+                            riservata</a>
+                    </li>
+                    <li class="nav-item mb-2"><a href="Contatti.html" class="nav-link p-0 text-muted">Contatti</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-3 text-md-start">
+                <h5>Info e condizioni di vendita</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2"><a href="FAQS.html" class="nav-link p-0 text-muted">FAQs</a></li>
+                    <li class="nav-item mb-2"><a href="MetodiDiPagamento.html" class="nav-link p-0 text-muted">Metodi di
+                            pagamento</a>
+                    </li>
+                    <li class="nav-item mb-2"><a href="TerminiCondizioni.html" class="nav-link p-0 text-muted">Termini e
+                            condizioni</a>
+                    </li>
+                    <li class="nav-item mb-2"><a href="PrivacyPolicy.html" class="nav-link p-0 text-muted">Privacy
+                            Policy</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-3 text-md-start">
+                <h5>Community & Social</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Instagram</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Facebook</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Twitter</a></li>
+                </ul>
+            </div>
+
+
+
         </div>
-    </footer>
+
+        <div class="d-flex justify-content-between py-4 my-4 border-top border-dark">
+            <p>© 2024 WeFlight. Tutti i diritti riservati.</p>
+            <ul class="list-unstyled d-flex">
+                <li class="ms-3"><a class="link-dark" href="#"><img src="assets/img/instagram.svg" class="bi" width="24"
+                            height="24">
+
+                    </a></li>
+                <li class="ms-3"><a class="link-dark" href="#"><img src="assets/img/facebook.svg" class="bi" width="24"
+                            height="24"></a>
+                </li>
+                <li class="ms-3"><a class="link-dark" href="#"><img src="assets/img/x-twitter.svg" class="bi" width="24"
+                            height="24">
+
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</footer>
 
     <script src="js/bootstrap.bundle.min.js"></script>
 

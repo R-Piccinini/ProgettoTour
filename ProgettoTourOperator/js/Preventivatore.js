@@ -1,34 +1,34 @@
 let currentStep = 1;
 const totalSteps = 4;
 
-const prices = {
-  partenza: {
-    'Milano': 60,
-    'Roma': 80,
-    'Napoli': 100,
-    'Bari': 120,
-    'Palermo': 150
-  },
-  destinazione: {
-    'Francia': 300,
-    'Inghilterra': 350,
-    'Spagna': 400,
-    'Grecia': 450,
-    'Germania': 500,
-    'Oceania': 600,
-    'Stati Uniti': 700,
-    'Asia': 800,
-    'Nord America': 900,
-    'Sud America': 1000,
-    'Africa': 1100
-  },
-  alloggio: {
-    'Ostello': 50,
-    'B&B': 100,
-    'Hotel': 200,
-    'Resort': 300
-  }
-};
+// const prices = {
+//   partenza: {
+//     'Milano +60€': 60,
+//     'Roma': 80,
+//     'Napoli': 100,
+//     'Bari': 120,
+//     'Palermo': 150
+//   },
+//   destinazione: {
+//     'Francia +300€': 300,
+//     'Inghilterra': 350,
+//     'Spagna': 400,
+//     'Grecia': 450,
+//     'Germania': 500,
+//     'Oceania': 600,
+//     'Stati Uniti': 700,
+//     'Asia': 800,
+//     'Nord America': 900,
+//     'Sud America': 1000,
+//     'Africa': 1100
+//   },
+//   alloggio: {
+//     'Ostello +50€': 50,
+//     'B&B': 100,
+//     'Hotel': 200,
+//     'Resort': 300
+//   }
+// };
 
 function nextStep() {
 
@@ -48,16 +48,80 @@ function prevStep() {
 function saveData() {
   totale = 0
   partenza = document.getElementById("partenza").value;
-  arrivo = document.getElementById("arrivo").value;
-  sistemazione = document.getElementById("alloggio").value;
-  minore = document.getElementById("minore").value;
-  viaggiatori = document.getElementById("nViaggiatori").value;
-  giorni = document.getElementById("nGiorni").value;
+  destinazione = document.getElementById("destinazione").value;
+  alloggio = document.getElementById("alloggio").value;
+  viaggiatori = document.getElementById("num-viaggiatori").value;
+  giorni = document.getElementById("num-giorni").value;
   return totale;
 }
 
+function preventivo() {
+  
+  saveData();
+  if (partenza === "Milano") {
+    totale = totale + 60;
+  } else if (partenza === "Roma") {
+    totale = totale + 80;
+  } else if (partenza === "Napoli") {
+    totale = totale + 100;
+  } else if (partenza === "Bari") {
+    totale = totale + 120;
+  } else if (partenza === "Palermo") {
+    totale = totale + 150;
+  }
+
+  if (destinazione === "Francia") {
+    totale = totale + 300;
+  } else if (destinazione === "Inghilterra") {
+    totale = totale + 350;
+  } else if (destinazione === "Spagna") {
+    totale = totale + 400;
+  } else if (destinazione === "Grecia") {
+    totale = totale + 450;
+  } else if (destinazione === "Germania") {
+    totale = totale + 500;
+  } else if (destinazione === "Oceania") {
+    totale = totale + 600;
+  } else if (destinazione === "Stati Uniti") {
+    totale = totale + 700;
+  } else if (destinazione === "Asia") {
+    totale = totale + 800;
+  } else if (destinazione === "Nord America") {
+    totale = totale + 900;
+  } else if (destinazione === "Sud America") {
+    totale = totale + 1000;
+  } else if (destinazione === "Africa") {
+    totale = totale + 1100;
+  }
+
+  if (alloggio === "Ostello") {
+    totale = totale + 50;
+  } else if (alloggio === "B&B") {
+    totale = totale + 100;
+  } else if (alloggio === "Hotel") {
+    totale = totale + 200;
+  } else if (alloggio === "Resort") {
+    totale = totale + 300;
+  }
+
+  if (viaggiatori == 0) {
+    viaggiatori = 1;
+  }
+
+  totale = totale * viaggiatori;
+  if (giorni == 0) {
+    giorni = 1
+  }
+
+  totale = totale * giorni;
+  
+  return totale;
+
+};
+
 function showStep() {
   const prevBtn = document.getElementById('prev-btn');
+  const nextBtn = document.getElementById('next-btn');
   const step1 = document.getElementById('step-1');
   const step2 = document.getElementById('step-2');
   const step3 = document.getElementById('step-3');
@@ -95,6 +159,8 @@ function showStep() {
       step3.classList.add('d-flex');
       step4.classList.remove('d-flex');
       step4.classList.add('d-none');
+      nextBtn.classList.remove('d-none');
+      nextBtn.classList.add('d-inlineblock');
       break;
     case 4:
       step1.classList.remove('d-flex');
@@ -105,18 +171,23 @@ function showStep() {
       step3.classList.add('d-none');
       step4.classList.remove('d-none');
       step4.classList.add('d-flex');
+      nextBtn.classList.remove('d-inlineblock');
+      nextBtn.classList.add('d-none');
+      
+      preventivo();
 
-      var nome = $('#nome').val() + ' ' + $('#cognome').val();
-      var aereoPartenza = $('#partenza').val();
-      var aereoArrivo = $('#arrivo').val();
-      var numeroGiorni = $('#nGiorni').val();
-      var numeroViaggiatori = $('#nViaggiatori').val();
+      var nome = 'Nome: ' + $('#nome').val() + ' ' + $('#cognome').val();
+      var aereoPartenza = 'Aeroporto di partenza: ' + $('#partenza').val();
+      var aereoArrivo = 'Aeroporto di arrivo: ' + $('#destinazione').val();
+      var numeroGiorni = 'Numero giorni: ' + $('#num-giorni').val();
+      var numeroViaggiatori = 'Numero viaggiatori: ' + $('#num-viaggiatori').val();
 
       $('#nome-val').text(nome);
       $('#partenza-val').text(aereoPartenza);
-      $('#arrivo-val').text(aereoArrivo);
+      $('#destinazione-val').text(aereoArrivo);
       $('#giorni-val').text(numeroGiorni);
       $('#nViagg-val').text(numeroViaggiatori);
+      $('#totale-val').text(totale + " €");
 
       break;
   }

@@ -32,15 +32,16 @@
                                     Destinazioni
                                 </button>
                                 <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Europa</a></li>
-                                    <li><a class="dropdown-item" href="#">Asia</a></li>
-                                    <li><a class="dropdown-item" href="#">America</a></li>
-                                    <li><a class="dropdown-item" href="#">Oceania</a></li>
-                                    <li><a class="dropdown-item" href="#">Africa</a></li>
+                                    <li><a class="dropdown-item" href="Destinazione.html/1">Europa</a></li>
+                                    <li><a class="dropdown-item" href="Destinazione.html/2">Asia</a></li>
+                                    <li><a class="dropdown-item" href="Destinazione.html/3">America</a></li>
+                                    <li><a class="dropdown-item" href="Destinazione.html/4">Oceania</a></li>
+                                    <li><a class="dropdown-item" href="Destinazione.html/5">Africa</a></li>
                                 </ul>
                             </div>
                         </li>
-                        <li><a role="button" href="..." class="btn btn-outline btn mx-4">Pacchetti</a></li>
+                        <li><a role="button" href="Preventivatore.html" class="btn btn-outline btn mx-4">Preventivo</a>
+                        </li>
                         <li><a role="button" href="Contatti.html" class="btn btn-outline btn mx-4">Contatti</a></li>
                     </ul>
 
@@ -63,17 +64,17 @@
                                             data-bs-parent="#accordiondest">
                                             <div class="accordion-body p-0" id="destinazioni">
                                                 <ul class="listadest">
-                                                    <li><a class="dest p-2" href="#">Europa</a></li>
-                                                    <li><a class="dest p-2" href="#">Asia</a></li>
-                                                    <li><a class="dest p-2" href="#">America</a></li>
-                                                    <li><a class="dest p-2" href="#">Oceania</a></li>
-                                                    <li><a class="dest p-2" href="#">Africa</a></li>
+                                                    <li><a class="dest p-2" href="Destinazione.html/1">Europa</a></li>
+                                                    <li><a class="dest p-2" href="Destinazione.html/2">Asia</a></li>
+                                                    <li><a class="dest p-2" href="Destinazione.html/3">America</a></li>
+                                                    <li><a class="dest p-2" href="Destinazione.html/4">Oceania</a></li>
+                                                    <li><a class="dest p-2" href="Destinazione.html/5">Africa</a></li>
                                                 </ul>
                                             </div>
                                         </div>
                                     </div>
                             </li>
-                            <li><a class="dropdown-item" href="#">Pacchetti</a></li>
+                            <li><a class="dropdown-item" href="Preventivatore.html">Preventivo</a></li>
                             <li><a class="dropdown-item" href="Contatti.html">Contatti</a></li>
                         </ul>
                     </div>
@@ -102,18 +103,18 @@
                                         data-bs-parent="#accordiondest">
                                         <div class="accordion-body p-0" id="destinazioni">
                                             <ul class="listadest">
-                                                <li><a class="dest p-2" href="#">Europa</a></li>
-                                                <li><a class="dest p-2" href="#">Asia</a></li>
-                                                <li><a class="dest p-2" href="#">America</a></li>
-                                                <li><a class="dest p-2" href="#">Oceania</a></li>
-                                                <li><a class="dest p-2" href="#">Africa</a></li>
+                                                <li><a class="dest p-2" href="Destinazione.html/1">Europa</a></li>
+                                                <li><a class="dest p-2" href="Destinazione.html/2">Asia</a></li>
+                                                <li><a class="dest p-2" href="Destinazione.html/3">America</a></li>
+                                                <li><a class="dest p-2" href="Destinazione.html/4">Oceania</a></li>
+                                                <li><a class="dest p-2" href="Destinazione.html/5">Africa</a></li>
                                             </ul>
                                         </div>
                                     </div>
                                 </div>
                         </li>
                         </li>
-                        <li><a class="dropdown-item" href="#">Pacchetti</a></li>
+                        <li><a class="dropdown-item" href="Preventivatore.html">Preventivo</a></li>
                         <li><a class="dropdown-item" href="Contatti.html">Contatti</a></li>
                     </ul>
                 </div>
@@ -127,100 +128,106 @@
                     </a>
                 </div>
             </div>
-    </header>
-
-    <!-- Modal accedi/registrati -->
-    <div class="modal fade" id="formAccedi" tabindex="-1" aria-labelledby="formModalAccedi" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-5 text-white" id="formModalAccedi">Effettua l'accesso</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form>
-                        <div class="form-floating mb-3">
-                            <input type="email" class="form-control rounded-3" id="floatingInput" required
-                                placeholder="name@example.com">
-                            <label for="floatingInput">Email</label>
+            <!-- Modal accedi/registrati -->
+            <div class="modal fade" id="formAccedi" tabindex="-1" aria-labelledby="formModalAccedi" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5 text-white" id="formModalAccedi">Effettua l'accesso</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
-                        <div class="form-floating mb-3">
-                            <input type="password" class="form-control rounded-3" id="floatingPassword"
-                                placeholder="Password">
-                            <label for="floatingPassword">Password</label>
-                        </div>
-                        <p id="formtext"> Hai dimenticato la tua password? Clicca <a href="#"
-                                class="text-decoration-underline" data-bs-toggle="modal"
-                                data-bs-target="#formRegistrati">qui</a> per reimpostarla</p>
-                        <p id="formtext">Non sei ancora registrato? Clicca <a href="#" class="text-decoration-underline"
-                                data-bs-toggle="modal" data-bs-target="#formRegistrati">qui</a> per registrarti</p>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button id="bottone-modal" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Torna
-                        indietro</button>
-                    <button id="bottone-modal" type="button" class="btn"><a href="areapersonale.html?=id"
-                            class="text-white text-decoration-none">Accedi</a></button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="modal fade" id="formRegistrati" tabindex="-1" aria-labelledby="formModalRegistrati" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-5 text-white" id="formModalRegistrati">Inserisci i tuoi dati per la
-                        registrazione</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form>
-                        <div class="form-floating mb-3">
-                            <input type="email" class="form-control rounded-3" id="floatingInput" required
-                                placeholder="name@example.com">
-                            <label for="floatingInput">Email</label>
-                            <div id="emailHelp" class="form-text">Non condivideremo mai i tuoi dati.
-                            </div>
-                        </div>
-
-                        <div class="form-floating mb-3">
-                            <input type="name" class="form-control rounded-3" id="floatingName" required
-                                placeholder="Nome Utente">
-                            <label for="floatingName">Nome Utente</label>
-                        </div>
-                        <div class="row">
-                            <div class="col-6">
+                        <div class="modal-body">
+                            <form>
+                                <div class="form-floating mb-3">
+                                    <input type="email" class="form-control rounded-3" id="floatingInput" required
+                                        placeholder="name@example.com">
+                                    <label for="floatingInput">Email</label>
+                                </div>
                                 <div class="form-floating mb-3">
                                     <input type="password" class="form-control rounded-3" id="floatingPassword"
                                         placeholder="Password">
                                     <label for="floatingPassword">Password</label>
                                 </div>
-                            </div>
-                            <div class="col-6">
-                                <div class="form-floating mb-3">
-                                    <input type="password" class="form-control rounded-3" id="floatingConfirmPassword"
-                                        placeholder="Conferma Password">
-                                    <label for="floatingConfirmPassword">Conferma Password</label>
-                                </div>
-                            </div>
+                                <p id="formtext"> Hai dimenticato la tua password? Clicca <a href="#"
+                                        class="text-decoration-underline" data-bs-toggle="modal"
+                                        data-bs-target="#formRegistrati">qui</a> per reimpostarla</p>
+                                <p id="formtext">Non sei ancora registrato? Clicca <a href="#"
+                                        class="text-decoration-underline" data-bs-toggle="modal"
+                                        data-bs-target="#formRegistrati">qui</a> per registrarti</p>
+                            </form>
                         </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                            <label class="form-check-label" for="defaultCheck1" id="formcheck">
-                                Accetto le condizioni della <a href="PrivacyPolicy.html">Privacy policy</a>
-                            </label>
+                        <div class="modal-footer">
+                            <button id="bottone-modal" type="button" class="btn btn-secondary"
+                                data-bs-dismiss="modal">Torna
+                                indietro</button>
+                            <button id="bottone-modal" type="button" class="btn"><a href="areapersonale.html?=id"
+                                    class="text-white text-decoration-none">Accedi</a></button>
                         </div>
-                        <div class=""></div>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button id="bottone-modal" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Torna
-                        indietro</button>
-                    <button id="bottone-modal" type="button" class="btn">Registrati</button>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
+            <div class="modal fade" id="formRegistrati" tabindex="-1" aria-labelledby="formModalRegistrati"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5 text-white" id="formModalRegistrati">Inserisci i tuoi dati per
+                                la
+                                registrazione</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="form-floating mb-3">
+                                    <input type="email" class="form-control rounded-3" id="floatingInput" required
+                                        placeholder="name@example.com">
+                                    <label for="floatingInput">Email</label>
+                                    <div id="emailHelp" class="form-text">Non condivideremo mai i tuoi dati.
+                                    </div>
+                                </div>
+
+                                <div class="form-floating mb-3">
+                                    <input type="name" class="form-control rounded-3" id="floatingName" required
+                                        placeholder="Nome Utente">
+                                    <label for="floatingName">Nome Utente</label>
+                                </div>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div class="form-floating mb-3">
+                                            <input type="password" class="form-control rounded-3" id="floatingPassword"
+                                                placeholder="Password">
+                                            <label for="floatingPassword">Password</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="form-floating mb-3">
+                                            <input type="password" class="form-control rounded-3"
+                                                id="floatingConfirmPassword" placeholder="Conferma Password">
+                                            <label for="floatingConfirmPassword">Conferma Password</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                    <label class="form-check-label" for="defaultCheck1" id="formcheck">
+                                        Accetto le condizioni della <a href="PrivacyPolicy.html">Privacy policy</a>
+                                    </label>
+                                </div>
+                                <div class=""></div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button id="bottone-modal" type="button" class="btn btn-secondary"
+                                data-bs-dismiss="modal">Torna
+                                indietro</button>
+                            <button id="bottone-modal" type="button" class="btn">Registrati</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </header>
+
+
 
     <footer id="footer">
         <div class="container mt-2">
@@ -244,15 +251,16 @@
                 <div class="col-6 col-sm-6 col-md-3 text-start">
                     <h5>Destinazioni</h5>
                     <ul class="nav flex-column">
-                        <li class="nav-item mb-2"><a href="Destinazioni.html?id=1"
+                        <li class="nav-item mb-2"><a href="Destinazioni.html/1"
                                 class="nav-link p-0 text-muted">Europa</a></li>
-                        <li class="nav-item mb-2"><a href="Destinazioni.html?id=2" class="nav-link p-0 text-muted">Stati
-                                Uniti</a></li>
-                        <li class="nav-item mb-2"><a href="Destinazioni.html?id=3"
+                        <li class="nav-item mb-2"><a href="Destinazioni.html/2"
+                                class="nav-link p-0 text-muted">America</a></li>
+                        <li class="nav-item mb-2"><a href="Destinazioni.html/3"
                                 class="nav-link p-0 text-muted">Africa</a></li>
-                        <li class="nav-item mb-2"><a href="Destinazioni.html?id=4"
-                                class="nav-link p-0 text-muted">Asia</a></li>
-                        <li class="nav-item mb-2"><a href="Destinazioni.html?id=5"
+                        <li class="nav-item mb-2"><a href="Destinazioni.html/4" 
+                            class="nav-link p-0 text-muted">Asia</a>
+                        </li>
+                        <li class="nav-item mb-2"><a href="Destinazioni.html/5"
                                 class="nav-link p-0 text-muted">Oceania</a></li>
                     </ul>
                 </div>
