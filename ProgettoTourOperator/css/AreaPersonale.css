@@ -43,6 +43,11 @@ h3 {
     color: white;
 }
 
+.card-text {
+    color: #004c74 !important;
+    
+}
+
 @media screen and (max-width: 767px) {
     #navVert {
         width: 80%;
