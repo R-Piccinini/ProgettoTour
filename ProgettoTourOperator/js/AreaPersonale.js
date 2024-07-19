@@ -54,3 +54,55 @@ function mostraSezione(sezione) {
     }
 }
 
+// Funzione per ottenere gli elementi dal server
+document.addEventListener('DOMContentLoaded', () => {
+    const username = document.getElementById('usernameAcc');
+    const password = document.getElementById('pswAcc');
+    const email = document.getElementById('emailAcc');
+    const nome = document.getElementById('nomeAcc');
+    const cognome = document.getElementById('cognomeAcc');
+    const dataNascita = document.getElementById('dataAcc');
+
+    // Funzione per ottenere gli elementi dal server
+    const urlParams = new URLSearchParams(window.location.search);
+    const id = urlParams.get('id');
+    const url = `http://127.0.0.1:8080/user/1`;
+    fetch(url)
+        .then(res => res.json())
+        .then(pack => {
+            console.log(pack)
+
+            username.innerHTML = "Username: " + pack.username;
+            password.innerHTML = "Password: " + pack.password;
+            email.innerHTML = "Email: " + pack.email;
+            nome.innerHTML = "Nome: " + pack.nome;
+            cognome.innerHTML = "Cognome: " + pack.cognome;
+            dataNascita.innerHTML = "Data di nascita: " + pack.dataNascita;
+            aggiuntaViaggio(pack.pacchetto_id);
+        })
+        .catch(error => console.error('Error:', error));
+});
+
+function aggiuntaViaggio(id) {
+
+    const nome = document.getElementById('packName');
+    const descrizione = document.getElementById('packDesc');
+    const sistemazione = document.getElementById('packSistem');
+    const durata = document.getElementById('packDur');
+    const prezzo = document.getElementById('packPrezzo');
+    const immagine = document.getElementById('packImg');
+    const url = `http://localhost:8080/pacchetto/${id}`;
+    fetch(url)
+        .then(res => res.json())
+        .then(pack => {
+            console.log(pack)
+            nome.innerHTML = pack.name;
+            descrizione.innerHTML = pack.descrizione;
+            durata.innerHTML = pack.durata;
+            prezzo.innerHTML = pack.price;
+            sistemazione.innerHTML = pack.sistemazione;
+            immagine.style.backgroundImage = `url(assets/PacchettiViaggio/${pack.immagine})`;
+
+        })
+        .catch(error => console.error('Error:', error));
+}
