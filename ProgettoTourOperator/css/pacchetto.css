@@ -45,3 +45,14 @@ i{
     color: white;
     background-color:#f64242;
 }
+
+#bottoneincluso{
+    border-color:#f64242; 
+    color: #f64242;
+}
+
+#bottoneincluso:hover{
+    border-color: #ff8a21;
+    color: white;
+    background-color:#ff8a21;
+}
