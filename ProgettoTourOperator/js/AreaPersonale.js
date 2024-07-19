@@ -84,7 +84,25 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function aggiuntaViaggio(id) {
-    
-    const url = `http://127.0.0.1:8080/pacchetto/${id}`
 
+    const nome = document.getElementById('packName');
+    const descrizione = document.getElementById('packDesc');
+    const sistemazione = document.getElementById('packSistem');
+    const durata = document.getElementById('packDur');
+    const prezzo = document.getElementById('packPrezzo');
+    const immagine = document.getElementById('packImg');
+    const url = `http://localhost:8080/pacchetto/${id}`;
+    fetch(url)
+        .then(res => res.json())
+        .then(pack => {
+            console.log(pack)
+            nome.innerHTML = pack.name;
+            descrizione.innerHTML = pack.descrizione;
+            durata.innerHTML = pack.durata;
+            prezzo.innerHTML = pack.price;
+            sistemazione.innerHTML = pack.sistemazione;
+            immagine.style.backgroundImage = `url(assets/PacchettiViaggio/${pack.immagine})`;
+
+        })
+        .catch(error => console.error('Error:', error));
 }
