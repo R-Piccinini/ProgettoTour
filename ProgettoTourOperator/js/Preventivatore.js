@@ -104,14 +104,7 @@ function preventivo() {
     totale = totale + 300;
   }
 
-  if (viaggiatori == 0) {
-    viaggiatori = 1;
-  }
-
   totale = totale * viaggiatori;
-  if (giorni == 0) {
-    giorni = 1
-  }
 
   totale = totale * giorni;
   
@@ -173,7 +166,7 @@ function showStep() {
       step4.classList.add('d-flex');
       nextBtn.classList.remove('d-inlineblock');
       nextBtn.classList.add('d-none');
-      
+
       preventivo();
 
       var nome = 'Nome: ' + $('#nome').val() + ' ' + $('#cognome').val();
