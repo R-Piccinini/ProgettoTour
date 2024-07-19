@@ -20,7 +20,8 @@ document.addEventListener('DOMContentLoaded', function loadPack() {
         nome2.innerHTML=pack.name +" in "+pack.durata+ " giorni";
         prezzo.innerHTML=pack.price +" €";
         sistemazione.innerHTML=pack.sistemazione;
-        immagine.style.backgroundImage =`url(assets/PacchettiViaggio/${pack.immagine})`;
+        immagine.style.backgroundImage =`url(assets/PacchettiViaggio/${pack.immagine})`
+        immagine.style.backgroundSize=cover;
 
     })
     .catch(error => console.error('Error:', error));
