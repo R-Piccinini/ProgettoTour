@@ -2,7 +2,6 @@ const sfondo=document.getElementById('imgpacchetto');
 const nome=document.getElementById('namepack');
 const descrizione=document.getElementById('descrizionepack');
 const nome2=document.getElementById('name2pack');
-const durata=document.getElementById('duratapack');
 const prezzo=document.getElementById('prezzopack');
 const sistemazione=document.getElementById('sistemazionepack');
 const immagine=document.getElementById('imgpacchetto')
@@ -18,9 +17,8 @@ document.addEventListener('DOMContentLoaded', function loadPack() {
         console.log(pack)
         nome.innerHTML=pack.name;
         descrizione.innerHTML=pack.descrizione;
-        nome2.innerHTML=pack.name;
-        durata.innerHTML=pack.durata;
-        prezzo.innerHTML=pack.price;
+        nome2.innerHTML=pack.name +" in "+pack.durata+ " giorni";
+        prezzo.innerHTML=pack.price +" €";
         sistemazione.innerHTML=pack.sistemazione;
         immagine.style.backgroundImage =`url(assets/PacchettiViaggio/${pack.immagine})`;
 

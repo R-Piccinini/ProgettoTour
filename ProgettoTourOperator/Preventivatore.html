@@ -7,6 +7,7 @@
     <title>Preventivatore</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/Preventivatore.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" rel="stylesheet">
@@ -32,11 +33,11 @@
                                     Destinazioni
                                 </button>
                                 <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="Destinazione.html/1">Europa</a></li>
-                                    <li><a class="dropdown-item" href="Destinazione.html/2">Asia</a></li>
-                                    <li><a class="dropdown-item" href="Destinazione.html/3">America</a></li>
-                                    <li><a class="dropdown-item" href="Destinazione.html/4">Oceania</a></li>
-                                    <li><a class="dropdown-item" href="Destinazione.html/5">Africa</a></li>
+                                    <li><a class="dropdown-item" href="Destinazione.html?id=1">Europa</a></li>
+                                    <li><a class="dropdown-item" href="Destinazione.html?id=2">Asia</a></li>
+                                    <li><a class="dropdown-item" href="Destinazione.html?id=3">America</a></li>
+                                    <li><a class="dropdown-item" href="Destinazione.html?id=4">Oceania</a></li>
+                                    <li><a class="dropdown-item" href="Destinazione.html?id=5">Africa</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -44,7 +45,7 @@
                         </li>
                         <li><a role="button" href="Contatti.html" class="btn btn-outline btn mx-4">Contatti</a></li>
                     </ul>
-
+    
                     <div class="dropdown-center" id="menu">
                         <button class="btn btn-lg dropdown-toggle" type="button" data-bs-toggle="dropdown"
                             data-bs-auto-close="outside" aria-expanded="false">Menù</button>
@@ -55,8 +56,8 @@
                                     <div class="accordion-item">
                                         <h2 class="accordion-header">
                                             <button class="accordion-button p-2" type="button" id="destinazioni"
-                                                data-bs-toggle="collapse" data-bs-target="#collapseOne"
-                                                aria-expanded="true" aria-controls="collapseOne">
+                                                data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true"
+                                                aria-controls="collapseOne">
                                                 Destinazioni
                                             </button>
                                         </h2>
@@ -64,11 +65,11 @@
                                             data-bs-parent="#accordiondest">
                                             <div class="accordion-body p-0" id="destinazioni">
                                                 <ul class="listadest">
-                                                    <li><a class="dest p-2" href="Destinazione.html/1">Europa</a></li>
-                                                    <li><a class="dest p-2" href="Destinazione.html/2">Asia</a></li>
-                                                    <li><a class="dest p-2" href="Destinazione.html/3">America</a></li>
-                                                    <li><a class="dest p-2" href="Destinazione.html/4">Oceania</a></li>
-                                                    <li><a class="dest p-2" href="Destinazione.html/5">Africa</a></li>
+                                                    <li><a class="dest p-2" href="Destinazione.html?id=1">Europa</a></li>
+                                                    <li><a class="dest p-2" href="Destinazione.html?id=2">Asia</a></li>
+                                                    <li><a class="dest p-2" href="Destinazione.html?id=3">America</a></li>
+                                                    <li><a class="dest p-2" href="Destinazione.html?id=4">Oceania</a></li>
+                                                    <li><a class="dest p-2" href="Destinazione.html?id=5">Africa</a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -79,12 +80,12 @@
                         </ul>
                     </div>
                 </div>
-
+    
                 <div class="col-4 ms-auto" id="dropdown">
-                    <img class="w-75 h-auto" src="assets/img/dropdown.png" data-bs-toggle="dropdown"
-                        aria-expanded="false" data-bs-auto-close="outside">
-
-
+                    <img class="w-75 h-auto" src="assets/img/dropdown.png" data-bs-toggle="dropdown" aria-expanded="false"
+                        data-bs-auto-close="outside">
+    
+    
                     <ul class="dropdown-menu text-center">
                         <li><a class="dropdown-item" href="#">Area Personale</a></li>
                         <li><a class="dropdown-item" href="ChiSiamo.html">Chi Siamo</a></li>
@@ -103,11 +104,11 @@
                                         data-bs-parent="#accordiondest">
                                         <div class="accordion-body p-0" id="destinazioni">
                                             <ul class="listadest">
-                                                <li><a class="dest p-2" href="Destinazione.html/1">Europa</a></li>
-                                                <li><a class="dest p-2" href="Destinazione.html/2">Asia</a></li>
-                                                <li><a class="dest p-2" href="Destinazione.html/3">America</a></li>
-                                                <li><a class="dest p-2" href="Destinazione.html/4">Oceania</a></li>
-                                                <li><a class="dest p-2" href="Destinazione.html/5">Africa</a></li>
+                                                <li><a class="dest p-2" href="Destinazione.html?id=1">Europa</a></li>
+                                                <li><a class="dest p-2" href="Destinazione.html?id=2">Asia</a></li>
+                                                <li><a class="dest p-2" href="Destinazione.html?id=3">America</a></li>
+                                                <li><a class="dest p-2" href="Destinazione.html?id=4">Oceania</a></li>
+                                                <li><a class="dest p-2" href="Destinazione.html?id=5">Africa</a></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -157,8 +158,7 @@
                             </form>
                         </div>
                         <div class="modal-footer">
-                            <button id="bottone-modal" type="button" class="btn btn-secondary"
-                                data-bs-dismiss="modal">Torna
+                            <button id="bottone-modal" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Torna
                                 indietro</button>
                             <button id="bottone-modal" type="button" class="btn"><a href="areapersonale.html?=id"
                                     class="text-white text-decoration-none">Accedi</a></button>
@@ -185,7 +185,7 @@
                                     <div id="emailHelp" class="form-text">Non condivideremo mai i tuoi dati.
                                     </div>
                                 </div>
-
+    
                                 <div class="form-floating mb-3">
                                     <input type="name" class="form-control rounded-3" id="floatingName" required
                                         placeholder="Nome Utente">
@@ -217,8 +217,7 @@
                             </form>
                         </div>
                         <div class="modal-footer">
-                            <button id="bottone-modal" type="button" class="btn btn-secondary"
-                                data-bs-dismiss="modal">Torna
+                            <button id="bottone-modal" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Torna
                                 indietro</button>
                             <button id="bottone-modal" type="button" class="btn">Registrati</button>
                         </div>
@@ -324,31 +323,31 @@
     <!-- Contenitore principale -->
     <div class="contenuto p-3">
         <!-- Contenitore Preventivo -->
-        <h1 class="text-center">Crea il tuo preventivo</h1>
-        <div class="container p-3 bg-dark text-white rounded p-3">
+        <h1 class="text-center" id="titoloPrev">Crea il tuo preventivo</h1>
+        <div class="container p-3 text-white rounded p-3" id="prev">
             <div class="justify-content-center">
                 <!-- Contenitore form -->
                 <form id="form-content">
                     <!-- Step 1 -->
                     <div class="row justify-content-center" id="step-1">
                         <h2>Step 1</h2>
-                        <div class="form-group col-4">
+                        <div class="form-group col-12 col-md-4">
                             <label for="nome">Nome</label>
                             <input type="text" class="form-control" id="nome" required>
                         </div>
-                        <div class="form-group col-4">
+                        <div class="form-group col-12 col-md-4">
                             <label for="cognome">Cognome</label>
                             <input type="text" class="form-control" id="cognome" required>
                         </div>
-                        <div class="form-group col-4">
+                        <div class="form-group col-12 col-md-4">
                             <label for="indirizzo">Indirizzo</label>
                             <input type="text" class="form-control" id="indirizzo" required>
                         </div>
-                        <div class="form-group col-4">
+                        <div class="form-group col-12 col-md-4">
                             <label for="dataNascita">Data di Nascita</label>
                             <input type="date" class="form-control" id="dataNascita" required>
                         </div>
-                        <div class="form-group col-4">
+                        <div class="form-group col-12 col-md-4">
                             <label for="numTel">Numero di telefono</label>
                             <input type="tel" class="form-control" id="numTel" required>
                         </div>
@@ -357,7 +356,7 @@
                     <!-- Step 2 -->
                     <div class="row" id="step-2">
                         <h2>Step 2</h2>
-                        <div class="form-group col-4">
+                        <div class="form-group col-12 col-md-4">
                             <label for="partenza">Partenza:</label>
                             <select class="form-select" id="partenza" name="partenza">
                                 <option value="Milano">Milano (+60€)</option>
@@ -367,7 +366,7 @@
                                 <option value="Palermo">Palermo (+150€)</option>
                             </select>
                         </div>
-                        <div class="form-group col-4">
+                        <div class="form-group cold-12 col-md-4">
                             <label for="destinazione">Destinazione:</label>
                             <select class="form-select" id="destinazione" name="destinazione">
                                 <optgroup label="Europa">
@@ -391,7 +390,7 @@
                     <!-- Step 3 -->
                     <div class="row" id="step-3">
                         <h2>Step 3</h2>
-                        <div class="form-group col-3">
+                        <div class="form-group col-12 col-md-3">
                             <label for="alloggio">Alloggio:</label>
                             <select class="form-select" id="alloggio" name="alloggio">
                                 <option value="Ostello" id="Ostello">Ostello (+50€)</option>
@@ -400,14 +399,14 @@
                                 <option value="Resort">Resort (+300€)</option>
                             </select>
                         </div>
-                        <div class="form-group col-3">
+                        <div class="form-group col-12 col-md-3">
                             <label for="inputNumber" class="input-number-label active">Numero viaggiatori</label>
                             <div class="input-group input-number">
                                 <input type="number" class="form-control" data-bs-input id="num-viaggiatori"
                                     name="inputNumber" value="1" step="any" />
                             </div>
                         </div>
-                        <div class="form-group col-3">
+                        <div class="form-group col-12 col-md-3">
                             <label for="inputNumber" class="input-number-label active">Numero giorni</label>
                             <div class="input-group input-number">
                                 <input type="number" class="form-control" data-bs-input id="num-giorni"
@@ -419,7 +418,7 @@
                     <div class="row" id="step-4">
                         <h2>Riepilogo preventivo</h2>
                         <div class="row">
-                            <div class="col-4">
+                            <div class="col-12 col-md-4">
                                 <p id="nome-val"></p>
                                 <p id="partenza-val"></p>
                                 <p id="destinazione-val"></p>
@@ -456,28 +455,24 @@
                     </div>
                 </div>
             </div>
-
+    
             <div class="row text-center">
                 <div class="col-6 col-sm-6 col-md-3 text-start">
                     <h5>Destinazioni</h5>
                     <ul class="nav flex-column">
-                        <li class="nav-item mb-2"><a href="Destinazioni.html/1"
-                                class="nav-link p-0 text-muted">Europa</a>
+                        <li class="nav-item mb-2"><a href="Destinazioni.html?id=1"
+                                class="nav-link p-0 text-muted">Europa</a></li>
+                        <li class="nav-item mb-2"><a href="Destinazioni.html?id=2"
+                                class="nav-link p-0 text-muted">America</a></li>
+                        <li class="nav-item mb-2"><a href="Destinazioni.html?id=3"
+                                class="nav-link p-0 text-muted">Africa</a></li>
+                        <li class="nav-item mb-2"><a href="Destinazioni.html?id=4" class="nav-link p-0 text-muted">Asia</a>
                         </li>
-                        <li class="nav-item mb-2"><a href="Destinazioni.html/2"
-                                class="nav-link p-0 text-muted">America</a>
-                        </li>
-                        <li class="nav-item mb-2"><a href="Destinazioni.html/3"
-                                class="nav-link p-0 text-muted">Africa</a>
-                        </li>
-                        <li class="nav-item mb-2"><a href="Destinazioni.html/4" class="nav-link p-0 text-muted">Asia</a>
-                        </li>
-                        <li class="nav-item mb-2"><a href="Destinazioni.html/5"
-                                class="nav-link p-0 text-muted">Oceania</a>
-                        </li>
+                        <li class="nav-item mb-2"><a href="Destinazioni.html?id=5"
+                                class="nav-link p-0 text-muted">Oceania</a></li>
                     </ul>
                 </div>
-
+    
                 <div class="col-6 col-sm-6 col-md-3 text-start">
                     <h5>WeFlight</h5>
                     <ul class="nav flex-column">
@@ -493,17 +488,15 @@
                         </li>
                     </ul>
                 </div>
-
+    
                 <div class="col-12 col-sm-6 col-md-3 text-md-start">
                     <h5>Info e condizioni di vendita</h5>
                     <ul class="nav flex-column">
                         <li class="nav-item mb-2"><a href="FAQS.html" class="nav-link p-0 text-muted">FAQs</a></li>
-                        <li class="nav-item mb-2"><a href="MetodiDiPagamento.html"
-                                class="nav-link p-0 text-muted">Metodi di
+                        <li class="nav-item mb-2"><a href="MetodiDiPagamento.html" class="nav-link p-0 text-muted">Metodi di
                                 pagamento</a>
                         </li>
-                        <li class="nav-item mb-2"><a href="TerminiCondizioni.html"
-                                class="nav-link p-0 text-muted">Termini e
+                        <li class="nav-item mb-2"><a href="TerminiCondizioni.html" class="nav-link p-0 text-muted">Termini e
                                 condizioni</a>
                         </li>
                         <li class="nav-item mb-2"><a href="PrivacyPolicy.html" class="nav-link p-0 text-muted">Privacy
@@ -511,7 +504,7 @@
                         </li>
                     </ul>
                 </div>
-
+    
                 <div class="col-12 col-sm-6 col-md-3 text-md-start">
                     <h5>Community & Social</h5>
                     <ul class="nav flex-column">
@@ -520,24 +513,24 @@
                         <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Twitter</a></li>
                     </ul>
                 </div>
-
-
-
+    
+    
+    
             </div>
-
+    
             <div class="d-flex justify-content-between py-4 my-4 border-top border-dark">
                 <p>© 2024 WeFlight. Tutti i diritti riservati.</p>
                 <ul class="list-unstyled d-flex">
-                    <li class="ms-3"><a class="link-dark" href="#"><img src="assets/img/instagram.svg" class="bi"
-                                width="24" height="24">
-
+                    <li class="ms-3"><a class="link-dark" href="#"><img src="assets/img/instagram.svg" class="bi" width="24"
+                                height="24">
+    
                         </a></li>
-                    <li class="ms-3"><a class="link-dark" href="#"><img src="assets/img/facebook.svg" class="bi"
-                                width="24" height="24"></a>
+                    <li class="ms-3"><a class="link-dark" href="#"><img src="assets/img/facebook.svg" class="bi" width="24"
+                                height="24"></a>
                     </li>
-                    <li class="ms-3"><a class="link-dark" href="#"><img src="assets/img/x-twitter.svg" class="bi"
-                                width="24" height="24">
-
+                    <li class="ms-3"><a class="link-dark" href="#"><img src="assets/img/x-twitter.svg" class="bi" width="24"
+                                height="24">
+    
                         </a>
                     </li>
                 </ul>
