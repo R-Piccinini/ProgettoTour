@@ -120,7 +120,7 @@ document.addEventListener('DOMContentLoaded', function loadPacks() {
                                 <small>${pack.durata} Giorni</small>
                             </li>
                         </ul>
-                        <a href="Pacchetto.html?id=${pack.id}" class="btn mt-auto">Scopri</a>
+                        <a href="Pacchetto.html?id=${pack.id}" class="btn mt-auto btn-card">Scopri</a>
                     </div>
                 </div>
                       `
