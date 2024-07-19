@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
             nome.innerHTML = "Nome: " + pack.nome;
             cognome.innerHTML = "Cognome: " + pack.cognome;
             dataNascita.innerHTML = "Data di nascita: " + pack.dataNascita;
-            aggiuntaViaggio(pack.pacchetto_id);
+            aggiuntaViaggio(4);
         })
         .catch(error => console.error('Error:', error));
 });
@@ -101,7 +101,7 @@ function aggiuntaViaggio(id) {
             durata.innerHTML = pack.durata;
             prezzo.innerHTML = pack.price;
             sistemazione.innerHTML = pack.sistemazione;
-            immagine.style.backgroundImage = `url(assets/PacchettiViaggio/${pack.immagine})`;
+            immagine.src = `url(assets/PacchettiViaggio/${pack.immagine})`;
 
         })
         .catch(error => console.error('Error:', error));
