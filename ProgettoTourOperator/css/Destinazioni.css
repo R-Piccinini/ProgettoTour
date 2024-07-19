@@ -2,12 +2,13 @@ h4 {
     background-color: #373434
 }
 
-.btn{
+.btn-card{
         border-color:#f64242; 
-        color: #f64242;
+        color: white;
+        background-color: #f64242;
     }
     
-    .btn:hover{
+    .btn-card:hover{
         border-color: #ff8a21;
         color: white;
         background-color:#ff8a21;
