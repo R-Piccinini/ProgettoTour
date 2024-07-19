@@ -1,11 +1,14 @@
+// Funzione per l'aggiunta dello sfondo onmouseover
 function aggiungiSfondo(element) {
     element.classList.add('sfondoTesto');
 }
 
+// Funzione per la rimozione dello sfondo onmouseout
 function rimuoviSfondo(element) {
     element.classList.remove('sfondoTesto');
 }
 
+// Funzione per lasciare lo sfondo attivo onclick
 function attivaSfondo(element) {
     const links = document.querySelectorAll('.nav-link');
     links.forEach(link => {
@@ -14,14 +17,15 @@ function attivaSfondo(element) {
     element.classList.add('sfondo');
 }
 
-document.addEventListener('click', function (event) {
-    if (!event.target.closest('.nav-link')) {
-        const links = document.querySelectorAll('.nav-link');
-        links.forEach(link => {
-            link.classList.remove('sfondo');
-        });
-    }
-})
+// // Funzione per rimuovere lo sfondo al click fuori
+// document.addEventListener('click', function (event) {
+//     if (!event.target.closest('.nav-link')) {
+//         const links = document.querySelectorAll('.nav-link');
+//         links.forEach(link => {
+//             link.classList.remove('sfondo');
+//         });
+//     }
+// })
 
 // Funzione che mostra la sezione
 function mostraSezione(sezione) {
@@ -45,6 +49,8 @@ function mostraSezione(sezione) {
     var p = document.querySelector('#sezione-contenuti p')
     if (p) {
         p.style.display = 'none';
+    } else {
+        console.error('Paragrafo non trovato');
     }
 }
 
