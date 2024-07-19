@@ -23,16 +23,45 @@ document.addEventListener('DOMContentLoaded', function loadDest() {
       nome.innerHTML = dest.name
       descrizione.innerHTML = dest.descrizione;
       if (dest.id == 1) {
-        imgcarosello.src = "assets/Destinazioni/centralpark.png";
-        nomecarosello.innerHTML = "HELP"
+        //europa
+        imgcarosello.src = "assets/Carosello/lussemburgo.jpg";
+        imgcarosello2.src = "assets/Carosello/spagna.jpg"
+        imgcarosello3.src = "assets/Carosello/turchia.jpg"
+        nomecarosello.innerHTML = "Luxemburg"
+        nomecarosello2.innerHTML = "Andalusia"
+        nomecarosello3.innerHTML = "Istanbul"
       } else if (dest.id == 3) {
-
+        //africa
+        imgcarosello.src = "assets/Carosello/sahara.jpg";
+        imgcarosello2.src = "assets/Carosello/zanzibar.jpg"
+        imgcarosello3.src = "assets/Carosello/madagascar.jpg"
+        nomecarosello.innerHTML = "Sahara"
+        nomecarosello2.innerHTML = "Zanzibar"
+        nomecarosello3.innerHTML = "Madagascar"
       } else if (dest.id == 4) {
-
+        //america
+        imgcarosello.src = "assets/Carosello/alaska.jpg";
+        imgcarosello2.src = "assets/Carosello/california.jpg"
+        imgcarosello3.src = "assets/Carosello/miami.jpg"
+        nomecarosello.innerHTML = "Alaska"
+        nomecarosello2.innerHTML = "California"
+        nomecarosello3.innerHTML = "Miami"
       } else if (dest.id == 5) {
-
+        //oceania
+        imgcarosello.src = "assets/Carosello/sydney.jpg";
+        imgcarosello2.src = "assets/Carosello/california.jpg"
+        imgcarosello3.src = "assets/Carosello/polinesiafrancese.jpg"
+        nomecarosello.innerHTML = "Sidney"
+        nomecarosello2.innerHTML = "California"
+        nomecarosello3.innerHTML = "Polinesia"
       } else if (dest.id == 6) {
-
+        //asia
+        imgcarosello.src = "assets/Carosello/maldive.jpg";
+        imgcarosello2.src = "assets/Carosello/nepal.jpg"
+        imgcarosello3.src = "assets/Carosello/mongolia.jpg"
+        nomecarosello.innerHTML = "Maldive"
+        nomecarosello2.innerHTML = "Nepal"
+        nomecarosello3.innerHTML = "Mongolia"
       }
     })
     .catch(error => console.error('Error:', error));
