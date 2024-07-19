@@ -1,0 +1,14 @@
+#btnmodifiche{
+    color: #004c74 ; 
+    border-color: #004c74;
+}
+
+#btnmodifiche:hover{
+    color: white ; 
+    border-color:white;
+    background-color: #004c74;
+}
+
+#titaction{
+    color: #f64242;
+}
