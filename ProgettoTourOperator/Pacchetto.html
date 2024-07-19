@@ -15,7 +15,7 @@
 </head>
 
 
-<body>
+<body onload="loadPack()">
     <header>
         <div class="container-fluid text-center">
             <div class="row py-3  align-items-center justify-content-center">
@@ -227,113 +227,18 @@
             </div>
     </header>
 
-    
-
-    <!-- Modal accedi/registrati -->
-    <div class="modal fade" id="formAccedi" tabindex="-1" aria-labelledby="formModalAccedi" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-5 text-white" id="formModalAccedi">Effettua l'accesso</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form>
-                        <div class="form-floating mb-3">
-                            <input type="email" class="form-control rounded-3" id="floatingInput" required
-                                placeholder="name@example.com">
-                            <label for="floatingInput">Email</label>
-                        </div>
-                        <div class="form-floating mb-3">
-                            <input type="password" class="form-control rounded-3" id="floatingPassword"
-                                placeholder="Password">
-                            <label for="floatingPassword">Password</label>
-                        </div>
-                        <p id="formtext"> Hai dimenticato la tua password? Clicca <a href="#"
-                                class="text-decoration-underline" data-bs-toggle="modal"
-                                data-bs-target="#formRegistrati">qui</a> per reimpostarla</p>
-                        <p id="formtext">Non sei ancora registrato? Clicca <a href="#" class="text-decoration-underline"
-                                data-bs-toggle="modal" data-bs-target="#formRegistrati">qui</a> per registrarti</p>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button id="bottone-modal" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Torna
-                        indietro</button>
-                    <button id="bottone-modal" type="button" class="btn"><a href="areapersonale.html?=id"
-                            class="text-white text-decoration-none">Accedi</a></button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="modal fade" id="formRegistrati" tabindex="-1" aria-labelledby="formModalRegistrati" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-5 text-white" id="formModalRegistrati">Inserisci i tuoi dati per la
-                        registrazione</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form>
-                        <div class="form-floating mb-3">
-                            <input type="email" class="form-control rounded-3" id="floatingInput" required
-                                placeholder="name@example.com">
-                            <label for="floatingInput">Email</label>
-                            <div id="emailHelp" class="form-text">Non condivideremo mai i tuoi dati.
-                            </div>
-                        </div>
-
-                        <div class="form-floating mb-3">
-                            <input type="name" class="form-control rounded-3" id="floatingName" required
-                                placeholder="Nome Utente">
-                            <label for="floatingName">Nome Utente</label>
-                        </div>
-                        <div class="row">
-                            <div class="col-6">
-                                <div class="form-floating mb-3">
-                                    <input type="password" class="form-control rounded-3" id="floatingPassword"
-                                        placeholder="Password">
-                                    <label for="floatingPassword">Password</label>
-                                </div>
-                            </div>
-                            <div class="col-6">
-                                <div class="form-floating mb-3">
-                                    <input type="password" class="form-control rounded-3" id="floatingConfirmPassword"
-                                        placeholder="Conferma Password">
-                                    <label for="floatingConfirmPassword">Conferma Password</label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                            <label class="form-check-label" for="defaultCheck1" id="formcheck">
-                                Accetto le condizioni della <a href="PrivacyPolicy.html">Privacy policy</a>
-                            </label>
-                        </div>
-                        <div class=""></div>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button id="bottone-modal" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Torna
-                        indietro</button>
-                    <button id="bottone-modal" type="button" class="btn">Registrati</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <div class="contenuto">
         <div class="mb-2" id="imgpacchetto">
             <br><br><br><br><br>
             <div class="container py-3 mx-1 text-md-start shadow-lg" id="titoloPacchetto">
-                <h1 class="titolopacchetto  rounded-3 p-2">Roma</h1>
+                <h1 id="namepack" class="titolopacchetto rounded-3 p-2">Roma</h1>
             </div>
         </div>
 
         <div class="container-fluid">
             <div class="row justify-content-evenly">
                 <div class="col-11 col-md-5 col-lg-5 rounded DescPacchetto">
-                    <p>
+                    <p id="descrizionepack">
                     <h3 style="color: #004c74;">La città eterna</h3>
                     Roma, capitale d'Italia, è una città ricca di storia, arte e cultura. Conosciuta come "La Città
                     Eterna", Roma offre un affascinante viaggio nel tempo attraverso le sue strade acciottolate,
@@ -350,9 +255,9 @@
                 </div>
                 <div class="col-11 col-md-3 col-lg-5 my-4 px-2 p-2 text-center rounded CarPacchetto" style="background-color: #004c74;" id="CardPacchetto">
                     <div class="border-dark  text-wrap">
-                        <h4 style="color: white;">Roma 8 giorni</h4>
-                        <p style="color: white;">Partenza 20 Agosto</p>
-                        <h3 style="color: #a3e8dc;">1.239€</h3>
+                        <h4 id="name2pack" style="color: white;">Roma 8 giorni</h4>
+                        <p id="duratapack" style="color: white;">Partenza 20 Agosto</p>
+                        <h3 id="prezzopack" style="color: #a3e8dc;">1.239€</h3>
                         <h7 class="" style="color: white;">Acconto a partire da 100€</h7><br>
 
                         <p class="d-inline-flex gap-1">
@@ -366,7 +271,7 @@
                             <i class="fa-solid fa-bed fa-xl" style="color: #a3ebdc;"></i>
                         </div>
                         <div class="col-8">
-                            <p class="text-start" style="color: white;">Sistemazione in camera multipla
+                            <p class="text-start" id="sistemazionepack" style="color: white;">Sistemazione in camera multipla
                                 con bagno privato</p>
                         </div>
                         <div class="col-3">
@@ -504,6 +409,8 @@
 </footer>
 
     <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/Pacchetto.js"></script>
 </body>
 
 
