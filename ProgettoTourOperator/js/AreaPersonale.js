@@ -97,12 +97,11 @@ function aggiuntaViaggio(id) {
         .then(pack => {
             console.log(pack)
             nome.innerHTML = pack.name;
-            descrizione.innerHTML = pack.descrizione;
-            durata.innerHTML = pack.durata;
-            prezzo.innerHTML = pack.price;
-            sistemazione.innerHTML = pack.sistemazione;
-            immagine.src = `url(assets/PacchettiViaggio/${pack.immagine})`;
-
+            // descrizione.innerHTML = pack.descrizione;
+            durata.innerHTML = "Giorni: " + pack.durata;
+            prezzo.innerHTML = "Prezzo: " + pack.price + "€";
+            sistemazione.innerHTML = "Alloggio: " + pack.sistemazione;
+            immagine.src = `assets/PacchettiViaggio/${pack.immagine}`;
         })
         .catch(error => console.error('Error:', error));
 }

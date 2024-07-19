@@ -7,6 +7,7 @@
     <title>Preventivatore</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/Preventivatore.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" rel="stylesheet">
@@ -322,31 +323,31 @@
     <!-- Contenitore principale -->
     <div class="contenuto p-3">
         <!-- Contenitore Preventivo -->
-        <h1 class="text-center">Crea il tuo preventivo</h1>
-        <div class="container p-3 bg-dark text-white rounded p-3">
+        <h1 class="text-center" id="titoloPrev">Crea il tuo preventivo</h1>
+        <div class="container p-3 text-white rounded p-3" id="prev">
             <div class="justify-content-center">
                 <!-- Contenitore form -->
                 <form id="form-content">
                     <!-- Step 1 -->
                     <div class="row justify-content-center" id="step-1">
                         <h2>Step 1</h2>
-                        <div class="form-group col-4">
+                        <div class="form-group col-12 col-md-4">
                             <label for="nome">Nome</label>
                             <input type="text" class="form-control" id="nome" required>
                         </div>
-                        <div class="form-group col-4">
+                        <div class="form-group col-12 col-md-4">
                             <label for="cognome">Cognome</label>
                             <input type="text" class="form-control" id="cognome" required>
                         </div>
-                        <div class="form-group col-4">
+                        <div class="form-group col-12 col-md-4">
                             <label for="indirizzo">Indirizzo</label>
                             <input type="text" class="form-control" id="indirizzo" required>
                         </div>
-                        <div class="form-group col-4">
+                        <div class="form-group col-12 col-md-4">
                             <label for="dataNascita">Data di Nascita</label>
                             <input type="date" class="form-control" id="dataNascita" required>
                         </div>
-                        <div class="form-group col-4">
+                        <div class="form-group col-12 col-md-4">
                             <label for="numTel">Numero di telefono</label>
                             <input type="tel" class="form-control" id="numTel" required>
                         </div>
@@ -355,7 +356,7 @@
                     <!-- Step 2 -->
                     <div class="row" id="step-2">
                         <h2>Step 2</h2>
-                        <div class="form-group col-4">
+                        <div class="form-group col-12 col-md-4">
                             <label for="partenza">Partenza:</label>
                             <select class="form-select" id="partenza" name="partenza">
                                 <option value="Milano">Milano (+60€)</option>
@@ -365,7 +366,7 @@
                                 <option value="Palermo">Palermo (+150€)</option>
                             </select>
                         </div>
-                        <div class="form-group col-4">
+                        <div class="form-group cold-12 col-md-4">
                             <label for="destinazione">Destinazione:</label>
                             <select class="form-select" id="destinazione" name="destinazione">
                                 <optgroup label="Europa">
@@ -389,7 +390,7 @@
                     <!-- Step 3 -->
                     <div class="row" id="step-3">
                         <h2>Step 3</h2>
-                        <div class="form-group col-3">
+                        <div class="form-group col-12 col-md-3">
                             <label for="alloggio">Alloggio:</label>
                             <select class="form-select" id="alloggio" name="alloggio">
                                 <option value="Ostello" id="Ostello">Ostello (+50€)</option>
@@ -398,14 +399,14 @@
                                 <option value="Resort">Resort (+300€)</option>
                             </select>
                         </div>
-                        <div class="form-group col-3">
+                        <div class="form-group col-12 col-md-3">
                             <label for="inputNumber" class="input-number-label active">Numero viaggiatori</label>
                             <div class="input-group input-number">
                                 <input type="number" class="form-control" data-bs-input id="num-viaggiatori"
                                     name="inputNumber" value="1" step="any" />
                             </div>
                         </div>
-                        <div class="form-group col-3">
+                        <div class="form-group col-12 col-md-3">
                             <label for="inputNumber" class="input-number-label active">Numero giorni</label>
                             <div class="input-group input-number">
                                 <input type="number" class="form-control" data-bs-input id="num-giorni"
@@ -417,7 +418,7 @@
                     <div class="row" id="step-4">
                         <h2>Riepilogo preventivo</h2>
                         <div class="row">
-                            <div class="col-4">
+                            <div class="col-12 col-md-4">
                                 <p id="nome-val"></p>
                                 <p id="partenza-val"></p>
                                 <p id="destinazione-val"></p>
