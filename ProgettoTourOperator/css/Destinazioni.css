@@ -1,3 +1,14 @@
 h4 {
     background-color: #373434
 }
+
+.btn{
+        border-color:#f64242; 
+        color: #f64242;
+    }
+    
+    .btn:hover{
+        border-color: #ff8a21;
+        color: white;
+        background-color:#ff8a21;
+    }
