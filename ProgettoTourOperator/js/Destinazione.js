@@ -82,8 +82,8 @@ document.addEventListener('DOMContentLoaded', function loadPacks() {
         col.innerHTML = `
            <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
                     style="background-image: url(assets/PacchettiViaggio/${pack.immagine});background-position: center;">
-                    <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
-                        <h3 class="pt-5 mt-5 mb-2 display-6 lh-1 fw-bold" >${pack.name}</h3>
+                    <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1" style="background-color: #004b7447;">
+                        <h3 class="pt-5 mt-5 mb-2 display-6 lh-1 fw-bold">${pack.name}</h3>
                         <!--STELLINE -->
                         <div class="container">
                             <div class="row">
@@ -103,8 +103,8 @@ document.addEventListener('DOMContentLoaded', function loadPacks() {
                         <br>
                         <!--fine stelline-->
                         <ul class="d-flex list-unstyled mt-auto">
-                            <li class="d-flex align-items-center me-3">
-                                <small>${pack.price} €</small>
+                            <li class="d-flex align-items-center me-3 style="font-style:black;">
+                                <medium>${pack.price} €</medium>
                             </li>
                             <li class="d-flex align-items-center me-auto"></li>
                             <li class="d-flex align-items-center me-3">

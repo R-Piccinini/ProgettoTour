@@ -13,3 +13,10 @@ h4 {
         color: white;
         background-color:#ff8a21;
     }
+
+#nomedest1, #nomedest2,#nomedest3{
+    background-color: #f64242b0;
+    padding: 5%;
+    font-size: medium;
+}
+
