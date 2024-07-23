@@ -56,31 +56,12 @@ function mostraSezione(sezione) {
 
 // Funzione per ottenere gli elementi dal server
 document.addEventListener('DOMContentLoaded', () => {
-    const username = document.getElementById('usernameAcc');
-    const password = document.getElementById('pswAcc');
-    const email = document.getElementById('emailAcc');
-    const nome = document.getElementById('nomeAcc');
-    const cognome = document.getElementById('cognomeAcc');
-    const dataNascita = document.getElementById('dataAcc');
+
 
     // Funzione per ottenere gli elementi dal server
     const urlParams = new URLSearchParams(window.location.search);
     const id = urlParams.get('id');
-    const url = `http://127.0.0.1:8080/user/1`;
-    fetch(url)
-        .then(res => res.json())
-        .then(pack => {
-            console.log(pack)
 
-            username.innerHTML = "Username: " + pack.username;
-            password.innerHTML = "Password: " + pack.password;
-            email.innerHTML = "Email: " + pack.email;
-            nome.innerHTML = "Nome: " + pack.nome;
-            cognome.innerHTML = "Cognome: " + pack.cognome;
-            dataNascita.innerHTML = "Data di nascita: " + pack.dataNascita;
-            aggiuntaViaggio(4);
-        })
-        .catch(error => console.error('Error:', error));
 });
 
 function aggiuntaViaggio(id) {
@@ -107,25 +88,35 @@ function aggiuntaViaggio(id) {
 }
 
 async function getUserData() {
-    const token = localStorage.getItem('authToken');
+    const username = document.getElementById('usernameAcc');
+    const password = document.getElementById('pswAcc');
+    const email = document.getElementById('emailAcc');
+    const nome = document.getElementById('nomeAcc');
+    const cognome = document.getElementById('cognomeAcc');
+    const dataNascita = document.getElementById('dataAcc');
+    const token = window.localStorage.getItem('authToken');
     const messageElement = document.getElementById('message');
     console.log("MY TOKEN:", token);
 
     try {
-        const response = await fetch('http://localhost:8080/user', {
+        const response = await fetch('http://localhost:8080/user/me', {
             method: 'GET',
             headers: {
-                'Authorization': `Bearer ${token}`
+                'Authorization': `${token}`
             }
-        });
+        }).then(res => res.json())
+            .then(pack => {
+                console.log(pack)
+                username.innerHTML = "Username: " + pack.username;
+                password.innerHTML = "Password: " + pack.password;
+                email.innerHTML = "Email: " + pack.email;
+                nome.innerHTML = "Nome: " + pack.nome;
+                cognome.innerHTML = "Cognome: " + pack.cognome;
+                dataNascita.innerHTML = "Data di nascita: " + pack.dataNascita;
+                aggiuntaViaggio(4);
+            })
+            .catch(error => console.error('Error:', error));
 
-        if (response.status === 200) {
-            const data = await response.json();
-            document.getElementById('userData').textContent = JSON.stringify(data, null, 2);
-        } else {
-            messageElement.textContent = 'Failed to get user data';
-            messageElement.style.color = 'red';
-        }
     } catch (error) {
         console.error('Error fetching profile:', error);
         messageElement.textContent = 'Error loading profile.';

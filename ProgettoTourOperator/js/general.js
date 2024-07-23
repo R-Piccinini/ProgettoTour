@@ -1,11 +1,10 @@
-async function login(event) {
-    event.preventDefault();
+async function login() {
     const username = document.getElementById('usernameLogin').value;
     const password = document.getElementById('passwordLogin').value;
     const messageElement = document.getElementById('message');
 
     try {
-        console.log("OK");
+        console.log("OK" + username + "e OK " + password);
         const response = await fetch('http://localhost:8080/auth/login', {
             method: 'POST',
             headers: {
@@ -17,10 +16,10 @@ async function login(event) {
         if (response.status === 200) {
             const data = await response.json();
             const token = data.token;
-            localStorage.setItem('authToken', token);
+            window.localStorage.setItem('authToken', token);
             messageElement.textContent = 'Login successful';
             messageElement.style.color = 'green';
-            //TODO: redirect sul profilo utente
+            window.location.href = "http://127.0.0.1:3000/ProgettoTourOperator/AreaPersonale.html";
         } else {
             messageElement.textContent = 'Invalid credentials';
             messageElement.style.color = 'red';
@@ -31,11 +30,12 @@ async function login(event) {
         messageElement.style.color = 'red';
     }
 
+    const qualcosa = window.localStorage.getItem('authToken');
+    console.log(qualcosa);
     
 }
 
-async function logout(event) {
-    event.preventDefault();
+async function logout() {
     const token = localStorage.getItem('authToken');
     const messageElement = document.getElementById('message');
 
