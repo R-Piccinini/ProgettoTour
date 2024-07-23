@@ -87,6 +87,57 @@ function aggiuntaViaggio(id) {
         .catch(error => console.error('Error:', error));
 }
 
+window.onload = aggiuntaViaggio(4);
+
+function aggiuntaWishlist(id) {
+
+    const nome = document.getElementById('wishName');
+    const descrizione = document.getElementById('wishDesc');
+    const sistemazione = document.getElementById('wishSistem');
+    const durata = document.getElementById('wishDur');
+    const prezzo = document.getElementById('wishPrezzo');
+    const immagine = document.getElementById('wishImg');
+    const url = `http://localhost:8080/pacchetto/${id}`;
+    fetch(url)
+        .then(res => res.json())
+        .then(pack => {
+            console.log(pack)
+            nome.innerHTML = pack.name;
+            // descrizione.innerHTML = pack.descrizione;
+            durata.innerHTML = "Giorni: " + pack.durata;
+            prezzo.innerHTML = "Prezzo: " + pack.price + "€";
+            sistemazione.innerHTML = "Alloggio: " + pack.sistemazione;
+            immagine.src = `assets/PacchettiViaggio/${pack.immagine}`;
+        })
+        .catch(error => console.error('Error:', error));
+}
+
+function aggiuntaWishlist2(id) {
+
+    const nome = document.getElementById('wishName2');
+    const descrizione = document.getElementById('wishDesc2');
+    const sistemazione = document.getElementById('wishSistem2');
+    const durata = document.getElementById('wishDur2');
+    const prezzo = document.getElementById('wishPrezzo2');
+    const immagine = document.getElementById('wishImg2');
+    const url = `http://localhost:8080/pacchetto/${id}`;
+    fetch(url)
+        .then(res => res.json())
+        .then(pack => {
+            console.log(pack)
+            nome.innerHTML = pack.name;
+            // descrizione.innerHTML = pack.descrizione;
+            durata.innerHTML = "Giorni: " + pack.durata;
+            prezzo.innerHTML = "Prezzo: " + pack.price + "€";
+            sistemazione.innerHTML = "Alloggio: " + pack.sistemazione;
+            immagine.src = `assets/PacchettiViaggio/${pack.immagine}`;
+        })
+        .catch(error => console.error('Error:', error));
+}
+
+window.onload = aggiuntaWishlist(10);
+window.onload = aggiuntaWishlist2(7);
+
 async function getUserData() {
     const username = document.getElementById('usernameAcc');
     const password = document.getElementById('pswAcc');
@@ -113,7 +164,6 @@ async function getUserData() {
                 nome.innerHTML = "Nome: " + pack.nome;
                 cognome.innerHTML = "Cognome: " + pack.cognome;
                 dataNascita.innerHTML = "Data di nascita: " + pack.dataNascita;
-                aggiuntaViaggio(4);
             })
             .catch(error => console.error('Error:', error));
 
