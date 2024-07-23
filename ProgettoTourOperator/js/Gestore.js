@@ -121,8 +121,14 @@ function editUser() {
 
 
 function loadPack() {
+    const token = window.localStorage.getItem('authToken');
     const url = "http://localhost:8080/pacchetto";
-    fetch(url)
+    fetch(url,{
+        method: 'GET',
+        headers: {
+            'Authorization': `${token}`
+        }
+    })
         .then(res => res.json())
         .then(packs => {
             tablePack.innerHTML = "";
