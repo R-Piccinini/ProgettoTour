@@ -99,7 +99,7 @@ async function getUserData() {
     console.log("MY TOKEN:", token);
 
     try {
-        const response = await fetch('http://localhost:8080/user/me', {
+        await fetch('http://localhost:8080/user/me', {
             method: 'GET',
             headers: {
                 'Authorization': `${token}`
