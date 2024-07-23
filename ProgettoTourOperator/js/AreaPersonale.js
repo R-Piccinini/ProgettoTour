@@ -56,31 +56,12 @@ function mostraSezione(sezione) {
 
 // Funzione per ottenere gli elementi dal server
 document.addEventListener('DOMContentLoaded', () => {
-    const username = document.getElementById('usernameAcc');
-    const password = document.getElementById('pswAcc');
-    const email = document.getElementById('emailAcc');
-    const nome = document.getElementById('nomeAcc');
-    const cognome = document.getElementById('cognomeAcc');
-    const dataNascita = document.getElementById('dataAcc');
+
 
     // Funzione per ottenere gli elementi dal server
     const urlParams = new URLSearchParams(window.location.search);
     const id = urlParams.get('id');
-    const url = `http://127.0.0.1:8080/user/1`;
-    fetch(url)
-        .then(res => res.json())
-        .then(pack => {
-            console.log(pack)
 
-            username.innerHTML = "Username: " + pack.username;
-            password.innerHTML = "Password: " + pack.password;
-            email.innerHTML = "Email: " + pack.email;
-            nome.innerHTML = "Nome: " + pack.nome;
-            cognome.innerHTML = "Cognome: " + pack.cognome;
-            dataNascita.innerHTML = "Data di nascita: " + pack.dataNascita;
-            aggiuntaViaggio(4);
-        })
-        .catch(error => console.error('Error:', error));
 });
 
 function aggiuntaViaggio(id) {
@@ -105,3 +86,121 @@ function aggiuntaViaggio(id) {
         })
         .catch(error => console.error('Error:', error));
 }
+
+window.onload = aggiuntaViaggio(4);
+
+function aggiuntaWishlist(id) {
+
+    const nome = document.getElementById('wishName');
+    const descrizione = document.getElementById('wishDesc');
+    const sistemazione = document.getElementById('wishSistem');
+    const durata = document.getElementById('wishDur');
+    const prezzo = document.getElementById('wishPrezzo');
+    const immagine = document.getElementById('wishImg');
+    const url = `http://localhost:8080/pacchetto/${id}`;
+    fetch(url)
+        .then(res => res.json())
+        .then(pack => {
+            console.log(pack)
+            nome.innerHTML = pack.name;
+            // descrizione.innerHTML = pack.descrizione;
+            durata.innerHTML = "Giorni: " + pack.durata;
+            prezzo.innerHTML = "Prezzo: " + pack.price + "€";
+            sistemazione.innerHTML = "Alloggio: " + pack.sistemazione;
+            immagine.src = `assets/PacchettiViaggio/${pack.immagine}`;
+        })
+        .catch(error => console.error('Error:', error));
+}
+
+function aggiuntaWishlist2(id) {
+
+    const nome = document.getElementById('wishName2');
+    const descrizione = document.getElementById('wishDesc2');
+    const sistemazione = document.getElementById('wishSistem2');
+    const durata = document.getElementById('wishDur2');
+    const prezzo = document.getElementById('wishPrezzo2');
+    const immagine = document.getElementById('wishImg2');
+    const url = `http://localhost:8080/pacchetto/${id}`;
+    fetch(url)
+        .then(res => res.json())
+        .then(pack => {
+            console.log(pack)
+            nome.innerHTML = pack.name;
+            // descrizione.innerHTML = pack.descrizione;
+            durata.innerHTML = "Giorni: " + pack.durata;
+            prezzo.innerHTML = "Prezzo: " + pack.price + "€";
+            sistemazione.innerHTML = "Alloggio: " + pack.sistemazione;
+            immagine.src = `assets/PacchettiViaggio/${pack.immagine}`;
+        })
+        .catch(error => console.error('Error:', error));
+}
+
+window.onload = aggiuntaWishlist(10);
+window.onload = aggiuntaWishlist2(7);
+
+async function getUserData() {
+    const username = document.getElementById('usernameAcc');
+    const password = document.getElementById('pswAcc');
+    const email = document.getElementById('emailAcc');
+    const nome = document.getElementById('nomeAcc');
+    const cognome = document.getElementById('cognomeAcc');
+    const dataNascita = document.getElementById('dataAcc');
+    const token = window.localStorage.getItem('authToken');
+    const messageElement = document.getElementById('message');
+    console.log("MY TOKEN:", token);
+
+    try {
+        await fetch('http://localhost:8080/user/me', {
+            method: 'GET',
+            headers: {
+                'Authorization': `${token}`
+            }
+        }).then(res => res.json())
+            .then(pack => {
+                console.log(pack)
+                username.innerHTML = "Username: " + pack.username;
+                password.innerHTML = "Password: " + pack.password;
+                email.innerHTML = "Email: " + pack.email;
+                nome.innerHTML = "Nome: " + pack.nome;
+                cognome.innerHTML = "Cognome: " + pack.cognome;
+                dataNascita.innerHTML = "Data di nascita: " + pack.dataNascita;
+            })
+            .catch(error => console.error('Error:', error));
+
+    } catch (error) {
+        console.error('Error fetching profile:', error);
+        messageElement.textContent = 'Error loading profile.';
+        messageElement.style.color = 'red';
+    }
+
+}
+
+window.onload = getUserData;
+
+
+
+// async function getUserData() {
+//     const token = localStorage.getItem('authToken');
+//     const messageElement = document.getElementById('message');
+//     console.log("MY TOKEN:", token);
+//     try {
+//         const response = await fetch('http://localhost:8080/api/me', {
+//             method: 'GET',
+//             headers: {
+//                 'Authorization': `${token}`
+//             }
+//         });
+
+//         if (response.status === 200) {
+//             const data = await response.json();
+//             document.getElementById('userData').textContent = JSON.stringify(data, null, 2);
+//         } else {
+//             messageElement.textContent = 'Failed to get user data';
+//             messageElement.style.color = 'red';
+//         }
+//     } catch (error) {
+//         console.error('Error during fetching user data:', error);
+//         messageElement.textContent = 'Error during fetching user data';
+//         messageElement.style.color = 'red';
+//     }
+// }

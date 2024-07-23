@@ -130,7 +130,7 @@
                     </a>
                 </div>
             </div>
-            <!-- Modal accedi/registrati -->
+            <!-- Modal accesso -->
             <div class="modal fade" id="formAccedi" tabindex="-1" aria-labelledby="formModalAccedi" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content">
@@ -141,14 +141,14 @@
                         <div class="modal-body">
                             <form>
                                 <div class="form-floating mb-3">
-                                    <input type="email" class="form-control rounded-3" id="floatingInput" required
-                                        placeholder="name@example.com">
-                                    <label for="floatingInput">Email</label>
+                                    <input type="username" class="form-control rounded-3" id="usernameLogin" required
+                                        placeholder="name">
+                                    <label for="usernameLogin">Username</label>
                                 </div>
                                 <div class="form-floating mb-3">
-                                    <input type="password" class="form-control rounded-3" id="floatingPassword"
+                                    <input type="password" class="form-control rounded-3" id="passwordLogin"
                                         placeholder="Password">
-                                    <label for="floatingPassword">Password</label>
+                                    <label for="passwordLogin">Password</label>
                                 </div>
                                 <p id="formtext"> Hai dimenticato la tua password? Clicca <a href="#"
                                         class="text-decoration-underline" data-bs-toggle="modal"
@@ -159,14 +159,16 @@
                             </form>
                         </div>
                         <div class="modal-footer">
-                            <button id="bottone-modal" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Torna
+                            <button id="bottone-modal" type="button" class="btn btn-secondary"
+                                data-bs-dismiss="modal">Torna
                                 indietro</button>
-                            <button id="bottone-modal" type="button" class="btn"><a href="areapersonale.html?=id"
-                                    class="text-white text-decoration-none">Accedi</a></button>
+                            <button id="bottone-modal" type="submit" class="btn" onclick="login()">Accedi</button>
+                                    <p id="message"></p>
                         </div>
                     </div>
                 </div>
             </div>
+            <!-- Modal registrazione -->
             <div class="modal fade" id="formRegistrati" tabindex="-1" aria-labelledby="formModalRegistrati"
                 aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered">
@@ -180,45 +182,45 @@
                         <div class="modal-body">
                             <form>
                                 <div class="form-floating mb-3">
-                                    <input type="email" class="form-control rounded-3" id="floatingInput" required
+                                    <input type="email" class="form-control rounded-3" id="emailRegister" required
                                         placeholder="name@example.com">
-                                    <label for="floatingInput">Email</label>
+                                    <label for="emailRegister">Email</label>
                                     <div id="emailHelp" class="form-text">Non condivideremo mai i tuoi dati.
                                     </div>
                                 </div>
-    
+
                                 <div class="form-floating mb-3">
-                                    <input type="name" class="form-control rounded-3" id="floatingName" required
+                                    <input type="name" class="form-control rounded-3" id="usernameRegister" required
                                         placeholder="Nome Utente">
-                                    <label for="floatingName">Nome Utente</label>
+                                    <label for="usernameRegister">Nome Utente</label>
                                 </div>
                                 <div class="row">
                                     <div class="col-6">
                                         <div class="form-floating mb-3">
-                                            <input type="password" class="form-control rounded-3" id="floatingPassword"
+                                            <input type="password" class="form-control rounded-3" id="passwordRegister"
                                                 placeholder="Password">
-                                            <label for="floatingPassword">Password</label>
+                                            <label for="passwordRegister">Password</label>
                                         </div>
                                     </div>
                                     <div class="col-6">
                                         <div class="form-floating mb-3">
                                             <input type="password" class="form-control rounded-3"
-                                                id="floatingConfirmPassword" placeholder="Conferma Password">
-                                            <label for="floatingConfirmPassword">Conferma Password</label>
+                                                id="confirmPasswordRegister" placeholder="Conferma Password">
+                                            <label for="confirmPasswordRegister">Conferma Password</label>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                                    <label class="form-check-label" for="defaultCheck1" id="formcheck">
+                                    <input class="form-check-input" type="checkbox" value="" id="privacyCheck">
+                                    <label class="form-check-label" for="privacyCheck" id="formcheck">
                                         Accetto le condizioni della <a href="PrivacyPolicy.html">Privacy policy</a>
                                     </label>
                                 </div>
-                                <div class=""></div>
                             </form>
                         </div>
                         <div class="modal-footer">
-                            <button id="bottone-modal" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Torna
+                            <button id="bottone-modal" type="button" class="btn btn-secondary"
+                                data-bs-dismiss="modal">Torna
                                 indietro</button>
                             <button id="bottone-modal" type="button" class="btn">Registrati</button>
                         </div>
@@ -259,120 +261,71 @@
         </table>
         <div class="d-grid gap-2 d-flex justify-content-end">
             <button class="btn me-md-2 mb-3 mx-5" id="btnmodifiche" data-bs-toggle="collapse"
-                href="#tabellaaggiungiuser" type="button"
-                style="--bs-btn-padding-y: .10rem; --bs-btn-padding-x: .3rem;">Aggiungi</button>
+                href="#tabellamodificauser" type="button"
+                style="--bs-btn-padding-y: .10rem; --bs-btn-padding-x: .3rem;" onclick="clearUser()">Aggiungi</button>
 
         </div>
 
-        <!-- Form Aggiungi User-->
-        <div class="collapse" id="tabellaaggiungiuser">
-            <div class="mb-3 row">
-                <label for="inputUsername" class="col-2 col-form-label mx-3">Username</label>
-                <div class="col-6">
-                    <input class="form-control" id="inputUsername">
-                </div>
-            </div>
-            <div class="mb-3 row">
-                <label for="inputPassword" class="col-2 col-form-label mx-3">Password</label>
-                <div class="col-6">
-                    <input type="password" class="form-control" id="inputPassword">
-                </div>
-            </div>
-            <div class="mb-3 row">
-                <label for="inputEmail" class="col-2 col-form-label mx-3">Email</label>
-                <div class="col-6">
-                    <input class="form-control" id="inputEmail">
-                </div>
-            </div>
-            <div class="mb-3 row">
-                <label for="inputNome" class="col-2 col-form-label mx-3">Nome</label>
-                <div class="col-6">
-                    <input class="form-control" id="inputNome">
-                </div>
-            </div>
-            <div class="mb-3 row">
-                <label for="inputCognome" class="col-2 col-form-label mx-3">Cognome</label>
-                <div class="col-6">
-                    <input class="form-control" id="inputCognome">
-                </div>
-            </div>
-            <div class="mb-3 row">
-                <label for="inputIndirizzo" class="col-2 col-form-label mx-3">Indirizzo</label>
-                <div class="col-6">
-                    <input class="form-control" id="inputIndirizzo">
-                </div>
-            </div>
-            <div class="mb-3 row">
-                <label for="inputData" class="col-2 col-form-label mx-3">Data di nascita</label>
-                <div class="col-6">
-                    <input class="form-control" id="inputData">
-                </div>
-            </div>
-            <div class="mb-3 row">
-                <label for="inputPacchetto" class="col-2 col-form-label mx-3">Pacchetto</label>
-                <div class="col-6">
-                    <input class="form-control" id="inputPacchetto">
-                </div>
-            </div>
-            <div class="d-grid gap-2 d-flex justify-content-end">
-                <button class="btn me-md-2 mb-3 mx-5" id="btnsalva" type="button"
-                    style="--bs-btn-padding-y: .10rem; --bs-btn-padding-x: .3rem;">Salva</button>
-            </div>
-        </div>
 
         <!-- Form Modifica User-->
         <div class="collapse" id="tabellamodificauser">
             <div class="mb-3 row">
-                <label for="inputUsername" class="col-2 col-form-label mx-3">Username</label>
+                <label for="idUser" class="col-2 col-form-label mx-3">Id</label>
                 <div class="col-6">
-                    <input class="form-control" id="inputUsername">
+                    <input class="form-control" id="idUser" disabled>
                 </div>
             </div>
             <div class="mb-3 row">
-                <label for="inputPassword" class="col-2 col-form-label mx-3">Password</label>
+                <label for="editUsernameUser" class="col-2 col-form-label mx-3">Username</label>
                 <div class="col-6">
-                    <input type="password" class="form-control" id="inputPassword">
+                    <input class="form-control" id="editUsernameUser">
                 </div>
             </div>
             <div class="mb-3 row">
-                <label for="inputEmail" class="col-2 col-form-label mx-3">Email</label>
+                <label for="editPasswordUser" class="col-2 col-form-label mx-3">Password</label>
                 <div class="col-6">
-                    <input class="form-control" id="inputEmail">
+                    <input type="password" class="form-control" id="editPasswordUser">
                 </div>
             </div>
             <div class="mb-3 row">
-                <label for="inputNome" class="col-2 col-form-label mx-3">Nome</label>
+                <label for="editEmailUser" class="col-2 col-form-label mx-3">Email</label>
                 <div class="col-6">
-                    <input class="form-control" id="inputNome">
+                    <input class="form-control" id="editEmailUser">
                 </div>
             </div>
             <div class="mb-3 row">
-                <label for="inputCognome" class="col-2 col-form-label mx-3">Cognome</label>
+                <label for="editNomeUser" class="col-2 col-form-label mx-3">Nome</label>
                 <div class="col-6">
-                    <input class="form-control" id="inputCognome">
+                    <input class="form-control" id="editNomeUser">
                 </div>
             </div>
             <div class="mb-3 row">
-                <label for="inputIndirizzo" class="col-2 col-form-label mx-3">Indirizzo</label>
+                <label for="editCognomeUser" class="col-2 col-form-label mx-3">Cognome</label>
                 <div class="col-6">
-                    <input class="form-control" id="inputIndirizzo">
+                    <input class="form-control" id="editCognomeUser">
                 </div>
             </div>
             <div class="mb-3 row">
-                <label for="inputData" class="col-2 col-form-label mx-3">Data di nascita</label>
+                <label for="editIndirizzoUser" class="col-2 col-form-label mx-3">Indirizzo</label>
                 <div class="col-6">
-                    <input class="form-control" id="inputData">
+                    <input class="form-control" id="editIndirizzoUser">
                 </div>
             </div>
             <div class="mb-3 row">
-                <label for="inputPacchetto" class="col-2 col-form-label mx-3">Pacchetto</label>
+                <label for="editDataUser" class="col-2 col-form-label mx-3">Data di nascita</label>
                 <div class="col-6">
-                    <input class="form-control" id="inputPacchetto">
+                    <input class="form-control" id="editDataUser">
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <label for="editPacchettoUser" class="col-2 col-form-label mx-3">Pacchetto</label>
+                <div class="col-6">
+                    <input class="form-control" id="editPacchettoUser">
                 </div>
             </div>
             <div class="d-grid gap-2 d-flex justify-content-end">
-                <button class="btn me-md-2 mb-3 mx-5" id="btnsalva" type="button"
-                    style="--bs-btn-padding-y: .10rem; --bs-btn-padding-x: .3rem;">Salva</button>
+                <button class="btn me-md-2 mb-3 mx-5" id="btnEditUser" type="button"
+                    style="--bs-btn-padding-y: .10rem; --bs-btn-padding-x: .3rem;" onclick="editUser()">Salva</button>
             </div>
         </div>
     </div>
@@ -394,112 +347,61 @@
                 </tr>
             </thead>
             <tbody id="tablePack">
-                <tr>
-                    <td>1</td>
-                    <td>EnricoMosc</td>
-                    <td>AmmazzalaMosca1</td>
-                    <td>enric@zz.it</td>
-                    <td>Enrico</td>
-                    <td>Mosca</td>
-                    <td> <button class="btn me-md-2 mb-3" type="button"
-                            style="--bs-btn-padding-y: .10rem; --bs-btn-padding-x: .3rem;">Elimina</button></td>
-                    <td><button class="btn me-md-2 mb-3" id="btnmodifiche" data-bs-toggle="collapse"
-                            href="#tabellamodificapacchetto" type="button"
-                            style="--bs-btn-padding-y: .10rem; --bs-btn-padding-x: .3rem;">Modifica</button></td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>RicPichu</td>
-                    <td>data</td>
-                    <td>placeholder</td>
-                    <td>text</td>
-                    <td>text</td>
-                    <td> <button class="btn me-md-2 mb-3" type="button"
-                            style="--bs-btn-padding-y: .10rem; --bs-btn-padding-x: .3rem;">Elimina</button></td>
-                    <td><button class="btn me-md-2 mb-3" id="btnmodifiche" data-bs-toggle="collapse"
-                            href="#tabellamodificapacchetto" type="button"
-                            style="--bs-btn-padding-y: .10rem; --bs-btn-padding-x: .3rem;">Modifica</button></td>
-                </tr>
             </tbody>
         </table>
         <div class="d-grid gap-2 d-flex justify-content-end">
             <button class="btn me-md-2 mb-3 mx-5" id="btnmodifiche" data-bs-toggle="collapse"
-                href="#tabellaaggiungipacchetto" type="button"
+                href="#tabellamodificapacchetto" type="button" onclick="clearPack()"
                 style="--bs-btn-padding-y: .10rem; --bs-btn-padding-x: .3rem;">Aggiungi</button>
 
-        </div>
-        <!-- Form Aggiungi Pacchetto-->
-        <div class="collapse" id="tabellaaggiungipacchetto">
-            <div class="mb-3 row">
-                <label for="inputNome" class="col-2 col-form-label mx-3">Nome</label>
-                <div class="col-6">
-                    <input class="form-control" id="inputNome">
-                </div>
-            </div>
-            <div class="mb-3 row">
-                <label for="inputPrezzo" class="col-2 col-form-label mx-3">Prezzo</label>
-                <div class="col-6">
-                    <input class="form-control" id="inputPrezzo">
-                </div>
-            </div>
-            <div class="mb-3 row">
-                <label for="inputDescrizione" class="col-2 col-form-label mx-3">Descrizione</label>
-                <div class="col-6">
-                    <input class="form-control" id="inputDescrizione">
-                </div>
-            </div>
-            <div class="mb-3 row">
-                <label for="inputSistemazione" class="col-2 col-form-label mx-3">Sistemazione</label>
-                <div class="col-6">
-                    <input class="form-control" id="inputSistemazione">
-                </div>
-            </div>
-            <div class="mb-3 row">
-                <label for="inputDurata" class="col-2 col-form-label mx-3">Durata</label>
-                <div class="col-6">
-                    <input class="form-control" id="inputDurata">
-                </div>
-            </div>
-            <div class="d-grid gap-2 d-flex justify-content-end">
-                <button class="btn me-md-2 mb-3 mx-5" id="btnsalva" type="button"
-                    style="--bs-btn-padding-y: .10rem; --bs-btn-padding-x: .3rem;">Salva</button>
-            </div>
         </div>
 
         <!-- Form Modifica Pacchetto-->
         <div class="collapse" id="tabellamodificapacchetto">
             <div class="mb-3 row">
-                <label for="inputNome" class="col-2 col-form-label mx-3">Nome</label>
+                <label for="idPack" class="col-2 col-form-label mx-3">Id</label>
                 <div class="col-6">
-                    <input class="form-control" id="inputNome">
+                    <input class="form-control" id="idPack" disabled>
                 </div>
             </div>
             <div class="mb-3 row">
-                <label for="inputPrezzo" class="col-2 col-form-label mx-3">Prezzo</label>
+                <label for="editNamePack" class="col-2 col-form-label mx-3">Nome</label>
                 <div class="col-6">
-                    <input class="form-control" id="inputPrezzo">
+                    <input class="form-control" id="editNamePack">
                 </div>
             </div>
             <div class="mb-3 row">
-                <label for="inputDescrizione" class="col-2 col-form-label mx-3">Descrizione</label>
+                <label for="editPrezzoPack" class="col-2 col-form-label mx-3">Prezzo</label>
                 <div class="col-6">
-                    <input class="form-control" id="inputDescrizione">
+                    <input class="form-control" id="editPrezzoPack">
                 </div>
             </div>
             <div class="mb-3 row">
-                <label for="inputSistemazione" class="col-2 col-form-label mx-3">Sistemazione</label>
+                <label for="editDescrizionePack" class="col-2 col-form-label mx-3">Descrizione</label>
                 <div class="col-6">
-                    <input class="form-control" id="inputSistemazione">
+                    <input class="form-control" id="editDescrizionePack">
                 </div>
             </div>
             <div class="mb-3 row">
-                <label for="inputDurata" class="col-2 col-form-label mx-3">Durata</label>
+                <label for="editSistemazionePack" class="col-2 col-form-label mx-3">Sistemazione</label>
                 <div class="col-6">
-                    <input class="form-control" id="inputDurata">
+                    <input class="form-control" id="editSistemazionePack">
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <label for="editDurataPack" class="col-2 col-form-label mx-3">Durata</label>
+                <div class="col-6">
+                    <input class="form-control" id="editDurataPack">
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <label for="editImgPack" class="col-2 col-form-label mx-3">Immagine</label>
+                <div class="col-6">
+                    <input class="form-control" id="editImgPack">
                 </div>
             </div>
             <div class="d-grid gap-2 d-flex justify-content-end">
-                <button class="btn me-md-2 mb-3 mx-5" id="btnsalva" type="button"
+                <button class="btn me-md-2 mb-3 mx-5" id="btnEditPack" type="button" onclick="editPack()"
                     style="--bs-btn-padding-y: .10rem; --bs-btn-padding-x: .3rem;">Salva</button>
             </div>
         </div>
@@ -692,6 +594,7 @@
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/jquery-3.7.1.min.js"></script>
     <script src="js/Gestore.js"></script>
+    <script src="js/general.js"></script>
 </body>
 
 

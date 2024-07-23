@@ -46,7 +46,7 @@
                         </li>
                         <li><a role="button" href="Contatti.html" class="btn btn-outline btn mx-4">Contatti</a></li>
                     </ul>
-    
+
                     <div class="dropdown-center" id="menu">
                         <button class="btn btn-lg dropdown-toggle" type="button" data-bs-toggle="dropdown"
                             data-bs-auto-close="outside" aria-expanded="false">Menù</button>
@@ -57,8 +57,8 @@
                                     <div class="accordion-item">
                                         <h2 class="accordion-header">
                                             <button class="accordion-button p-2" type="button" id="destinazioni"
-                                                data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true"
-                                                aria-controls="collapseOne">
+                                                data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                                                aria-expanded="true" aria-controls="collapseOne">
                                                 Destinazioni
                                             </button>
                                         </h2>
@@ -66,11 +66,15 @@
                                             data-bs-parent="#accordiondest">
                                             <div class="accordion-body p-0" id="destinazioni">
                                                 <ul class="listadest">
-                                                    <li><a class="dest p-2" href="Destinazione.html?id=1">Europa</a></li>
+                                                    <li><a class="dest p-2" href="Destinazione.html?id=1">Europa</a>
+                                                    </li>
                                                     <li><a class="dest p-2" href="Destinazione.html?id=6">Asia</a></li>
-                                                    <li><a class="dest p-2" href="Destinazione.html?id=4">America</a></li>
-                                                    <li><a class="dest p-2" href="Destinazione.html?id=5">Oceania</a></li>
-                                                    <li><a class="dest p-2" href="Destinazione.html?id=3">Africa</a></li>
+                                                    <li><a class="dest p-2" href="Destinazione.html?id=4">America</a>
+                                                    </li>
+                                                    <li><a class="dest p-2" href="Destinazione.html?id=5">Oceania</a>
+                                                    </li>
+                                                    <li><a class="dest p-2" href="Destinazione.html?id=3">Africa</a>
+                                                    </li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -81,12 +85,12 @@
                         </ul>
                     </div>
                 </div>
-    
+
                 <div class="col-4 ms-auto" id="dropdown">
-                    <img class="w-75 h-auto" src="assets/img/dropdown.png" data-bs-toggle="dropdown" aria-expanded="false"
-                        data-bs-auto-close="outside">
-    
-    
+                    <img class="w-75 h-auto" src="assets/img/dropdown.png" data-bs-toggle="dropdown"
+                        aria-expanded="false" data-bs-auto-close="outside">
+
+
                     <ul class="dropdown-menu text-center">
                         <li><a class="dropdown-item" href="#">Area Personale</a></li>
                         <li><a class="dropdown-item" href="ChiSiamo.html">Chi Siamo</a></li>
@@ -130,7 +134,7 @@
                     </a>
                 </div>
             </div>
-            <!-- Modal accedi/registrati -->
+            <!-- Modal accesso -->
             <div class="modal fade" id="formAccedi" tabindex="-1" aria-labelledby="formModalAccedi" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content">
@@ -141,14 +145,14 @@
                         <div class="modal-body">
                             <form>
                                 <div class="form-floating mb-3">
-                                    <input type="email" class="form-control rounded-3" id="floatingInput" required
-                                        placeholder="name@example.com">
-                                    <label for="floatingInput">Email</label>
+                                    <input type="username" class="form-control rounded-3" id="usernameLogin" required
+                                        placeholder="name">
+                                    <label for="usernameLogin">Username</label>
                                 </div>
                                 <div class="form-floating mb-3">
-                                    <input type="password" class="form-control rounded-3" id="floatingPassword"
+                                    <input type="password" class="form-control rounded-3" id="passwordLogin"
                                         placeholder="Password">
-                                    <label for="floatingPassword">Password</label>
+                                    <label for="passwordLogin">Password</label>
                                 </div>
                                 <p id="formtext"> Hai dimenticato la tua password? Clicca <a href="#"
                                         class="text-decoration-underline" data-bs-toggle="modal"
@@ -159,14 +163,16 @@
                             </form>
                         </div>
                         <div class="modal-footer">
-                            <button id="bottone-modal" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Torna
+                            <button id="bottone-modal" type="button" class="btn btn-secondary"
+                                data-bs-dismiss="modal">Torna
                                 indietro</button>
-                            <button id="bottone-modal" type="button" class="btn"><a href="areapersonale.html?=id"
-                                    class="text-white text-decoration-none">Accedi</a></button>
+                            <button id="bottone-modal" type="submit" class="btn" onclick="login()">Accedi</button>
+                            <p id="message"></p>
                         </div>
                     </div>
                 </div>
             </div>
+            <!-- Modal registrazione -->
             <div class="modal fade" id="formRegistrati" tabindex="-1" aria-labelledby="formModalRegistrati"
                 aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered">
@@ -180,45 +186,45 @@
                         <div class="modal-body">
                             <form>
                                 <div class="form-floating mb-3">
-                                    <input type="email" class="form-control rounded-3" id="floatingInput" required
+                                    <input type="email" class="form-control rounded-3" id="emailRegister" required
                                         placeholder="name@example.com">
-                                    <label for="floatingInput">Email</label>
+                                    <label for="emailRegister">Email</label>
                                     <div id="emailHelp" class="form-text">Non condivideremo mai i tuoi dati.
                                     </div>
                                 </div>
-    
+
                                 <div class="form-floating mb-3">
-                                    <input type="name" class="form-control rounded-3" id="floatingName" required
+                                    <input type="name" class="form-control rounded-3" id="usernameRegister" required
                                         placeholder="Nome Utente">
-                                    <label for="floatingName">Nome Utente</label>
+                                    <label for="usernameRegister">Nome Utente</label>
                                 </div>
                                 <div class="row">
                                     <div class="col-6">
                                         <div class="form-floating mb-3">
-                                            <input type="password" class="form-control rounded-3" id="floatingPassword"
+                                            <input type="password" class="form-control rounded-3" id="passwordRegister"
                                                 placeholder="Password">
-                                            <label for="floatingPassword">Password</label>
+                                            <label for="passwordRegister">Password</label>
                                         </div>
                                     </div>
                                     <div class="col-6">
                                         <div class="form-floating mb-3">
                                             <input type="password" class="form-control rounded-3"
-                                                id="floatingConfirmPassword" placeholder="Conferma Password">
-                                            <label for="floatingConfirmPassword">Conferma Password</label>
+                                                id="confirmPasswordRegister" placeholder="Conferma Password">
+                                            <label for="confirmPasswordRegister">Conferma Password</label>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                                    <label class="form-check-label" for="defaultCheck1" id="formcheck">
+                                    <input class="form-check-input" type="checkbox" value="" id="privacyCheck">
+                                    <label class="form-check-label" for="privacyCheck" id="formcheck">
                                         Accetto le condizioni della <a href="PrivacyPolicy.html">Privacy policy</a>
                                     </label>
                                 </div>
-                                <div class=""></div>
                             </form>
                         </div>
                         <div class="modal-footer">
-                            <button id="bottone-modal" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Torna
+                            <button id="bottone-modal" type="button" class="btn btn-secondary"
+                                data-bs-dismiss="modal">Torna
                                 indietro</button>
                             <button id="bottone-modal" type="button" class="btn">Registrati</button>
                         </div>
@@ -285,6 +291,7 @@
                             modificare
                             le informazioni del tuo
                             account e controllare la tua lista di buoni.</p>
+                        <p id="message"></p>
 
                         <!-- Contenuto dei viaggi -->
                         <div class="sezione viaggi">
@@ -305,10 +312,34 @@
                         <div class="sezione wishlist">
                             <h3>Wishlist</h3>
                             <p>Elementi salvati nella tua wishlist.</p>
+                            <div class="row">
+                                <div class="col-12 col-md-6">
+                                    <div class="card" style="width: 18rem;">
+                                        <img src="" class="card-img-top" alt="..." id="wishImg">
+                                        <div class="card-body">
+                                            <h5 class="card-title" id="wishName"></h5>
+                                            <p class="card-text" id="wishSistem"></p>
+                                            <p class="card-text" id="wishDur"></p>
+                                            <p class="card-text" id="wishPrezzo"></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <div class="card" style="width: 18rem;">
+                                        <img src="" class="card-img-top" alt="..." id="wishImg2">
+                                        <div class="card-body">
+                                            <h5 class="card-title" id="wishName2"></h5>
+                                            <p class="card-text" id="wishSistem2"></p>
+                                            <p class="card-text" id="wishDur2"></p>
+                                            <p class="card-text" id="wishPrezzo2"></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
 
                         <!-- Contenuto delle info account -->
-                        <div class="sezione info-account">
+                        <div class="sezione info-account" id="userData">
                             <h3>Info Account</h3>
                             <p>Informazioni personali e impostazioni dell'account.</p>
                             <p id="idAcc"></p>
@@ -349,7 +380,7 @@
                     </div>
                 </div>
             </div>
-    
+
             <div class="row text-center">
                 <div class="col-6 col-sm-6 col-md-3 text-start">
                     <h5>Destinazioni</h5>
@@ -360,20 +391,22 @@
                                 class="nav-link p-0 text-muted">America</a></li>
                         <li class="nav-item mb-2"><a href="Destinazione.html?id=3"
                                 class="nav-link p-0 text-muted">Africa</a></li>
-                        <li class="nav-item mb-2"><a href="Destinazione.html?id=6" class="nav-link p-0 text-muted">Asia</a>
+                        <li class="nav-item mb-2"><a href="Destinazione.html?id=6"
+                                class="nav-link p-0 text-muted">Asia</a>
                         </li>
                         <li class="nav-item mb-2"><a href="Destinazione.html?id=5"
                                 class="nav-link p-0 text-muted">Oceania</a>
                         </li>
                     </ul>
                 </div>
-    
+
                 <div class="col-6 col-sm-6 col-md-3 text-start">
                     <h5>WeFlight</h5>
                     <ul class="nav flex-column">
                         <li class="nav-item mb-2"><a href="ChiSiamo.html" class="nav-link p-0 text-muted">Gruppo</a>
                         </li>
-                        <li class="nav-item mb-2"><a href="LavoraConNoi.html" class="nav-link p-0 text-muted">Lavora con
+                        <li class="nav-item mb-2"><a href="LavoraConNoi.html" class="nav-link p-0 text-muted">Lavora
+                                con
                                 noi</a>
                         </li>
                         <li class="nav-item mb-2"><a href="AreaPersonale.html" class="nav-link p-0 text-muted">Area
@@ -383,15 +416,17 @@
                         </li>
                     </ul>
                 </div>
-    
+
                 <div class="col-12 col-sm-6 col-md-3 text-md-start">
                     <h5>Info e condizioni di vendita</h5>
                     <ul class="nav flex-column">
                         <li class="nav-item mb-2"><a href="FAQS.html" class="nav-link p-0 text-muted">FAQs</a></li>
-                        <li class="nav-item mb-2"><a href="MetodiDiPagamento.html" class="nav-link p-0 text-muted">Metodi di
+                        <li class="nav-item mb-2"><a href="MetodiDiPagamento.html"
+                                class="nav-link p-0 text-muted">Metodi di
                                 pagamento</a>
                         </li>
-                        <li class="nav-item mb-2"><a href="TerminiCondizioni.html" class="nav-link p-0 text-muted">Termini e
+                        <li class="nav-item mb-2"><a href="TerminiCondizioni.html"
+                                class="nav-link p-0 text-muted">Termini e
                                 condizioni</a>
                         </li>
                         <li class="nav-item mb-2"><a href="PrivacyPolicy.html" class="nav-link p-0 text-muted">Privacy
@@ -399,7 +434,7 @@
                         </li>
                     </ul>
                 </div>
-    
+
                 <div class="col-12 col-sm-6 col-md-3 text-md-start">
                     <h5>Community & Social</h5>
                     <ul class="nav flex-column">
@@ -408,24 +443,24 @@
                         <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Twitter</a></li>
                     </ul>
                 </div>
-    
-    
-    
+
+
+
             </div>
-    
+
             <div class="d-flex justify-content-between py-4 my-4 border-top border-dark">
                 <p>© 2024 WeFlight. Tutti i diritti riservati.</p>
                 <ul class="list-unstyled d-flex">
-                    <li class="ms-3"><a class="link-dark" href="#"><img src="assets/img/instagram.svg" class="bi" width="24"
-                                height="24">
-    
+                    <li class="ms-3"><a class="link-dark" href="#"><img src="assets/img/instagram.svg" class="bi"
+                                width="24" height="24">
+
                         </a></li>
-                    <li class="ms-3"><a class="link-dark" href="#"><img src="assets/img/facebook.svg" class="bi" width="24"
-                                height="24"></a>
+                    <li class="ms-3"><a class="link-dark" href="#"><img src="assets/img/facebook.svg" class="bi"
+                                width="24" height="24"></a>
                     </li>
-                    <li class="ms-3"><a class="link-dark" href="#"><img src="assets/img/x-twitter.svg" class="bi" width="24"
-                                height="24">
-    
+                    <li class="ms-3"><a class="link-dark" href="#"><img src="assets/img/x-twitter.svg" class="bi"
+                                width="24" height="24">
+
                         </a>
                     </li>
                 </ul>
@@ -435,6 +470,7 @@
 
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/areapersonale.js"></script>
+    <script src="js/general.js"></script>
 </body>
 
 </html>
