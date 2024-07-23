@@ -180,7 +180,7 @@ function showStep() {
       $('#destinazione-val').text(aereoArrivo);
       $('#giorni-val').text(numeroGiorni);
       $('#nViagg-val').text(numeroViaggiatori);
-      $('#totale-val').text(totale + " €");
+      $('#totale-val').text("Prezzo: " + totale + " €");
 
       break;
   }
