@@ -81,7 +81,7 @@ function preventivo() {
   totale = totale * giorni;
 
   if (minori === "Si") {
-    totale * 0.9;
+   totale = totale * 0.9;
   }
   
   return totale;
