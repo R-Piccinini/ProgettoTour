@@ -11,3 +11,17 @@
         h2 {
             margin-bottom: 30px;
         }
+        footer#footer {
+            width: 100%;
+            padding: 20px 0;
+        }
+
+        footer#footer .container {
+            max-width: 100%;
+            padding: 0 90px; 
+        }
+
+        footer#footer .row {
+            margin-left: 0;
+            margin-right: 0;
+        }

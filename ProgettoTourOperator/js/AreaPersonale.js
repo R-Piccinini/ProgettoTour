@@ -105,3 +105,61 @@ function aggiuntaViaggio(id) {
         })
         .catch(error => console.error('Error:', error));
 }
+
+async function getUserData() {
+    const token = localStorage.getItem('authToken');
+    const messageElement = document.getElementById('message');
+    console.log("MY TOKEN:", token);
+
+    try {
+        const response = await fetch('http://localhost:8080/user', {
+            method: 'GET',
+            headers: {
+                'Authorization': `Bearer ${token}`
+            }
+        });
+
+        if (response.status === 200) {
+            const data = await response.json();
+            document.getElementById('userData').textContent = JSON.stringify(data, null, 2);
+        } else {
+            messageElement.textContent = 'Failed to get user data';
+            messageElement.style.color = 'red';
+        }
+    } catch (error) {
+        console.error('Error fetching profile:', error);
+        messageElement.textContent = 'Error loading profile.';
+        messageElement.style.color = 'red';
+    }
+
+}
+
+window.onload = getUserData;
+
+
+
+// async function getUserData() {
+//     const token = localStorage.getItem('authToken');
+//     const messageElement = document.getElementById('message');
+//     console.log("MY TOKEN:", token);
+//     try {
+//         const response = await fetch('http://localhost:8080/api/me', {
+//             method: 'GET',
+//             headers: {
+//                 'Authorization': `${token}`
+//             }
+//         });
+
+//         if (response.status === 200) {
+//             const data = await response.json();
+//             document.getElementById('userData').textContent = JSON.stringify(data, null, 2);
+//         } else {
+//             messageElement.textContent = 'Failed to get user data';
+//             messageElement.style.color = 'red';
+//         }
+//     } catch (error) {
+//         console.error('Error during fetching user data:', error);
+//         messageElement.textContent = 'Error during fetching user data';
+//         messageElement.style.color = 'red';
+//     }
+// }

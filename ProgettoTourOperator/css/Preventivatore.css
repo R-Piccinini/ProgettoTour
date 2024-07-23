@@ -5,3 +5,25 @@
 #prev {
     background-color: #004c74;
 }
+
+.bottonemov{
+        border-color:#f64242; 
+        color: #f64242;
+}
+    
+    .bottonemov:hover{
+        border-color: #ff8a21;
+        color: white;
+        background-color:#ff8a21;
+    }
+
+    .bottonemovind{
+        border-color:#f64242; 
+        color: #f64242;
+}
+    
+    .bottonemovind:hover{
+        border-color: #ba2644;
+        color: white;
+        background-color:#ba2644;
+    }
