@@ -1,35 +1,6 @@
 let currentStep = 1;
 const totalSteps = 4;
 
-// const prices = {
-//   partenza: {
-//     'Milano +60€': 60,
-//     'Roma': 80,
-//     'Napoli': 100,
-//     'Bari': 120,
-//     'Palermo': 150
-//   },
-//   destinazione: {
-//     'Francia +300€': 300,
-//     'Inghilterra': 350,
-//     'Spagna': 400,
-//     'Grecia': 450,
-//     'Germania': 500,
-//     'Oceania': 600,
-//     'Stati Uniti': 700,
-//     'Asia': 800,
-//     'Nord America': 900,
-//     'Sud America': 1000,
-//     'Africa': 1100
-//   },
-//   alloggio: {
-//     'Ostello +50€': 50,
-//     'B&B': 100,
-//     'Hotel': 200,
-//     'Resort': 300
-//   }
-// };
-
 function nextStep() {
 
   if (currentStep < totalSteps) {
@@ -112,6 +83,7 @@ function preventivo() {
 
 };
 
+// Funzione per visualizzazione step
 function showStep() {
   const prevBtn = document.getElementById('prev-btn');
   const nextBtn = document.getElementById('next-btn');
@@ -121,6 +93,7 @@ function showStep() {
   const step4 = document.getElementById('step-4');
 
   switch (currentStep) {
+    // Visualizzazione step 1 (nasconde tutti gli altri step)
     case 1:
       step1.classList.remove('d-none');
       step1.classList.add('d-flex');
@@ -131,6 +104,7 @@ function showStep() {
       prevBtn.classList.remove('d-inlineblock');
       prevBtn.classList.add('d-none');
       break;
+    // Visualizzazione step 2
     case 2:
       step1.classList.remove('d-flex');
       step1.classList.add('d-none');
@@ -143,6 +117,7 @@ function showStep() {
       prevBtn.classList.remove('d-none');
       prevBtn.classList.add('d-inlineblock');
       break;
+    // Visualizzazione step 3
     case 3:
       step1.classList.remove('d-flex');
       step1.classList.add('d-none');
@@ -155,6 +130,7 @@ function showStep() {
       nextBtn.classList.remove('d-none');
       nextBtn.classList.add('d-inlineblock');
       break;
+    // Visualizzazione step 4  
     case 4:
       step1.classList.remove('d-flex');
       step1.classList.add('d-none');
@@ -167,6 +143,7 @@ function showStep() {
       nextBtn.classList.remove('d-inlineblock');
       nextBtn.classList.add('d-none');
 
+      // Richiama funzione preventivo per il calcolo
       preventivo();
 
       var nome = 'Nome: ' + $('#nome').val() + ' ' + $('#cognome').val();
@@ -175,6 +152,7 @@ function showStep() {
       var numeroGiorni = 'Numero giorni: ' + $('#num-giorni').val();
       var numeroViaggiatori = 'Numero viaggiatori: ' + $('#num-viaggiatori').val();
 
+      // Aggiunge il testo
       $('#nome-val').text(nome);
       $('#partenza-val').text(aereoPartenza);
       $('#destinazione-val').text(aereoArrivo);
