@@ -23,6 +23,7 @@ function saveData() {
   alloggio = document.getElementById("alloggio").value;
   viaggiatori = document.getElementById("num-viaggiatori").value;
   giorni = document.getElementById("num-giorni").value;
+  giorni = document.getElementById("minori").value;
   return totale;
 }
 
@@ -78,6 +79,10 @@ function preventivo() {
   totale = totale * viaggiatori;
 
   totale = totale * giorni;
+
+  if (minori === "Si") {
+    totale * 0.9;
+  }
   
   return totale;
 
