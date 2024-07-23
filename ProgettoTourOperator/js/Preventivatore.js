@@ -23,7 +23,7 @@ function saveData() {
   alloggio = document.getElementById("alloggio").value;
   viaggiatori = document.getElementById("num-viaggiatori").value;
   giorni = document.getElementById("num-giorni").value;
-  giorni = document.getElementById("minori").value;
+  minori = document.getElementById("minori").value;
   return totale;
 }
 
